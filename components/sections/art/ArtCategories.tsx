@@ -1,0 +1,87 @@
+'use client';
+
+import { motion } from 'framer-motion';
+import { Pencil, Paintbrush, User, Monitor, Image, Frame } from 'lucide-react';
+import { SectionReveal } from '@/components/shared/SectionReveal';
+
+const categories = [
+  {
+    icon: User,
+    title: 'Portrait Sketches',
+    description: 'Lifelike pencil and charcoal portraits capturing the essence of the subject.',
+    count: 24,
+  },
+  {
+    icon: Paintbrush,
+    title: 'Fine Arts',
+    description: 'Original paintings and mixed media works exploring color, texture, and form.',
+    count: 18,
+  },
+  {
+    icon: Pencil,
+    title: 'Pencil Drawings',
+    description: 'Detailed graphite and colored pencil illustrations with meticulous precision.',
+    count: 32,
+  },
+  {
+    icon: Monitor,
+    title: 'Digital Artwork',
+    description: 'Cutting-edge digital creations blending technology with artistic vision.',
+    count: 15,
+  },
+  {
+    icon: Frame,
+    title: 'Custom Commissions',
+    description: 'Bespoke artwork created to your specifications and vision.',
+    count: 12,
+  },
+  {
+    icon: Image,
+    title: 'Wall Art',
+    description: 'Statement pieces designed to transform and elevate any interior space.',
+    count: 20,
+  },
+];
+
+export function ArtCategories() {
+  return (
+    <section className="py-24 md:py-32 bg-brand-background">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <SectionReveal>
+          <div className="text-center mb-16">
+            <p className="text-brand-secondary text-sm tracking-[0.3em] uppercase mb-4">
+              Explore
+            </p>
+            <h2 className="font-playfair text-4xl md:text-5xl text-brand-text">
+              Art Categories
+            </h2>
+          </div>
+        </SectionReveal>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {categories.map((category, index) => (
+            <SectionReveal key={category.title} delay={0.1 * index}>
+              <motion.div
+                whileHover={{ y: -5 }}
+                className="group p-8 rounded-xl bg-white shadow-sm hover:shadow-lg transition-all duration-300 border border-transparent hover:border-brand-secondary/20"
+              >
+                <div className="w-14 h-14 rounded-full bg-brand-secondary/10 flex items-center justify-center mb-6 group-hover:bg-brand-secondary/20 transition-colors">
+                  <category.icon size={28} className="text-brand-secondary" />
+                </div>
+                <h3 className="font-playfair text-xl text-brand-text mb-2">
+                  {category.title}
+                </h3>
+                <p className="text-brand-text/60 text-sm leading-relaxed mb-4">
+                  {category.description}
+                </p>
+                <span className="text-brand-secondary text-sm font-medium">
+                  {category.count} artworks
+                </span>
+              </motion.div>
+            </SectionReveal>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
