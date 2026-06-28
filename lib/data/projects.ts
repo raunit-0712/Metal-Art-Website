@@ -1,4 +1,4 @@
-~import { Project, Artwork, Testimonial, TeamMember, Service, TimelineEvent, FAQ } from '@/types';
+import { Project, Artwork, Testimonial, TeamMember, Service, TimelineEvent, FAQ } from '@/types';
 
 export const projects: Project[] = [
   {
