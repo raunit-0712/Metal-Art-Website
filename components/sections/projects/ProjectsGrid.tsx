@@ -4,10 +4,10 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, Filter, X, ArrowRight, Grid3X3, List } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { projects, artworks } from '@/lib/data/projects';
+import { steelProjects, artProjects, artworks, artCategories } from '@/lib/data';
 
 const categories = ['All', 'Steel', 'Art', 'Residential', 'Commercial', 'Custom'];
-const types = ['All', 'Staircases', 'Railings', 'Lift Cladding', 'Decorative Panels', 'Portrait', 'Fine Art', 'Digital'];
+const types = ['All', 'Staircases', 'Railings', 'Lift Cladding', 'Decorative Panels', 'Metal Shelves', 'Architectural Metal', ...artCategories];
 
 export function ProjectsGrid() {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -18,7 +18,8 @@ export function ProjectsGrid() {
   const [showFilters, setShowFilters] = useState(false);
 
   const allItems = useMemo(() => {
-    const steelItems = projects.map((p) => ({ ...p, itemType: 'project' as const }));
+    const steelItems = steelProjects.map((p) => ({ ...p, itemType: 'project' as const }));
+    const artProjectItems = artProjects.map((p) => ({ ...p, itemType: 'project' as const }));
     const artItems = artworks.map((a) => ({
       id: a.id,
       title: a.title,
@@ -35,7 +36,7 @@ export function ProjectsGrid() {
       price: a.price,
       available: a.available,
     }));
-    return [...steelItems, ...artItems];
+    return [...steelItems, ...artProjectItems, ...artItems];
   }, []);
 
   const filteredItems = useMemo(() => {

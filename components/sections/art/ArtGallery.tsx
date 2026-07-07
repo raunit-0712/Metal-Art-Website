@@ -4,9 +4,9 @@ import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, ZoomIn, Filter } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { artworks } from '@/lib/data/projects';
+import { artworks, artCategories } from '@/lib/data';
 
-const categories = ['All', 'Portrait Sketches', 'Fine Arts', 'Pencil Drawings', 'Digital Artwork', 'Custom Commissions', 'Wall Art'];
+const categories = ['All', ...artCategories];
 
 export function ArtGallery() {
   const [selectedCategory, setSelectedCategory] = useState('All');

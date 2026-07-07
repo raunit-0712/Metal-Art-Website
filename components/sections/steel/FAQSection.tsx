@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { faqs } from '@/lib/data/projects';
+import { faqs } from '@/lib/data';
 
 export function FAQSection() {
   const [openId, setOpenId] = useState<string | null>(null);

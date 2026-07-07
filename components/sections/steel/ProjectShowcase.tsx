@@ -4,11 +4,10 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, X, Calendar, MapPin, User, Layers } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { projects } from '@/lib/data/projects';
+import { steelProjects } from '@/lib/data';
 
 export function ProjectShowcase() {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
-  const steelProjects = projects.filter((p) => p.category === 'steel');
 
   const selected = steelProjects.find((p) => p.id === selectedProject);
 

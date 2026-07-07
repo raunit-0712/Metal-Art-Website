@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Wrench, Hammer, Check, Grid3X3, LayoutGrid, Layers, Minus, Library } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { steelServices } from '@/lib/data/projects';
+import { steelServices } from '@/lib/data';
 
 const iconMap: Record<string, React.ElementType> = {
   Stairs: Wrench,

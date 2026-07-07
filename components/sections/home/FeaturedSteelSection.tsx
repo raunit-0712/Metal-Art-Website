@@ -4,12 +4,10 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { projects } from '@/lib/data/projects';
+import { steelFeatured } from '@/lib/data';
 
 export function FeaturedSteelSection() {
-  const featuredProjects = projects
-    .filter((p) => p.category === 'steel' && p.featured)
-    .slice(0, 3);
+  const featuredProjects = steelFeatured.slice(0, 3);
 
   return (
     <section className="py-24 md:py-32 bg-brand-primary">

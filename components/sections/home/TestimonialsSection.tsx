@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { testimonials } from '@/lib/data/projects';
+import { testimonials } from '@/lib/data';
 
 export function TestimonialsSection() {
   const [currentIndex, setCurrentIndex] = useState(0);

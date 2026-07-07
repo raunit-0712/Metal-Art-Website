@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
 import { ArrowRight, X, ZoomIn } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { artworks } from '@/lib/data/projects';
+import { artworks } from '@/lib/data';
 
 export function FeaturedArtSection() {
   const [selectedArtwork, setSelectedArtwork] = useState<string | null>(null);

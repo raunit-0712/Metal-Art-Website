@@ -7,39 +7,45 @@ import { SectionReveal } from '@/components/shared/SectionReveal';
 const categories = [
   {
     icon: User,
-    title: 'Portrait Sketches',
+    title: 'Portraits',
     description: 'Lifelike pencil and charcoal portraits capturing the essence of the subject.',
-    count: 24,
-  },
-  {
-    icon: Paintbrush,
-    title: 'Fine Arts',
-    description: 'Original paintings and mixed media works exploring color, texture, and form.',
-    count: 18,
-  },
-  {
-    icon: Pencil,
-    title: 'Pencil Drawings',
-    description: 'Detailed graphite and colored pencil illustrations with meticulous precision.',
-    count: 32,
+    count: 29,
   },
   {
     icon: Monitor,
     title: 'Digital Artwork',
     description: 'Cutting-edge digital creations blending technology with artistic vision.',
-    count: 15,
+    count: 7,
   },
   {
     icon: Frame,
-    title: 'Custom Commissions',
-    description: 'Bespoke artwork created to your specifications and vision.',
-    count: 12,
+    title: 'Logos',
+    description: 'Bespoke corporate identity and vector brand designs.',
+    count: 16,
+  },
+  {
+    icon: Pencil,
+    title: 'Miscellaneous',
+    description: 'Sketch drafts, still lifes, technical layouts, and custom drawings.',
+    count: 23,
+  },
+  {
+    icon: Paintbrush,
+    title: 'Old Masters Copy',
+    description: 'Oil paintings replicating classical landscape and figure styles.',
+    count: 4,
+  },
+  {
+    icon: Paintbrush,
+    title: 'Student Works',
+    description: 'Basic shape studies, anatomical sketches, and shading practices.',
+    count: 11,
   },
   {
     icon: Image,
-    title: 'Wall Art',
-    description: 'Statement pieces designed to transform and elevate any interior space.',
-    count: 20,
+    title: 'Wall Arts',
+    description: 'Statement mural pieces designed to transform and elevate any interior space.',
+    count: 4,
   },
 ];
 

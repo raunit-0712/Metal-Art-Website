@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Linkedin, Instagram } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { teamMembers } from '@/lib/data/projects';
+import { teamMembers } from '@/lib/data';
 
 export function TeamSection() {
   return (

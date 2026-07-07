@@ -2,7 +2,7 @@
 
 import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { timelineEvents } from '@/lib/data/projects';
+import { timelineEvents } from '@/lib/data';
 
 function TimelineItem({
   event,
