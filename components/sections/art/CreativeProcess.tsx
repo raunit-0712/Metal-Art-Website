@@ -23,7 +23,7 @@ const steps = [
   {
     icon: Image,
     title: 'Final Artwork',
-    description: 'The completed piece emerges — a unique creation ready to inspire and captivate for generations.',
+    description: 'The completed piece emerges - a unique creation ready to inspire and captivate for generations.',
   },
 ];
 

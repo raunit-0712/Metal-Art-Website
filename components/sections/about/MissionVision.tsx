@@ -43,7 +43,7 @@ export function MissionVision() {
               </h2>
               <p className="text-white/70 leading-relaxed mb-4">
                 To be the world&apos;s premier destination where architectural
-                engineering and fine art converge — a place where visionaries
+                engineering and fine art converge - a place where visionaries
                 come to realize their most ambitious creative dreams.
               </p>
               <p className="text-white/70 leading-relaxed">

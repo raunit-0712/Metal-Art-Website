@@ -63,12 +63,12 @@ export function CTASection() {
                 <span className="text-sm">+1 (555) 123-4567</span>
               </a>
               <a
-                href="mailto:hello@artisanmetalarts.com"
+                href="mailto:hello@Aakriti Ateliermetalarts.com"
                 className="flex items-center gap-2 text-white/60 hover:text-brand-secondary transition-colors"
               >
                 <Mail size={18} />
                 <span className="text-sm hidden sm:inline">
-                  hello@artisanmetalarts.com
+                  hello@Aakriti Ateliermetalarts.com
                 </span>
               </a>
             </div>

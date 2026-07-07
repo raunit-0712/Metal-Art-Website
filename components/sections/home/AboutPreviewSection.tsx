@@ -51,7 +51,7 @@ export function AboutPreviewSection() {
             <SectionReveal delay={0.2}>
               <p className="text-brand-text/70 text-lg leading-relaxed mb-8">
                 Founded on the belief that engineering and art are not opposing
-                forces but complementary disciplines, Artisan Metal & Arts has
+                forces but complementary disciplines, Aakriti Atelier has
                 spent over a decade transforming spaces and creating lasting
                 impressions.
               </p>
@@ -62,7 +62,7 @@ export function AboutPreviewSection() {
                 From precision-engineered architectural metalwork to evocative
                 fine art pieces, our multidisciplinary approach ensures every
                 project receives the dedication and expertise it deserves. We
-                don&apos;t just build structures or create art — we craft
+                don&apos;t just build structures or create art - we craft
                 experiences that inspire.
               </p>
             </SectionReveal>

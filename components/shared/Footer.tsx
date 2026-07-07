@@ -1,7 +1,16 @@
 'use client';
 
+import Image from 'next/image';
 import Link from 'next/link';
-import { MapPin, Phone, Mail, Clock, Instagram, Facebook, Linkedin } from 'lucide-react';
+import {
+  MapPin,
+  Phone,
+  Mail,
+  Clock,
+  Instagram,
+  Facebook,
+  Linkedin,
+} from 'lucide-react';
 
 export function Footer() {
   return (
@@ -10,15 +19,23 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-            <h3 className="font-playfair text-2xl mb-4">Artisan</h3>
-            <p className="text-brand-secondary text-sm tracking-wider uppercase mb-4">
-              Metal & Arts
-            </p>
-            <p className="text-white/60 text-sm leading-relaxed">
-              Where engineering meets art. Crafting architectural metal
-              masterpieces and timeless artistic creations since 2014.
-            </p>
-          </div>
+          <Link href="/" className="inline-block mb-4">
+            <Image
+              src="/images/logo.png"
+              alt="Aakriti Atelier"
+              width={220}
+              height={80}
+              priority
+              className="h-16 w-auto object-contain"
+            />
+          </Link>
+
+          <p className="text-white/60 text-sm leading-relaxed mt-4">
+            Aakriti Atelier specializes in premium architectural steel
+            fabrication, custom metal works, railings, staircases,
+            pergolas, gates and handcrafted artistic creations.
+          </p>
+        </div>
 
           {/* Quick Links */}
           <div>
@@ -79,7 +96,7 @@ export function Footer() {
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-brand-secondary shrink-0" />
                 <span className="text-white/60 text-sm">
-                  hello@artisanmetalarts.com
+                  support@aakritiatelier.in
                 </span>
               </li>
               <li className="flex items-center gap-3">
@@ -95,7 +112,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4">
           <p className="text-white/40 text-sm">
-            &copy; {new Date().getFullYear()} Artisan Metal & Arts. All rights
+            &copy; {new Date().getFullYear()} Aakriti Atelier . All rights
             reserved.
           </p>
 

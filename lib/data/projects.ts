@@ -300,7 +300,7 @@ export const testimonials: Testimonial[] = [
     role: 'Interior Designer',
     company: 'Mitchell Design Studio',
     content:
-      'Working with Artisan Metal & Arts was an absolute pleasure. Their attention to detail and craftsmanship transformed our client\'s vision into a stunning reality. The helical staircase they created is now the centerpiece of the entire home.',
+      'Working with Aakriti Atelier was an absolute pleasure. Their attention to detail and craftsmanship transformed our client\'s vision into a stunning reality. The helical staircase they created is now the centerpiece of the entire home.',
     rating: 5,
     category: 'steel',
   },
@@ -320,7 +320,7 @@ export const testimonials: Testimonial[] = [
     role: 'Property Developer',
     company: 'Chen Development Group',
     content:
-      'We\'ve partnered with Artisan Metal & Arts on multiple luxury residential projects. Their metalwork consistently elevates our properties to the next level. Exceptional quality and service.',
+      'We\'ve partnered with Aakriti Atelier on multiple luxury residential projects. Their metalwork consistently elevates our properties to the next level. Exceptional quality and service.',
     rating: 5,
     category: 'steel',
   },
@@ -330,7 +330,7 @@ export const testimonials: Testimonial[] = [
     role: 'Art Collector',
     company: 'Private Collector',
     content:
-      'I\'ve collected art for over 20 years, and the pieces from Artisan Metal & Arts are among the finest in my collection. Their unique blend of technical skill and artistic vision is truly rare.',
+      'I\'ve collected art for over 20 years, and the pieces from Aakriti Atelier are among the finest in my collection. Their unique blend of technical skill and artistic vision is truly rare.',
     rating: 5,
     category: 'art',
   },
@@ -340,7 +340,7 @@ export const testimonials: Testimonial[] = [
     role: 'Architect',
     company: 'Park Architecture',
     content:
-      'As an architect, I demand precision and creativity. Artisan Metal & Arts delivers both flawlessly. Their custom fabrication work is architectural poetry in metal.',
+      'As an architect, I demand precision and creativity. Aakriti Atelier delivers both flawlessly. Their custom fabrication work is architectural poetry in metal.',
     rating: 5,
     category: 'steel',
   },
@@ -351,7 +351,7 @@ export const teamMembers: TeamMember[] = [
     id: 'team1',
     name: 'Alexander Wright',
     role: 'Founder & Master Craftsman',
-    bio: 'With over 20 years of experience in metal fabrication and fine arts, Alexander founded Artisan Metal & Arts to bridge the gap between engineering precision and artistic expression.',
+    bio: 'With over 20 years of experience in metal fabrication and fine arts, Alexander founded Aakriti Atelier to bridge the gap between engineering precision and artistic expression.',
     image: 'https://images.pexels.com/photos/2379004/pexels-photo-2379004.jpeg?auto=compress&cs=tinysrgb&w=400&h=400&dpr=2',
     social: {
       linkedin: '#',
@@ -497,7 +497,7 @@ export const timelineEvents: TimelineEvent[] = [
     year: '2014',
     title: 'The Beginning',
     description:
-      'Artisan Metal & Arts was founded with a vision to combine engineering excellence with artistic creativity.',
+      'Aakriti Atelier was founded with a vision to combine engineering excellence with artistic creativity.',
   },
   {
     year: '2016',

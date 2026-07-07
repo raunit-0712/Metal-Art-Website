@@ -22,8 +22,8 @@ const contactMethods = [
   {
     icon: Mail,
     label: 'Email Us',
-    value: 'hello@artisanmetalarts.com',
-    href: 'mailto:hello@artisanmetalarts.com',
+    value: 'hello@Aakriti Ateliermetalarts.com',
+    href: 'mailto:hello@Aakriti Ateliermetalarts.com',
     color: 'bg-brand-secondary',
   },
 ];

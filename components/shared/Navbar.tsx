@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
+import Image from "next/image";
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -47,15 +48,27 @@ export function Navbar() {
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center gap-2">
+            {/* logo */}
+            {/* <Link href="/" className="flex items-center gap-2">
               <span className="font-playfair text-2xl text-white">
-                Artisan
+                Aakriti Atelier
               </span>
               <span className="hidden sm:inline text-brand-secondary text-xs tracking-wider uppercase">
-                Metal & Arts
+                Shaping Ideas into Reality
               </span>
-            </Link>
+            </Link> */}
+            <Link href="/" className="flex items-center">
+            <Image
+              src="/images/logo.png"
+              alt="Aakriti Atelier"
+              width={220}
+              height={80}
+              priority
+              className="h-14 w-auto object-contain"
+            />
+          </Link>
+
+
 
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center gap-8">
