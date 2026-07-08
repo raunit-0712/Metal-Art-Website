@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
 import { steelFeatured } from '@/lib/data';
@@ -50,11 +51,14 @@ export function FeaturedSteelSection() {
                 whileHover={{ y: -10 }}
                 className="group relative overflow-hidden rounded-lg cursor-pointer"
               >
-                <div className="aspect-[4/5] overflow-hidden">
-                  <img
-                    src={project.images[0]}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                <div className="relative aspect-[4/5] overflow-hidden">
+                  <Image
+                    src={project.images[0].src}
+                    alt={project.images[0].alt || project.title}
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-110"
+                    loading="lazy"
                   />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-primary via-brand-primary/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />

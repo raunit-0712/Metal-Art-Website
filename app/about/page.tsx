@@ -18,9 +18,9 @@ export default function AboutPage() {
       <AboutHero />
       <MissionVision />
       <ValuesSection />
-      <TimelineSection />
-      <TeamSection />
-      <AchievementsSection />
+      {/* <TimelineSection /> */}
+      {/* <TeamSection /> */}
+      {/* <AchievementsSection /> */}
     </>
   );
 }

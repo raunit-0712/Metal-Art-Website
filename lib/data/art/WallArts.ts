@@ -10,8 +10,6 @@ export const wallArts: Artwork[] = [
     description: 'An abstract, heavily textured panel mimicking industrial weathered walls.',
     image: '/images/arts/wall-arts/001.jpeg',
     year: 2024,
-    price: '$3,200',
-    available: true,
     featured: true,
   },
   {
@@ -23,8 +21,6 @@ export const wallArts: Artwork[] = [
     description: 'The second piece in the wall texture series, displaying deep linear crack patterns.',
     image: '/images/arts/wall-arts/002.jpeg',
     year: 2024,
-    price: '$3,200',
-    available: true,
     featured: false,
   },
   {
@@ -36,8 +32,6 @@ export const wallArts: Artwork[] = [
     description: 'A minimalist relief structure exploring organic sand ridges and earth tones.',
     image: '/images/arts/wall-arts/003.jpeg',
     year: 2024,
-    price: '$2,100',
-    available: true,
     featured: false,
   },
   {
@@ -49,8 +43,6 @@ export const wallArts: Artwork[] = [
     description: 'A large-scale wall panel suggesting geological strata and environmental erosion.',
     image: '/images/arts/wall-arts/004.jpeg',
     year: 2024,
-    price: '$4,500',
-    available: true,
     featured: true,
   },
 ];

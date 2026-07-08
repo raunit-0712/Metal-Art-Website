@@ -10,8 +10,6 @@ export const logos: Artwork[] = [
     description: 'Corporate logo design combining sleek typography and abstract form.',
     image: '/images/arts/logos/000000.jpg',
     year: 2023,
-    price: '$450',
-    available: false,
     featured: false,
   },
   {
@@ -23,8 +21,6 @@ export const logos: Artwork[] = [
     description: 'A study in branding and corporate identity for a tech firm.',
     image: '/images/arts/logos/Screenshot 2026-07-03 225620.png',
     year: 2023,
-    price: '$400',
-    available: false,
     featured: false,
   },
   {
@@ -36,8 +32,6 @@ export const logos: Artwork[] = [
     description: 'Modern geometric corporate identity design featuring blue accents.',
     image: '/images/arts/logos/Screenshot 2026-07-03 225813.png',
     year: 2023,
-    price: '$400',
-    available: false,
     featured: false,
   },
   {
@@ -49,8 +43,6 @@ export const logos: Artwork[] = [
     description: 'A unique conceptual logo for a creative agency and design studio.',
     image: '/images/arts/logos/Screenshot 2026-07-03 225919.png',
     year: 2023,
-    price: '$500',
-    available: false,
     featured: false,
   },
   {
@@ -62,8 +54,6 @@ export const logos: Artwork[] = [
     description: 'Sleek monogram concept utilizing overlapping letterforms.',
     image: '/images/arts/logos/Screenshot 2026-07-03 225931.png',
     year: 2023,
-    price: '$350',
-    available: false,
     featured: false,
   },
   {
@@ -75,8 +65,6 @@ export const logos: Artwork[] = [
     description: 'Branding mark with shield shape and dynamic stripes.',
     image: '/images/arts/logos/Screenshot 2026-07-03 230301.png',
     year: 2023,
-    price: '$420',
-    available: false,
     featured: false,
   },
   {
@@ -88,8 +76,6 @@ export const logos: Artwork[] = [
     description: 'Corporate logo concept using the infinity loop motif.',
     image: '/images/arts/logos/Screenshot 2026-07-03 230329.png',
     year: 2024,
-    price: '$480',
-    available: false,
     featured: false,
   },
   {
@@ -101,8 +87,6 @@ export const logos: Artwork[] = [
     description: 'Branding concept featuring a line art hexagon symbol.',
     image: '/images/arts/logos/Screenshot 2026-07-03 230532.png',
     year: 2024,
-    price: '$380',
-    available: false,
     featured: false,
   },
   {
@@ -114,8 +98,6 @@ export const logos: Artwork[] = [
     description: 'Modern astronomical and technology sector branding design.',
     image: '/images/arts/logos/Screenshot 2026-07-03 231026.png',
     year: 2024,
-    price: '$450',
-    available: false,
     featured: false,
   },
   {
@@ -127,8 +109,6 @@ export const logos: Artwork[] = [
     description: 'Adventure and outdoor lifestyle brand identity concept.',
     image: '/images/arts/logos/Screenshot 2026-07-03 231106.png',
     year: 2024,
-    price: '$400',
-    available: false,
     featured: false,
   },
   {
@@ -140,8 +120,6 @@ export const logos: Artwork[] = [
     description: 'Organic leaf brand concept for clean energy or agriculture.',
     image: '/images/arts/logos/Screenshot 2026-07-04 230213.png',
     year: 2024,
-    price: '$500',
-    available: false,
     featured: true,
   },
   {
@@ -153,8 +131,6 @@ export const logos: Artwork[] = [
     description: 'Marine, ocean, or water filtration company logo.',
     image: '/images/arts/logos/aqua11.jpg',
     year: 2023,
-    price: '$380',
-    available: false,
     featured: false,
   },
   {
@@ -166,8 +142,6 @@ export const logos: Artwork[] = [
     description: 'Calligraphy-inspired traditional yet modern Indian identity design.',
     image: '/images/arts/logos/dhyas (2).jpg',
     year: 2024,
-    price: '$600',
-    available: false,
     featured: true,
   },
   {
@@ -179,8 +153,6 @@ export const logos: Artwork[] = [
     description: 'Hand-drawn aesthetics translated into a modern vector badge.',
     image: '/images/arts/logos/drawing.png',
     year: 2023,
-    price: '$350',
-    available: false,
     featured: false,
   },
   {
@@ -192,8 +164,6 @@ export const logos: Artwork[] = [
     description: 'Custom script lettering branding design for a client project.',
     image: '/images/arts/logos/rashmi.jpg',
     year: 2024,
-    price: '$550',
-    available: false,
     featured: false,
   },
   {
@@ -205,8 +175,6 @@ export const logos: Artwork[] = [
     description: 'Sleek premium brandmark and typography for the Ventus corporate project.',
     image: '/images/arts/logos/ventuslogo.jpg',
     year: 2024,
-    price: '$750',
-    available: false,
     featured: true,
   },
 ];

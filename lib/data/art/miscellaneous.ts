@@ -10,8 +10,6 @@ export const miscellaneous: Artwork[] = [
     description: 'A delicate organic design study focusing on petals and shadows.',
     image: '/images/arts/miscellaneous/000044.png',
     year: 2023,
-    price: '$550',
-    available: true,
     featured: false,
   },
   {
@@ -23,8 +21,6 @@ export const miscellaneous: Artwork[] = [
     description: 'A study of light reflections on geometric metallic structures.',
     image: '/images/arts/miscellaneous/00017.JPG',
     year: 2023,
-    price: '$750',
-    available: true,
     featured: false,
   },
   {
@@ -36,8 +32,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Flowing natural linework representing environmental flow.',
     image: '/images/arts/miscellaneous/00019.jpeg',
     year: 2023,
-    price: '$450',
-    available: true,
     featured: false,
   },
   {
@@ -49,8 +43,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Exploring texture gradients through various pencil hardness ratings.',
     image: '/images/arts/miscellaneous/00024.jpeg',
     year: 2023,
-    price: '$500',
-    available: true,
     featured: false,
   },
   {
@@ -62,8 +54,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Representing folds, weight, and light interaction on linen fabric.',
     image: '/images/arts/miscellaneous/00026.jpeg',
     year: 2023,
-    price: '$650',
-    available: true,
     featured: false,
   },
   {
@@ -75,8 +65,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Investigating high contrast shadows cast by everyday objects.',
     image: '/images/arts/miscellaneous/00027.jpeg',
     year: 2023,
-    price: '$580',
-    available: true,
     featured: false,
   },
   {
@@ -88,8 +76,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Perfect gradient spherical rendering and cast shadow study.',
     image: '/images/arts/miscellaneous/00029.jpeg',
     year: 2023,
-    price: '$600',
-    available: true,
     featured: false,
   },
   {
@@ -101,8 +87,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Traditional still life drawing featuring glassware and bottles.',
     image: '/images/arts/miscellaneous/00030.jpg',
     year: 2024,
-    price: '$850',
-    available: true,
     featured: true,
   },
   {
@@ -114,8 +98,6 @@ export const miscellaneous: Artwork[] = [
     description: 'An abstract sketch visualizing urban connectivity.',
     image: '/images/arts/miscellaneous/00031.jpg',
     year: 2024,
-    price: '$700',
-    available: true,
     featured: false,
   },
   {
@@ -127,8 +109,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Stylized logo concept artwork created for the studio.',
     image: '/images/arts/miscellaneous/Aakriti Atelier logo.png',
     year: 2024,
-    price: '$450',
-    available: false,
     featured: false,
   },
   {
@@ -140,8 +120,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Corporate graphic design conceptual emblem.',
     image: '/images/arts/miscellaneous/Asset 2.png',
     year: 2023,
-    price: '$300',
-    available: false,
     featured: false,
   },
   {
@@ -153,8 +131,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Bespoke design drafts for client-commissioned metal work.',
     image: '/images/arts/miscellaneous/IMG_3846.JPG',
     year: 2024,
-    price: '$480',
-    available: true,
     featured: false,
   },
   {
@@ -166,8 +142,6 @@ export const miscellaneous: Artwork[] = [
     description: 'A design proposal for custom decorative steel panels.',
     image: '/images/arts/miscellaneous/IMG_3847.JPG',
     year: 2024,
-    price: '$480',
-    available: true,
     featured: false,
   },
   {
@@ -179,8 +153,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Initial structural ideas for metal staircase balustrades.',
     image: '/images/arts/miscellaneous/IMG_3872.JPG',
     year: 2024,
-    price: '$950',
-    available: true,
     featured: false,
   },
   {
@@ -192,8 +164,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Detailed profile drawings for custom structural metal railings.',
     image: '/images/arts/miscellaneous/IMG_3873.JPG',
     year: 2024,
-    price: '$950',
-    available: true,
     featured: false,
   },
   {
@@ -205,8 +175,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Concept drawing for laser-cut wall dividers and screens.',
     image: '/images/arts/miscellaneous/IMG_3874.JPG',
     year: 2024,
-    price: '$800',
-    available: true,
     featured: false,
   },
   {
@@ -218,8 +186,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Classical design for a wrought-iron driveway gate.',
     image: '/images/arts/miscellaneous/IMG_3875.JPG',
     year: 2024,
-    price: '$1,100',
-    available: true,
     featured: false,
   },
   {
@@ -231,8 +197,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Technical draft detailing welded steel connections.',
     image: '/images/arts/miscellaneous/IMG_3876.JPG',
     year: 2024,
-    price: '$950',
-    available: true,
     featured: false,
   },
   {
@@ -244,8 +208,6 @@ export const miscellaneous: Artwork[] = [
     description: 'Pencil drawing study depicting the divine union of Radha and Krishna.',
     image: '/images/arts/miscellaneous/Radha Krishna.JPG',
     year: 2024,
-    price: '$1,200',
-    available: true,
     featured: true,
   },
   {
@@ -257,8 +219,6 @@ export const miscellaneous: Artwork[] = [
     description: 'An abstract artwork depicting electrical circuitry flow.',
     image: '/images/arts/miscellaneous/circuit.png',
     year: 2023,
-    price: '$500',
-    available: true,
     featured: false,
   },
   {
@@ -270,8 +230,6 @@ export const miscellaneous: Artwork[] = [
     description: 'A study combining physical textures with digital color blending.',
     image: '/images/arts/miscellaneous/image_c47ce748.png',
     year: 2023,
-    price: '$850',
-    available: true,
     featured: false,
   },
   {
@@ -283,8 +241,6 @@ export const miscellaneous: Artwork[] = [
     description: 'An extensive facial feature study on archival paper.',
     image: '/images/arts/miscellaneous/manorama.JPG',
     year: 2024,
-    price: '$1,600',
-    available: true,
     featured: true,
   },
   {
@@ -296,8 +252,6 @@ export const miscellaneous: Artwork[] = [
     description: 'An abstract exploration of form, contrast, and balance.',
     image: '/images/arts/miscellaneous/untitled_by_mnorma_d3gqkmz.jpg',
     year: 2023,
-    price: '$900',
-    available: true,
     featured: false,
   },
 ];

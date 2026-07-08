@@ -175,30 +175,16 @@ export function ArtGallery() {
                     <span className="text-white/40">Year:</span>{' '}
                     {selected.year}
                   </p>
-                  {selected.price && (
-                    <p>
-                      <span className="text-white/40">Price:</span>{' '}
-                      {selected.price}
-                    </p>
-                  )}
-                  <p>
-                    <span className="text-white/40">Status:</span>{' '}
-                    <span className={selected.available ? 'text-green-400' : 'text-red-400'}>
-                      {selected.available ? 'Available' : 'Sold'}
-                    </span>
-                  </p>
                 </div>
                 <p className="text-white/60 leading-relaxed mb-8">
                   {selected.description}
                 </p>
-                {selected.available && (
-                  <a
-                    href="/contact"
-                    className="inline-block px-6 py-3 bg-brand-secondary text-white rounded hover:bg-brand-accent transition-colors"
-                  >
-                    Inquire About This Piece
-                  </a>
-                )}
+                <a
+                  href="/contact"
+                  className="inline-block px-6 py-3 bg-brand-secondary text-white rounded hover:bg-brand-accent transition-colors"
+                >
+                  Inquire About This Artwork
+                </a>
               </div>
             </motion.div>
           </motion.div>

@@ -1,3 +1,9 @@
+export interface ProjectImage {
+  src: string;
+  alt: string;
+  caption: string;
+}
+
 export interface Project {
   id: string;
   title: string;
@@ -8,11 +14,21 @@ export interface Project {
   medium?: string;
   size?: string;
   completionDate?: string;
-  images: string[];
+  images: string[] | ProjectImage[];
   featured: boolean;
   tags: string[];
   client?: string;
   location?: string;
+  // Enhanced storytelling & metadata
+  overview?: string;
+  challenge?: string;
+  solution?: string;
+  result?: string;
+  scopeOfWork?: string[];
+  servicesPerformed?: string[];
+  finishType?: string;
+  sector?: string;
+  year?: string;
 }
 
 export interface Artwork {
@@ -24,8 +40,6 @@ export interface Artwork {
   description: string;
   image: string;
   year: number;
-  price?: string;
-  available: boolean;
   featured: boolean;
 }
 

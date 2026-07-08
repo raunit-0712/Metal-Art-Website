@@ -31,7 +31,7 @@ export function HeroSection() {
           className="absolute inset-0 bg-cover bg-center bg-no-repeat"
           style={{
             backgroundImage:
-              'url(https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2)',
+              'url(images/gallery/hero.avif)',
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/70 via-brand-primary/50 to-brand-primary/90" />
@@ -53,7 +53,7 @@ export function HeroSection() {
             transition={{ delay: 0.5 }}
             className="text-brand-secondary text-sm md:text-base tracking-[0.4em] uppercase mb-6"
           >
-            Where Engineering Meets Art
+            Precision in Metal. Creativity in Art
           </motion.p>
 
           {/* Main Title */}

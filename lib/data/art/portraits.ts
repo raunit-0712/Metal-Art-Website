@@ -10,8 +10,6 @@ export const portraits: Artwork[] = [
     description: 'A study in pencil focusing on facial structure and delicate highlights.',
     image: '/images/arts/portraits/000039.png',
     year: 2023,
-    price: '$950',
-    available: true,
     featured: false,
   },
   {
@@ -23,8 +21,6 @@ export const portraits: Artwork[] = [
     description: 'Exploring values and depth with soft charcoal transitions.',
     image: '/images/arts/portraits/00010.png',
     year: 2023,
-    price: '$1,100',
-    available: true,
     featured: false,
   },
   {
@@ -36,8 +32,6 @@ export const portraits: Artwork[] = [
     description: 'Capturing dynamic facial movements and micro-expressions with quick sketch lines.',
     image: '/images/arts/portraits/00012.png',
     year: 2023,
-    price: '$800',
-    available: true,
     featured: false,
   },
   {
@@ -49,8 +43,6 @@ export const portraits: Artwork[] = [
     description: 'A structured head study focusing on planar changes of the face.',
     image: '/images/arts/portraits/00013.png',
     year: 2023,
-    price: '$900',
-    available: true,
     featured: false,
   },
   {
@@ -62,8 +54,6 @@ export const portraits: Artwork[] = [
     description: 'Combining charcoal and graphite to achieve high contrast and rich textures.',
     image: '/images/arts/portraits/00021.jpeg',
     year: 2024,
-    price: '$1,200',
-    available: true,
     featured: true,
   },
   {
@@ -75,8 +65,6 @@ export const portraits: Artwork[] = [
     description: 'A minimalist approach capturing human emotions with minimal linework.',
     image: '/images/arts/portraits/00031.png',
     year: 2023,
-    price: '$750',
-    available: true,
     featured: false,
   },
   {
@@ -88,8 +76,6 @@ export const portraits: Artwork[] = [
     description: 'A detailed representation focusing on hyperrealistic textures and expressions.',
     image: '/images/arts/portraits/000320.jpeg',
     year: 2024,
-    price: '$1,800',
-    available: false,
     featured: false,
   },
   {
@@ -101,8 +87,6 @@ export const portraits: Artwork[] = [
     description: 'Focusing on the subtle variations around the eyes and mouth.',
     image: '/images/arts/portraits/00033.png',
     year: 2023,
-    price: '$850',
-    available: true,
     featured: false,
   },
   {
@@ -114,8 +98,6 @@ export const portraits: Artwork[] = [
     description: 'Emphasizing the dramatic interplay between light and dark values.',
     image: '/images/arts/portraits/00036.png',
     year: 2024,
-    price: '$1,300',
-    available: true,
     featured: true,
   },
   {
@@ -127,8 +109,6 @@ export const portraits: Artwork[] = [
     description: 'A precise anatomical study of the human head in profile view.',
     image: '/images/arts/portraits/00038(1).png',
     year: 2023,
-    price: '$700',
-    available: true,
     featured: false,
   },
   {
@@ -140,8 +120,6 @@ export const portraits: Artwork[] = [
     description: 'A classical drawing exploring the geometry and proportions of the face.',
     image: '/images/arts/portraits/00038.png',
     year: 2023,
-    price: '$920',
-    available: true,
     featured: false,
   },
   {
@@ -153,8 +131,6 @@ export const portraits: Artwork[] = [
     description: 'A soft-focus approach to render realistic skin textures under natural lighting.',
     image: '/images/arts/portraits/00041.png',
     year: 2024,
-    price: '$1,400',
-    available: true,
     featured: false,
   },
   {
@@ -166,8 +142,6 @@ export const portraits: Artwork[] = [
     description: 'A quick sketch to capture transient emotions and character details.',
     image: '/images/arts/portraits/0005.jpg',
     year: 2023,
-    price: '$500',
-    available: true,
     featured: false,
   },
   {
@@ -179,8 +153,6 @@ export const portraits: Artwork[] = [
     description: 'A bold study utilizing intense dark tones to bring the subject forward.',
     image: '/images/arts/portraits/0037.png',
     year: 2024,
-    price: '$1,650',
-    available: true,
     featured: false,
   },
   {
@@ -192,8 +164,6 @@ export const portraits: Artwork[] = [
     description: 'A study based on classic photography focusing on depth and contrast.',
     image: '/images/arts/portraits/1506915_653705644691654_1990609488_n.jpg',
     year: 2023,
-    price: '$880',
-    available: true,
     featured: false,
   },
   {
@@ -205,8 +175,6 @@ export const portraits: Artwork[] = [
     description: 'An intense gaze study focusing on micro-shading around the eyes.',
     image: '/images/arts/portraits/IMG_20160119_180552043.JPG',
     year: 2023,
-    price: '$1,150',
-    available: true,
     featured: false,
   },
   {
@@ -218,8 +186,6 @@ export const portraits: Artwork[] = [
     description: 'Investigating strong side-lighting on facial features and shadows.',
     image: '/images/arts/portraits/IMG_20160727_221512999.JPG',
     year: 2023,
-    price: '$900',
-    available: true,
     featured: false,
   },
   {
@@ -231,8 +197,6 @@ export const portraits: Artwork[] = [
     description: 'Part of an ongoing series exploring emotion through deep charcoal shading.',
     image: '/images/arts/portraits/IMG_20160729_175742490.JPG',
     year: 2024,
-    price: '$1,750',
-    available: true,
     featured: false,
   },
   {
@@ -244,8 +208,6 @@ export const portraits: Artwork[] = [
     description: 'Meticulous tonal gradations defining the curves and form of the face.',
     image: '/images/arts/portraits/IMG_20171119_134420752.JPG',
     year: 2023,
-    price: '$1,050',
-    available: true,
     featured: false,
   },
   {
@@ -257,8 +219,6 @@ export const portraits: Artwork[] = [
     description: 'Bold charcoal strokes detailing features under ambient studio lighting.',
     image: '/images/arts/portraits/IMG_20171124_195859209.JPG',
     year: 2024,
-    price: '$1,350',
-    available: true,
     featured: false,
   },
   {
@@ -270,8 +230,6 @@ export const portraits: Artwork[] = [
     description: 'Capturing innocence and youthful traits with soft pencil shading.',
     image: '/images/arts/portraits/IMG_20221105_205940_227.jpg',
     year: 2024,
-    price: '$980',
-    available: true,
     featured: false,
   },
   {
@@ -283,8 +241,6 @@ export const portraits: Artwork[] = [
     description: 'A custom-commissioned fine portrait capturing a soulful expression and texture.',
     image: '/images/arts/portraits/chester_by_mnorma_d.jpg',
     year: 2024,
-    price: '$1,900',
-    available: false,
     featured: true,
   },
   {
@@ -296,8 +252,6 @@ export const portraits: Artwork[] = [
     description: 'A delicate portrait capturing the essence of human emotion through subtle shading.',
     image: '/images/arts/portraits/dddDSCF3498.JPG',
     year: 2024,
-    price: '$2,500',
-    available: true,
     featured: true,
   },
   {
@@ -309,8 +263,6 @@ export const portraits: Artwork[] = [
     description: 'A realistic celebrity sketch emphasizing texture and lighting highlights.',
     image: '/images/arts/portraits/halle0berry copy.jpg',
     year: 2023,
-    price: '$1,250',
-    available: true,
     featured: false,
   },
   {
@@ -322,8 +274,6 @@ export const portraits: Artwork[] = [
     description: 'A stylized portrait representation featuring classic pencil techniques.',
     image: '/images/arts/portraits/jbj.jpg',
     year: 2023,
-    price: '$1,000',
-    available: true,
     featured: false,
   },
   {
@@ -335,8 +285,6 @@ export const portraits: Artwork[] = [
     description: 'High-contrast detailed charcoal portrait focusing on hair and texture.',
     image: '/images/arts/portraits/mike_shinoda.jpg',
     year: 2024,
-    price: '$2,100',
-    available: true,
     featured: true,
   },
   {
@@ -348,8 +296,6 @@ export const portraits: Artwork[] = [
     description: 'A study capturing character expression and dynamic shading.',
     image: '/images/arts/portraits/severus_snape.jpg',
     year: 2023,
-    price: '$1,100',
-    available: true,
     featured: false,
   },
   {
@@ -361,8 +307,6 @@ export const portraits: Artwork[] = [
     description: 'Focused study of facial expressions and sharp structures.',
     image: '/images/arts/portraits/shinoda_11_.jpg',
     year: 2023,
-    price: '$750',
-    available: true,
     featured: false,
   },
   {
@@ -374,8 +318,6 @@ export const portraits: Artwork[] = [
     description: 'Rendered using charcoal shadows and white chalk highlights for three-dimensional pop.',
     image: '/images/arts/portraits/the_good_by_mnorma_d47yv4r.jpg',
     year: 2024,
-    price: '$1,500',
-    available: true,
     featured: false,
   },
 ];

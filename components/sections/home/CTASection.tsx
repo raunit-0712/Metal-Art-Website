@@ -54,21 +54,30 @@ export function CTASection() {
               </Link>
             </MagneticButton>
 
-            <div className="flex items-center gap-6">
+            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-6 sm:mt-0">
+              <div className="flex flex-wrap justify-center gap-4">
+                <a
+                  href="tel:+918080414471"
+                  className="flex items-center gap-2 text-white/60 hover:text-brand-secondary transition-colors"
+                >
+                  <Phone size={18} />
+                  <span className="text-sm">Steel: +91 80804 14471</span>
+                </a>
+                <a
+                  href="tel:+917388335687"
+                  className="flex items-center gap-2 text-white/60 hover:text-brand-secondary transition-colors"
+                >
+                  <Phone size={18} />
+                  <span className="text-sm">Arts: +91 73883 35687</span>
+                </a>
+              </div>
               <a
-                href="tel:+15551234567"
-                className="flex items-center gap-2 text-white/60 hover:text-brand-secondary transition-colors"
-              >
-                <Phone size={18} />
-                <span className="text-sm">+1 (555) 123-4567</span>
-              </a>
-              <a
-                href="mailto:hello@Aakriti Ateliermetalarts.com"
+                href="mailto:hello@aakritiatelier.in"
                 className="flex items-center gap-2 text-white/60 hover:text-brand-secondary transition-colors"
               >
                 <Mail size={18} />
-                <span className="text-sm hidden sm:inline">
-                  hello@Aakriti Ateliermetalarts.com
+                <span className="text-sm">
+                  hello@aakritiatelier.in
                 </span>
               </a>
             </div>

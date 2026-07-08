@@ -5,7 +5,7 @@ import { Inter, Playfair_Display } from 'next/font/google';
 import { Navbar } from '@/components/shared/Navbar';
 import { Footer } from '@/components/shared/Footer';
 import { CustomCursor } from '@/components/shared/CustomCursor';
-import { LoadingScreen } from '@/components/shared/LoadingScreen';
+// import { LoadingScreen } from '@/components/shared/LoadingScreen';
 import { SmoothScroll } from '@/components/shared/SmoothScroll';
 import WhatsAppButton from '@/components/shared/WhatsAppButton';
 
@@ -98,7 +98,7 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable}`}
     >
       <body className="font-sans bg-brand-background text-brand-text overflow-x-hidden">
-        <LoadingScreen />
+        {/* <LoadingScreen /> */}
         <CustomCursor />
         <SmoothScroll>
           <Navbar />

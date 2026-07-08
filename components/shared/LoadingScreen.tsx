@@ -8,7 +8,7 @@ export function LoadingScreen() {
   const [isLoading, setIsLoading] = useState(true);
   const [progress, setProgress] = useState(0);
 
-  useEffect(() => {
+  useEffect(() => { 
     setMounted(true);
 
     let current = 0;

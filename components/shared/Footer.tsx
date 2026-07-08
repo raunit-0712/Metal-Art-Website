@@ -19,15 +19,16 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div>
-          <Link href="/" className="inline-block mb-4">
-            <Image
-              src="/images/logo.png"
-              alt="Aakriti Atelier"
-              width={220}
-              height={80}
-              priority
-              className="h-16 w-auto object-contain"
-            />
+          <Link href="/" className="inline-block mb-6">
+            <div className="relative h-28 w-64">
+              <Image
+                src="/images/logo.webp"
+                alt="Aakriti Atelier"
+                fill
+                priority
+                className="object-contain object-left"
+              />
+            </div>
           </Link>
 
           <p className="text-white/60 text-sm leading-relaxed mt-4">
@@ -86,17 +87,27 @@ export function Footer() {
               <li className="flex items-start gap-3">
                 <MapPin size={18} className="text-brand-secondary mt-0.5 shrink-0" />
                 <span className="text-white/60 text-sm">
-                  123 Craftsmanship Lane, Design District, CA 90210
+                  N/502, Veena Dynasty<br />
+                  Evershine City, Last stop, Vasai (E)<br />
+                  Maharashtra Pin- 401209
+                </span>
+              </li> 
+              <li className="flex items-center gap-3">
+                <Phone size={18} className="text-brand-secondary shrink-0" />
+                <span className="text-white/60 text-sm">
+                  Steel: <a href="tel:+918080414471" className="hover:text-brand-secondary transition-colors">+91 80804 14471</a>
                 </span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={18} className="text-brand-secondary shrink-0" />
-                <span className="text-white/60 text-sm">+1 (555) 123-4567</span>
+                <span className="text-white/60 text-sm">
+                  Arts: <a href="tel:+917388335687" className="hover:text-brand-secondary transition-colors">+91 73883 35687</a>
+                </span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-brand-secondary shrink-0" />
                 <span className="text-white/60 text-sm">
-                  support@aakritiatelier.in
+                  <a href="mailto:hello@aakritiatelier.in" className="hover:text-brand-secondary transition-colors">hello@aakritiatelier.in</a>
                 </span>
               </li>
               <li className="flex items-center gap-3">

@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { Suspense } from 'react';
 import { ProjectsHero } from '@/components/sections/projects/ProjectsHero';
 import { ProjectsGrid } from '@/components/sections/projects/ProjectsGrid';
 
@@ -12,7 +13,9 @@ export default function ProjectsPage() {
   return (
     <>
       <ProjectsHero />
-      <ProjectsGrid />
+      <Suspense fallback={<div className="py-24 bg-brand-background text-center text-brand-text/50">Loading Projects...</div>}>
+        <ProjectsGrid />
+      </Suspense>
     </>
   );
 }

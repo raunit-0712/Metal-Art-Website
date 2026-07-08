@@ -1,9 +1,31 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 import { MessageCircle } from 'lucide-react';
+import { CONTACT } from '@/lib/config/contact';
 
 export default function WhatsAppButton() {
-  const phoneNumber = '919999999999'; // Replace with client's number
+  const pathname = usePathname();
+  const [activeDivision, setActiveDivision] = useState<'steel' | 'art'>('steel');
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const searchParams = new URLSearchParams(window.location.search);
+      const categoryParam = searchParams.get('category');
+
+      if (pathname?.startsWith('/art-gallery') || categoryParam === 'art') {
+        setActiveDivision('art');
+      } else if (pathname?.startsWith('/steel-works') || categoryParam === 'steel') {
+        setActiveDivision('steel');
+      } else {
+        setActiveDivision('steel');
+      }
+    }
+  }, [pathname]);
+
+  const currentContact = CONTACT[activeDivision];
+  const whatsappUrl = `https://wa.me/${currentContact.whatsapp}?text=${encodeURIComponent(currentContact.whatsappMessage)}`;
 
   return (
     <>
@@ -26,7 +48,7 @@ export default function WhatsAppButton() {
       `}</style>
 
       <a
-        href={`https://wa.me/${phoneNumber}?text=Hello,%20I%20am%20interested%20in%20your%20services.`}
+        href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
         className="

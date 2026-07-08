@@ -59,7 +59,7 @@ export function Navbar() {
             </Link> */}
             <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.png"
+              src="/images/logo.webp"
               alt="Aakriti Atelier"
               width={220}
               height={80}

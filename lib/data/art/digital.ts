@@ -10,8 +10,6 @@ export const digital: Artwork[] = [
     description: 'An abstract futuristic exploration of colors and shapes.',
     image: '/images/arts/digital/010.jpg',
     year: 2024,
-    price: '$850',
-    available: true,
     featured: true,
   },
   {
@@ -23,8 +21,6 @@ export const digital: Artwork[] = [
     description: 'A pop art tribute to the King of Rock and Roll.',
     image: '/images/arts/digital/Elvis1.png',
     year: 2023,
-    price: '$600',
-    available: true,
     featured: false,
   },
   {
@@ -36,8 +32,6 @@ export const digital: Artwork[] = [
     description: 'A vibrant and modern representation of spiritual connection.',
     image: '/images/arts/digital/Radha Krishna.png',
     year: 2024,
-    price: '$1,200',
-    available: true,
     featured: true,
   },
   {
@@ -49,8 +43,6 @@ export const digital: Artwork[] = [
     description: 'Deconstructing classic portrait features into colorful digital shapes.',
     image: '/images/arts/digital/dsdsd.jpg',
     year: 2023,
-    price: '$700',
-    available: true,
     featured: false,
   },
   {
@@ -62,8 +54,6 @@ export const digital: Artwork[] = [
     description: 'A secondary pop art study exploring contrasting duotone shadows.',
     image: '/images/arts/digital/elvis.png',
     year: 2023,
-    price: '$600',
-    available: true,
     featured: false,
   },
   {
@@ -75,8 +65,6 @@ export const digital: Artwork[] = [
     description: 'A clean isometric study focusing on architectural geometry and light.',
     image: '/images/arts/digital/isometric.png',
     year: 2024,
-    price: '$800',
-    available: true,
     featured: false,
   },
   {
@@ -88,8 +76,6 @@ export const digital: Artwork[] = [
     description: 'Digital representation simulating traditional oil brush strokes.',
     image: '/images/arts/digital/jbj.jpg',
     year: 2023,
-    price: '$500',
-    available: true,
     featured: false,
   },
 ];

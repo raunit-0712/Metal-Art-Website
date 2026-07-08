@@ -10,8 +10,6 @@ export const studentWorks: Artwork[] = [
     description: 'A student charcoal drawing focusing on basic shapes and shadows.',
     image: '/images/arts/student-works/0011.jpg',
     year: 2023,
-    price: '$350',
-    available: true,
     featured: false,
   },
   {
@@ -23,8 +21,6 @@ export const studentWorks: Artwork[] = [
     description: 'An elementary study detailing joints, shadows, and perspective of the hand.',
     image: '/images/arts/student-works/0012.jpg',
     year: 2023,
-    price: '$300',
-    available: true,
     featured: false,
   },
   {
@@ -36,8 +32,6 @@ export const studentWorks: Artwork[] = [
     description: 'A study of folds and lighting gradients on heavy drapery.',
     image: '/images/arts/student-works/0013.jpg',
     year: 2023,
-    price: '$350',
-    available: true,
     featured: false,
   },
   {
@@ -49,8 +43,6 @@ export const studentWorks: Artwork[] = [
     description: 'Rending a sphere under a direct light source to master values.',
     image: '/images/arts/student-works/0014.jpg',
     year: 2023,
-    price: '$250',
-    available: true,
     featured: false,
   },
   {
@@ -62,8 +54,6 @@ export const studentWorks: Artwork[] = [
     description: 'Studying transparency, highlights, and distortion on glass objects.',
     image: '/images/arts/student-works/0015.jpg',
     year: 2023,
-    price: '$400',
-    available: true,
     featured: false,
   },
   {
@@ -75,8 +65,6 @@ export const studentWorks: Artwork[] = [
     description: 'One-point perspective indoor study detailing parallel lines.',
     image: '/images/arts/student-works/0016.jpg',
     year: 2023,
-    price: '$380',
-    available: true,
     featured: false,
   },
   {
@@ -88,8 +76,6 @@ export const studentWorks: Artwork[] = [
     description: 'Drawing from a plaster head cast to understand three-dimensional form.',
     image: '/images/arts/student-works/0017.jpg',
     year: 2023,
-    price: '$500',
-    available: true,
     featured: true,
   },
   {
@@ -101,8 +87,6 @@ export const studentWorks: Artwork[] = [
     description: 'Landscape composition sketching detailing trees and terrain.',
     image: '/images/arts/student-works/WhatsApp Image 2025-06-18 at 17.23.57_8684abb8.jpg',
     year: 2024,
-    price: '$420',
-    available: true,
     featured: false,
   },
   {
@@ -114,8 +98,6 @@ export const studentWorks: Artwork[] = [
     description: 'Group arrangement of geometric objects and shadows study.',
     image: '/images/arts/student-works/WhatsApp Image 2025-06-18 at 17.23.57_b9dbac2c.jpg',
     year: 2024,
-    price: '$480',
-    available: true,
     featured: true,
   },
   {
@@ -127,8 +109,6 @@ export const studentWorks: Artwork[] = [
     description: 'A study sketching classical torso sculpture details.',
     image: '/images/arts/student-works/WhatsApp Image 2025-06-18 at 17.23.58_5ce6fabd.jpg',
     year: 2024,
-    price: '$450',
-    available: true,
     featured: false,
   },
   {
@@ -140,8 +120,6 @@ export const studentWorks: Artwork[] = [
     description: 'Exploring texture differences: metal, wood, rock, and fabric.',
     image: '/images/arts/student-works/WhatsApp Image 2025-06-18 at 17.23.58_f97c665d.jpg',
     year: 2024,
-    price: '$600',
-    available: true,
     featured: true,
   },
 ];

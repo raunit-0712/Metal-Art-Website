@@ -131,24 +131,16 @@ export function FeaturedArtSection() {
                     <span className="text-white/40">Year:</span>{' '}
                     {selectedArt.year}
                   </p>
-                  {selectedArt.price && (
-                    <p>
-                      <span className="text-white/40">Price:</span>{' '}
-                      {selectedArt.price}
-                    </p>
-                  )}
                 </div>
                 <p className="mt-6 text-white/60 leading-relaxed">
                   {selectedArt.description}
                 </p>
-                {selectedArt.available && (
-                  <Link
-                    href="/contact"
-                    className="inline-block mt-8 px-6 py-3 bg-brand-secondary text-white rounded hover:bg-brand-accent transition-colors"
-                  >
-                    Inquire About This Piece
-                  </Link>
-                )}
+                <Link
+                  href="/contact"
+                  className="inline-block mt-8 px-6 py-3 bg-brand-secondary text-white rounded hover:bg-brand-accent transition-colors"
+                >
+                  Inquire About This Artwork
+                </Link>
               </div>
             </motion.div>
           </motion.div>

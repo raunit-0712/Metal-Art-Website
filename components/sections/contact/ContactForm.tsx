@@ -102,7 +102,7 @@ export function ContactForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-200 focus:border-brand-secondary focus:ring-1 focus:ring-brand-secondary outline-none transition-colors bg-white"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 00000000000"
                   />
                 </div>
               </div>

@@ -13,7 +13,6 @@ export function CommissionForm() {
     phone: '',
     artType: '',
     size: '',
-    budget: '',
     referenceImages: '',
     description: '',
   });
@@ -107,7 +106,7 @@ export function CommissionForm() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-secondary focus:ring-1 focus:ring-brand-secondary outline-none transition-colors bg-brand-background"
-                    placeholder="+1 (555) 000-0000"
+                    placeholder="+91 0000000000"
                   />
                 </div>
                 <div>
@@ -132,7 +131,7 @@ export function CommissionForm() {
                 </div>
               </div>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="grid grid-cols-1 gap-6">
                 <div>
                   <label className="block text-sm font-medium text-brand-text mb-2">
                     Preferred Size
@@ -148,23 +147,6 @@ export function CommissionForm() {
                     <option value="medium">Medium (up to 24x36&quot;)</option>
                     <option value="large">Large (up to 36x48&quot;)</option>
                     <option value="custom">Custom Size</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-brand-text mb-2">
-                    Budget Range
-                  </label>
-                  <select
-                    name="budget"
-                    value={formData.budget}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-secondary focus:ring-1 focus:ring-brand-secondary outline-none transition-colors bg-brand-background"
-                  >
-                    <option value="">Select budget</option>
-                    <option value="500-1000">$500 - $1,000</option>
-                    <option value="1000-2500">$1,000 - $2,500</option>
-                    <option value="2500-5000">$2,500 - $5,000</option>
-                    <option value="5000+">$5,000+</option>
                   </select>
                 </div>
               </div>

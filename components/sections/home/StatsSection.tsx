@@ -5,13 +5,13 @@ import { AnimatedCounter } from '@/components/shared/AnimatedCounter';
 
 const stats = [
   {
-    value: 150,
+    value: 100,
     suffix: '+',
     label: 'Projects Completed',
     description: 'Across residential, commercial, and public spaces',
   },
   {
-    value: 50,
+    value:25,
     suffix: '+',
     label: 'Happy Clients',
     description: 'Satisfied customers worldwide',
@@ -23,7 +23,7 @@ const stats = [
     description: 'Crafting excellence since 2014',
   },
   {
-    value: 25,
+    value: 5,
     suffix: '+',
     label: 'Awards Won',
     description: 'Recognition for design excellence',
