@@ -52,6 +52,7 @@ export interface Testimonial {
   rating: number;
   image?: string;
   category: 'steel' | 'art';
+  location?: string;
 }
 
 export interface TeamMember {
