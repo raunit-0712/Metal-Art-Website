@@ -1,13 +1,14 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Playfair_Display } from 'next/font/google';
+import dynamic from 'next/dynamic';
 
 import { Navbar } from '@/components/shared/Navbar';
 import { Footer } from '@/components/shared/Footer';
-import { CustomCursor } from '@/components/shared/CustomCursor';
-// import { LoadingScreen } from '@/components/shared/LoadingScreen';
-import { SmoothScroll } from '@/components/shared/SmoothScroll';
-import WhatsAppButton from '@/components/shared/WhatsAppButton';
+
+const CustomCursor = dynamic(() => import('@/components/shared/CustomCursor'), { ssr: false });
+const SmoothScroll = dynamic(() => import('@/components/shared/SmoothScroll'), { ssr: false });
+const WhatsAppButton = dynamic(() => import('@/components/shared/WhatsAppButton'), { ssr: false });
 
 const inter = Inter({
   subsets: ['latin'],

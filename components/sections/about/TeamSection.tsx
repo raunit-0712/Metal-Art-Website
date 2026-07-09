@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Linkedin, Instagram } from 'lucide-react';
+import Image from 'next/image';
 import { SectionReveal } from '@/components/shared/SectionReveal';
 import { teamMembers } from '@/lib/data';
 
@@ -27,11 +28,14 @@ export function TeamSection() {
                 whileHover={{ y: -10 }}
                 className="group"
               >
-                <div className="relative overflow-hidden rounded-xl mb-6">
-                  <img
+                <div className="relative overflow-hidden rounded-xl mb-6 aspect-[3/4]">
+                  <Image
                     src={member.image}
                     alt={member.name}
-                    className="w-full aspect-[3/4] object-cover transition-transform duration-700 group-hover:scale-105"
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    loading="lazy"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                   <div className="absolute bottom-4 left-4 right-4 flex gap-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">

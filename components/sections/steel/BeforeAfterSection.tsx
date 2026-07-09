@@ -2,6 +2,7 @@
 
 import { useState, useRef, useCallback } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 import { SectionReveal } from '@/components/shared/SectionReveal';
 
 export function BeforeAfterSection() {
@@ -62,11 +63,14 @@ export function BeforeAfterSection() {
             onTouchEnd={handleMouseUp}
           >
             {/* After Image (Full) */}
-            <img
+            <Image
               src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675&dpr=2"
               alt="After"
-              className="absolute inset-0 w-full h-full object-cover"
+              fill
+              sizes="(max-width: 1024px) 100vw, 1200px"
+              className="object-cover"
               draggable={false}
+              loading="lazy"
             />
 
             {/* Before Image (Clipped) */}
@@ -74,13 +78,20 @@ export function BeforeAfterSection() {
               className="absolute inset-0 overflow-hidden"
               style={{ width: `${sliderPosition}%` }}
             >
-              <img
-                src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675&dpr=2"
-                alt="Before"
-                className="absolute inset-0 w-full h-full object-cover"
-                style={{ width: `${100 / (sliderPosition / 100)}%` }}
-                draggable={false}
-              />
+              <div
+                className="absolute inset-y-0 left-0 h-full"
+                style={{ width: sliderPosition > 0 ? `${(100 / sliderPosition) * 100}%` : '100%' }}
+              >
+                <Image
+                  src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675&dpr=2"
+                  alt="Before"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 1200px"
+                  className="object-cover"
+                  draggable={false}
+                  loading="lazy"
+                />
+              </div>
             </div>
 
             {/* Slider Handle */}

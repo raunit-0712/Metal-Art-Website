@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { Wrench, Hammer, Check, Grid3X3, LayoutGrid, Layers, Minus, Library } from 'lucide-react';
+import Image from 'next/image';
 import { SectionReveal } from '@/components/shared/SectionReveal';
 import { steelServices } from '@/lib/data';
 
@@ -39,11 +40,14 @@ export function ServicesGrid() {
                   whileHover={{ y: -5 }}
                   className="group relative overflow-hidden rounded-xl bg-white/5 border border-white/10 hover:border-brand-secondary/30 transition-all duration-300"
                 >
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
+                  <div className="aspect-[16/10] overflow-hidden relative">
+                    <Image
                       src={service.image}
                       alt={service.title}
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                      fill
+                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-700 group-hover:scale-110"
+                      loading="lazy"
                     />
                   </div>
                   <div className="p-6">

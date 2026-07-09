@@ -3,6 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowDown, ChevronRight } from 'lucide-react';
 import gsap from 'gsap';
 
@@ -27,12 +28,13 @@ export function HeroSection() {
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              'url(images/gallery/hero.avif)',
-          }}
+        <Image
+          src="/images/gallery/hero.avif"
+          alt="Luxury steel works and fine art studio backdrop"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/70 via-brand-primary/50 to-brand-primary/90" />
         <div className="absolute inset-0 bg-gradient-to-r from-brand-primary/60 to-transparent" />
@@ -59,12 +61,10 @@ export function HeroSection() {
           {/* Main Title */}
           <h1
             ref={titleRef}
-            className="font-playfair text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-8"
-          >
-            Crafting
-            <span className="block text-gradient">Masterpieces</span>
-            <span className="block text-3xl sm:text-4xl md:text-5xl lg:text-6xl mt-2">
-              in Metal & Art
+            className="font-moontime text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white leading-[1.1] mb-8"
+          >   
+            Aakriti Atelier
+            <span className="block text-gradient text-2xl sm:text-5xl md:text-4xl lg:text-6xl mt-2">Shaping Ideas Into Reality
             </span>
           </h1>
 

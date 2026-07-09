@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowRight, X, ZoomIn } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
 import { artworks } from '@/lib/data';
@@ -55,10 +56,14 @@ export function FeaturedArtSection() {
                 className="break-inside-avoid group relative overflow-hidden rounded-lg cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
-                <img
+                <Image
                   src={artwork.image}
                   alt={artwork.title}
-                  className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width={600}
+                  height={600}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/40 transition-all duration-500 flex items-center justify-center">
                   <ZoomIn
@@ -104,11 +109,13 @@ export function FeaturedArtSection() {
               className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="aspect-square overflow-hidden rounded-lg">
-                <img
+              <div className="aspect-square overflow-hidden rounded-lg relative">
+                <Image
                   src={selectedArt.image}
                   alt={selectedArt.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 500px"
+                  className="object-cover"
                 />
               </div>
               <div className="text-white">

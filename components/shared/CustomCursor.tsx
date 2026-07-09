@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from 'react';
 
-export function CustomCursor() {
+export default function CustomCursor() {
   const cursorRef = useRef<HTMLDivElement>(null);
   const dotRef = useRef<HTMLDivElement>(null);
 
@@ -39,18 +39,17 @@ export function CustomCursor() {
       cursor.classList.remove('hover');
     };
 
+    let rafId: number;
     const animate = () => {
       cursorX += (mouseX - cursorX) * 0.15;
       cursorY += (mouseY - cursorY) * 0.15;
       dotX += (mouseX - dotX) * 0.5;
       dotY += (mouseY - dotY) * 0.5;
 
-      cursor.style.left = `${cursorX}px`;
-      cursor.style.top = `${cursorY}px`;
-      dot.style.left = `${dotX}px`;
-      dot.style.top = `${dotY}px`;
+      cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+      dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
 
-      requestAnimationFrame(animate);
+      rafId = requestAnimationFrame(animate);
     };
 
     window.addEventListener('mousemove', onMouseMove);
@@ -63,7 +62,7 @@ export function CustomCursor() {
       el.addEventListener('mouseleave', onMouseLeaveInteractive);
     });
 
-    const rafId = requestAnimationFrame(animate);
+    rafId = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);

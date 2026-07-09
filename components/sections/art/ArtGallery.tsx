@@ -3,6 +3,7 @@
 import { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Search, X, ZoomIn, Filter } from 'lucide-react';
+import Image from 'next/image';
 import { SectionReveal } from '@/components/shared/SectionReveal';
 import { artworks, artCategories } from '@/lib/data';
 
@@ -94,10 +95,14 @@ export function ArtGallery() {
                 className="break-inside-avoid group relative overflow-hidden rounded-xl cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
-                <img
+                <Image
                   src={artwork.image}
                   alt={artwork.title}
-                  className="w-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  width={600}
+                  height={600}
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
@@ -148,11 +153,13 @@ export function ArtGallery() {
               className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="aspect-square overflow-hidden rounded-xl">
-                <img
+              <div className="aspect-square overflow-hidden rounded-xl relative">
+                <Image
                   src={selected.image}
                   alt={selected.title}
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 500px"
+                  className="object-cover"
                 />
               </div>
               <div className="text-white">

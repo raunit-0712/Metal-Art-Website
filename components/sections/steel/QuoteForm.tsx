@@ -71,7 +71,7 @@ export function QuoteForm() {
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-secondary focus:ring-1 focus:ring-brand-secondary outline-none transition-colors bg-white"
-                    placeholder="John Doe"
+                    placeholder="Sid Malhotra"
                   />
                 </div>
                 <div>
@@ -85,7 +85,7 @@ export function QuoteForm() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full px-4 py-3 rounded-lg border border-gray-200 focus:border-brand-secondary focus:ring-1 focus:ring-brand-secondary outline-none transition-colors bg-white"
-                    placeholder="john@example.com"
+                    placeholder="sid@example.com"
                   />
                 </div>
               </div>

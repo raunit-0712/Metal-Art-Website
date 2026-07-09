@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowDown, ChevronRight } from 'lucide-react';
 
 export function ArtHero() {
@@ -9,12 +10,13 @@ export function ArtHero() {
     <section className="relative min-h-screen bg-brand-background flex items-center justify-center overflow-hidden">
       {/* Soft Background */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              'url(https://images.pexels.com/photos/1571472/pexels-photo-1571472.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2)',
-          }}
+        <Image
+          src="https://images.pexels.com/photos/1571472/pexels-photo-1571472.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2"
+          alt="Fine art gallery showcase background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-brand-background/90" />
       </div>
@@ -62,8 +64,14 @@ export function ArtHero() {
             <ChevronRight size={18} />
           </Link>
           <Link
+            href="#courses"
+            className="px-8 py-4 bg-brand-secondary/10 border border-brand-secondary/45 text-brand-secondary font-medium rounded-sm hover:bg-brand-secondary hover:text-white transition-all text-center"
+          >
+            Courses & Certification
+          </Link>
+          <Link
             href="#commission"
-            className="px-8 py-4 border border-brand-text/20 text-brand-text font-medium rounded-sm hover:bg-brand-text/5 transition-colors"
+            className="px-8 py-4 border border-brand-text/20 text-brand-text font-medium rounded-sm hover:bg-brand-text/5 transition-colors text-center"
           >
             Commission Artwork
           </Link>

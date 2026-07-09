@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ArrowDown, ChevronRight } from 'lucide-react';
 
 export function SteelHero() {
@@ -9,12 +10,13 @@ export function SteelHero() {
     <section className="relative min-h-screen bg-brand-primary flex items-center justify-center overflow-hidden">
       {/* Background */}
       <div className="absolute inset-0">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{
-            backgroundImage:
-              'url(https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2)',
-          }}
+        <Image
+          src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2"
+          alt="Architectural steel works showcase background"
+          fill
+          priority
+          sizes="100vw"
+          className="object-cover object-center"
         />
         <div className="absolute inset-0 bg-brand-primary/85" />
         <div className="absolute inset-0 bg-gradient-to-b from-brand-primary/60 via-transparent to-brand-primary" />
