@@ -7,7 +7,7 @@ export const steelServices: Service[] = [
     description:
       'Custom stainless steel lift jambs and entrance framing designed to provide a clean, durable, and premium finish for residential, commercial, and hospitality projects.',
     icon: 'Square',
-    image: '/images/steel/services/lift-metal-jamb.jpeg',
+    image: '/images/steel/services/Lift-metal-jamb.jpeg',
     features: [
       'Custom Stainless Steel Fabrication',
       'Mirror & Hairline Finish Options',
