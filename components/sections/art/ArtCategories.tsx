@@ -64,10 +64,10 @@ export function ArtCategories() {
             <SectionReveal key={category.title} delay={0.1 * index}>
               <motion.div
                 whileHover={{ y: -4 }}
-                className="group p-8 rounded-[16px] bg-white border border-[#DAD2BC] hover:border-[#748CAB] shadow-[0_10px_30px_rgba(13,19,33,0.08)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.15)] transition-all duration-300"
+                className="group p-8 rounded-[16px] bg-white border border-[#DAD2BC] hover:border-[#3E5C76] shadow-[0_10px_30px_rgba(13,19,33,0.08)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.15)] transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-full bg-[#748CAB]/10 flex items-center justify-center mb-6 group-hover:bg-[#748CAB]/20 transition-colors">
-                  <category.icon size={28} className="text-[#748CAB]" />
+                <div className="w-14 h-14 rounded-full bg-[#3E5C76]/10 flex items-center justify-center mb-6 group-hover:bg-[#3E5C76]/20 transition-colors">
+                  <category.icon size={28} className="text-[#3E5C76]" />
                 </div>
                 <h3 className="font-playfair text-xl text-[#0D1321] mb-2">
                   {category.title}
@@ -75,7 +75,7 @@ export function ArtCategories() {
                 <p className="text-[#3E5C76] text-sm leading-relaxed mb-4">
                   {category.description}
                 </p>
-                <span className="text-[#748CAB] text-sm font-medium">
+                <span className="text-[#3E5C76] text-sm font-medium">
                   {category.count} artworks
                 </span>
               </motion.div>

@@ -31,9 +31,9 @@ function getBalancedFeaturedArtworks(artworksList: typeof artworks): typeof artw
   ];
   
   // Preferred visual representative for each category to ensure high quality
-  const preferredIds = [
+  const preferredIds = [  
     'om4', // Grand Landscape Master Copy (Old Masters Copy)
-    'p23', // Portrait of Grace (Portraits)
+    'p21', // Portrait of Grace (Portraits)
     'w1',  // Textured Wall Mural I (Wall Arts)
     'd3',  // Divine Union (Radha Krishna) (Digital Artwork)
     'l16', // Ventus Logo Design (Logos)
@@ -89,18 +89,18 @@ export function FeaturedArtSection() {
   const selectedArt = artworks.find((a) => a.id === selectedArtwork);
 
   return (
-    <section className="py-24 md:py-32 bg-brand-background">
+    <section className="py-24 md:py-32 bg-[#F0EBD8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-16">
           <div>
             <SectionReveal>
-              <p className="text-brand-secondary text-sm tracking-[0.3em] uppercase mb-4">
+              <p className="text-[#3E5C76] text-sm tracking-[0.3em] uppercase mb-4">
                 Art Gallery
               </p>
             </SectionReveal>
             <SectionReveal delay={0.1}>
-              <h2 className="font-playfair text-4xl md:text-5xl text-brand-text">
+              <h2 className="font-playfair text-4xl md:text-5xl text-[#0D1321]">
                 Featured Artworks
               </h2>
             </SectionReveal>
@@ -108,7 +108,7 @@ export function FeaturedArtSection() {
           <SectionReveal delay={0.2}>
             <Link
               href="/art-gallery"
-              className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-accent transition-colors group mt-6 md:mt-0"
+              className="inline-flex items-center gap-2 text-[#3E5C76] hover:text-[#748CAB] transition-colors group mt-6 md:mt-0"
             >
               <span className="text-sm tracking-wider uppercase">
                 View All Artworks
@@ -126,9 +126,9 @@ export function FeaturedArtSection() {
           {featuredArtworks.map((artwork, index) => (
             <SectionReveal key={artwork.id} delay={0.1 * index}>
               <motion.div
-                whileHover={{ scale: 1.03 }}
+                whileHover={{ y: -4 }}
                 transition={{ duration: 0.4 }}
-                className="break-inside-avoid relative overflow-hidden rounded-lg cursor-pointer"
+                className="break-inside-avoid relative overflow-hidden rounded-[16px] border border-[#DAD2BC] bg-white shadow-[0_10px_30px_rgba(13,19,33,0.06)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.12)] transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
                 <Image
@@ -156,6 +156,7 @@ export function FeaturedArtSection() {
             className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-8"
             onClick={() => setSelectedArtwork(null)}
           >
+            {/* Close Button */}
             <button
               onClick={() => setSelectedArtwork(null)}
               className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-[110] p-2 bg-white/5 hover:bg-white/10 rounded-full"
@@ -172,11 +173,23 @@ export function FeaturedArtSection() {
               className="relative max-w-full max-h-[85vh] aspect-auto flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={selectedArt.image}
-                alt={selectedArt.title}
-                className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
-              />
+              <div className="relative overflow-hidden">
+                <img
+                  src={selectedArt.image}
+                  alt={selectedArt.title}
+                  className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
+                />
+                {/* Branded Watermark overlay */}
+                <div className="absolute bottom-4 right-4 w-[12%] min-w-[70px] max-w-[150px] aspect-[1402/567] z-10 pointer-events-none select-none opacity-15">
+                  <Image
+                    src="/images/watermark.webp"
+                    alt="Aakriti Atelier Watermark"
+                    width={140}
+                    height={57}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         )}

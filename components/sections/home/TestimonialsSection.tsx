@@ -22,14 +22,14 @@ export function TestimonialsSection() {
   const current = testimonials[currentIndex];
 
   return (
-    <section className="py-24 md:py-32 bg-brand-background">
+    <section className="py-24 md:py-32 bg-[#F0EBD8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionReveal>
           <div className="text-center mb-16">
-            <p className="text-brand-secondary text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-[#3E5C76] text-sm tracking-[0.3em] uppercase mb-4">
               Testimonials
             </p>
-            <h2 className="font-playfair text-4xl md:text-5xl text-brand-text">
+            <h2 className="font-playfair text-4xl md:text-5xl text-[#0D1321]">
               What Our Clients Say
             </h2>
           </div>
@@ -37,10 +37,10 @@ export function TestimonialsSection() {
 
         <SectionReveal delay={0.2}>
           <div className="max-w-4xl mx-auto">
-            <div className="relative bg-white rounded-2xl shadow-xl p-8 md:p-12">
+            <div className="relative bg-white rounded-2xl shadow-xl p-8 md:p-12 border border-[#DAD2BC]/50">
               <Quote
                 size={48}
-                className="text-brand-secondary/20 absolute top-8 left-8"
+                className="text-[#748CAB]/20 absolute top-8 left-8"
               />
 
               <AnimatePresence mode="wait">
@@ -58,36 +58,36 @@ export function TestimonialsSection() {
                       <Star
                         key={i}
                         size={20}
-                        className="text-brand-accent fill-brand-accent"
+                        className="text-[#748CAB] fill-[#748CAB]"
                       />
                     ))}
                   </div>
 
                   {/* Quote */}
-                  <p className="text-brand-text text-lg md:text-xl leading-relaxed mb-8 italic">
+                  <p className="text-[#3E5C76] text-lg md:text-xl leading-relaxed mb-8 italic">
                     &ldquo;{current.content}&rdquo;
                   </p>
 
                   {/* Author */}
                   <div className="flex items-center gap-4">
-                    <div className="w-14 h-14 rounded-full bg-brand-secondary/10 flex items-center justify-center">
-                      <span className="font-playfair text-xl text-brand-secondary">
+                    <div className="w-14 h-14 rounded-full bg-[#748CAB]/10 flex items-center justify-center">
+                      <span className="font-playfair text-xl text-[#3E5C76]">
                         {current.name.charAt(0)}
                       </span>
                     </div>
                     <div>
-                      <h4 className="font-medium text-brand-text">
+                      <h4 className="font-medium text-[#0D1321]">
                         {current.name}
                       </h4>
-                      <p className="text-brand-text/60 text-sm">
+                      <p className="text-[#3E5C76]/70 text-sm">
                         {current.role}, {current.company}
                       </p>
                     </div>
                     <span
                       className={`ml-auto text-xs tracking-wider uppercase px-3 py-1 rounded-full ${
                         current.category === 'steel'
-                          ? 'bg-brand-primary text-white'
-                          : 'bg-brand-accent/20 text-brand-accent'
+                          ? 'bg-[#1D2D44] text-white'
+                          : 'bg-[#748CAB]/20 text-[#1D2D44]'
                       }`}
                     >
                       {current.category}
@@ -105,7 +105,7 @@ export function TestimonialsSection() {
                       onClick={() => setCurrentIndex(index)}
                       className={`w-2 h-2 rounded-full transition-all duration-300 ${
                         index === currentIndex
-                          ? 'w-8 bg-brand-secondary'
+                          ? 'w-8 bg-[#1D2D44]'
                           : 'bg-gray-300 hover:bg-gray-400'
                       }`}
                     />
@@ -115,13 +115,13 @@ export function TestimonialsSection() {
                 <div className="flex gap-3">
                   <button
                     onClick={prev}
-                    className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-secondary hover:text-white hover:border-brand-secondary transition-all"
+                    className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#1D2D44] hover:text-white hover:border-[#1D2D44] transition-all"
                   >
                     <ChevronLeft size={20} />
                   </button>
                   <button
                     onClick={next}
-                    className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-brand-secondary hover:text-white hover:border-brand-secondary transition-all"
+                    className="w-12 h-12 rounded-full border border-gray-200 flex items-center justify-center hover:bg-[#1D2D44] hover:text-white hover:border-[#1D2D44] transition-all"
                   >
                     <ChevronRight size={20} />
                   </button>

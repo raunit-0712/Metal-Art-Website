@@ -8,7 +8,7 @@ export const wallArts: Artwork[] = [
     medium: 'Acrylic and Plaster on Wood Panel',
     size: '48 x 72 inches',
     description: 'An abstract, heavily textured panel mimicking industrial weathered walls.',
-    image: '/images/arts/wall-arts/001.jpeg',
+    image: '/images/arts/portraits/00041.png',
     year: 2024,
     featured: true,
   },

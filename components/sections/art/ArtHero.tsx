@@ -44,7 +44,7 @@ export function ArtHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-[#DAD2BC] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-[#FFFFFF] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           Timeless artistic creations that capture emotion, beauty, and the
           essence of human expression through various mediums.

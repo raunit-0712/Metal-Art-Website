@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Phone, Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Linkedin } from 'lucide-react';
+import { Mail, MapPin, Clock, MessageCircle, Instagram, Facebook, Linkedin } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
 
 import { CONTACT } from '@/lib/config/contact';
@@ -10,13 +10,6 @@ const contactSections = [
   {
     title: 'Metal Works Division',
     items: [
-      {
-        icon: Phone,
-        label: 'Call Metal Works',
-        value: '+91 80804 14471',
-        href: `tel:+918080414471`,
-        color: 'bg-green-500',
-      },
       {
         icon: MessageCircle,
         label: 'WhatsApp Metal Works',
@@ -29,13 +22,6 @@ const contactSections = [
   {
     title: 'Fine Arts Division',
     items: [
-      {
-        icon: Phone,
-        label: 'Call Fine Arts',
-        value: '+91 73883 35687',
-        href: `tel:+917388335687`,
-        color: 'bg-green-500',
-      },
       {
         icon: MessageCircle,
         label: 'WhatsApp Fine Arts',

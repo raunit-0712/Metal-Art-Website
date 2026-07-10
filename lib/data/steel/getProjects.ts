@@ -26,11 +26,12 @@ const SUBCATEGORY_MAPPING: Record<string, string> = {
 };
 
 const FEATURED_MAPPING: Record<string, boolean> = {
-  'bangalore-t2-airport': true,
-  'Card-lounge-080 t2 bangalore airport': true,
+  'bangalore-t2-airport': false,
+  'Card-lounge-080 t2 bangalore airport': false,
   'card-lounge-international-airport': true,
   'prestige-enterprise-center': true,
-  'kempegowda-airport': true,
+  'kempegowda-airport': false,
+  'Metal-Decorative-Partition': true,
 };
 
 const SUPPORTED_EXTENSIONS = ['.jpg', '.jpeg', '.png', '.webp', '.avif'];

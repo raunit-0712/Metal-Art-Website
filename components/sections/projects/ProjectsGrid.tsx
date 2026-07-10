@@ -217,7 +217,7 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                       onClick={() => setSelectedProject(item.id)}
                     >
                       {/* Project Card Image Container */}
-                      <div className="relative overflow-hidden rounded-xl mb-0 aspect-square bg-brand-primary border border-black/5 shadow-sm">
+                      <div className="relative overflow-hidden rounded-xl mb-3 aspect-square bg-brand-primary border border-black/5 shadow-sm">
                         <Image
                           src={src}
                           alt={alt}
@@ -227,6 +227,9 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                           loading="lazy"
                         />
                       </div>
+                      <h3 className="font-playfair text-lg text-brand-text group-hover:text-brand-secondary transition-colors">
+                        {item.title}
+                      </h3>
                     </motion.div>
                   );
                 }
@@ -278,7 +281,7 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                       animate={{ opacity: 1, y: 0 }}
                       exit={{ opacity: 0, y: -20 }}
                       transition={{ duration: 0.4, delay: index * 0.05 }}
-                      className="group flex flex-col md:flex-row gap-6 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
+                      className="group flex flex-col md:flex-row gap-6 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer items-center"
                       onClick={() => setSelectedProject(item.id)}
                     >
                       <div className="relative md:w-48 h-32 rounded-lg overflow-hidden shrink-0 aspect-[4/3] bg-brand-primary mb-0">
@@ -290,6 +293,11 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                           className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                           loading="lazy"
                         />
+                      </div>
+                      <div className="flex flex-col justify-center">
+                        <h3 className="font-playfair text-xl text-[#0D1321] group-hover:text-[#748CAB] transition-colors">
+                          {item.title}
+                        </h3>
                       </div>
                     </motion.div>
                   );
@@ -358,7 +366,7 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
               >
                 <SteelProjectGallery project={selected as any} onClose={() => setSelectedProject(null)} />
               </motion.div>
-            ) : (
+             ) : (
               <motion.div
                 initial={{ scale: 0.95, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -367,11 +375,23 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                 className="relative max-w-full max-h-[85vh] aspect-auto flex items-center justify-center"
                 onClick={(e) => e.stopPropagation()}
               >
-                <img
-                  src={typeof selected.images[0] === 'string' ? selected.images[0] : (selected.images[0] as any).src}
-                  alt={selected.title}
-                  className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
-                />
+                <div className="relative overflow-hidden">
+                  <img
+                    src={typeof selected.images[0] === 'string' ? selected.images[0] : (selected.images[0] as any).src}
+                    alt={selected.title}
+                    className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
+                  />
+                  {/* Branded Watermark overlay */}
+                  <div className="absolute bottom-4 right-4 w-[12%] min-w-[70px] max-w-[150px] aspect-[1402/567] z-10 pointer-events-none select-none opacity-15">
+                    <Image
+                      src="/images/watermark.webp"
+                      alt="Aakriti Atelier Watermark"
+                      width={140}
+                      height={57}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
               </motion.div>
             )}
           </motion.div>

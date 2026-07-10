@@ -54,7 +54,7 @@ export function FeaturedSteelSection({ initialProjects }: FeaturedSteelSectionPr
             <SectionReveal key={project.id} delay={0.1 * index}>
               <Link href={`/projects?category=steel&id=${project.id}`}>
                 <motion.div className="group cursor-pointer">
-                  <div className="relative aspect-square overflow-hidden rounded-xl mb-0 bg-brand-primary border border-white/5 shadow-sm">
+                  <div className="relative aspect-square overflow-hidden rounded-xl mb-3 bg-brand-primary border border-white/5 shadow-sm">
                     <Image
                       src={project.images[0].src}
                       alt={project.images[0].alt || project.title}
@@ -64,6 +64,9 @@ export function FeaturedSteelSection({ initialProjects }: FeaturedSteelSectionPr
                       loading="lazy"
                     />
                   </div>
+                  <h3 className="font-playfair text-lg text-white group-hover:text-brand-secondary transition-colors">
+                    {project.title}
+                  </h3>
                 </motion.div>
               </Link>
             </SectionReveal>

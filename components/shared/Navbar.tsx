@@ -72,7 +72,9 @@ export function Navbar() {
               width={220}
               height={80}
               priority
-              className="h-14 w-auto object-contain"
+              className={`h-14 w-auto object-contain transition-all duration-300 ${
+                isArtGallery ? 'filter brightness-0 invert-[0.95] sepia-[0.1] saturate-[500%] hue-rotate-[330deg]' : ''
+              }`}
             />
           </Link>
 
@@ -87,7 +89,7 @@ export function Navbar() {
                   className={`relative text-sm tracking-wide transition-colors duration-300 ${
                     pathname === link.href
                       ? isArtGallery ? 'text-[#748CAB]' : 'text-brand-secondary'
-                      : isArtGallery ? 'text-[#F0EBD8]/80 hover:text-white' : 'text-white/80 hover:text-white'
+                      : isArtGallery ? 'text-[#F0EBD8]/80 hover:text-[#3E5C76]' : 'text-white/80 hover:text-white'
                   }`}
                 >
                   {link.label}
@@ -148,10 +150,10 @@ export function Navbar() {
                 >
                   <Link
                     href={link.href}
-                    className={`text-2xl font-playfair ${
+                    className={`text-2xl font-playfair transition-colors duration-300 ${
                       pathname === link.href
                         ? isArtGallery ? 'text-[#748CAB]' : 'text-brand-secondary'
-                        : isArtGallery ? 'text-[#F0EBD8]' : 'text-white'
+                        : isArtGallery ? 'text-[#F0EBD8] hover:text-[#3E5C76]' : 'text-white hover:text-white'
                     }`}
                   >
                     {link.label}

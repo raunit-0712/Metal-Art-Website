@@ -58,7 +58,7 @@ export function ProjectShowcase({ initialSteelProjects }: ProjectShowcaseProps) 
                 onClick={() => setSelectedProject(project.id)}
               >
                 {/* Image Container with Rounded Corners and Soft Shadow */}
-                <div className="relative overflow-hidden rounded-xl mb-0 aspect-square bg-brand-primary border border-black/5 shadow-sm">
+                <div className="relative overflow-hidden rounded-xl mb-3 aspect-square bg-brand-primary border border-black/5 shadow-sm">
                   <Image
                     src={project.images[0].src}
                     alt={project.images[0].alt || project.title}
@@ -68,6 +68,9 @@ export function ProjectShowcase({ initialSteelProjects }: ProjectShowcaseProps) 
                     loading="lazy"
                   />
                 </div>
+                <h3 className="font-playfair text-lg text-brand-text group-hover:text-brand-secondary transition-colors">
+                  {project.title}
+                </h3>
               </motion.div>
             </SectionReveal>
           ))}

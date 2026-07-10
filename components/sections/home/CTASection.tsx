@@ -2,9 +2,10 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { ArrowRight, Phone, Mail } from 'lucide-react';
+import { ArrowRight, MessageCircle, Mail } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
 import { MagneticButton } from '@/components/shared/MagneticButton';
+import { CONTACT } from '@/lib/config/contact';
 
 export function CTASection() {
   return (
@@ -54,21 +55,25 @@ export function CTASection() {
               </Link>
             </MagneticButton>
 
-            <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-6 sm:mt-0">
+          <div className="flex flex-col sm:flex-row items-center gap-4 sm:gap-6 mt-6 sm:mt-0">
               <div className="flex flex-wrap justify-center gap-4">
                 <a
-                  href="tel:+918080414471"
+                  href={`https://wa.me/91${CONTACT.steel.whatsapp}?text=${encodeURIComponent(CONTACT.steel.whatsappMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-white/60 hover:text-brand-secondary transition-colors"
                 >
-                  <Phone size={18} />
-                  <span className="text-sm">Steel: +91 80804 14471</span>
+                  <MessageCircle size={18} />
+                  <span className="text-sm">Steel Works</span>
                 </a>
                 <a
-                  href="tel:+917388335687"
+                  href={`https://wa.me/91${CONTACT.art.whatsapp}?text=${encodeURIComponent(CONTACT.art.whatsappMessage)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="flex items-center gap-2 text-white/60 hover:text-brand-secondary transition-colors"
                 >
-                  <Phone size={18} />
-                  <span className="text-sm">Arts: +91 73883 35687</span>
+                  <MessageCircle size={18} />
+                  <span className="text-sm">Fine Arts</span>
                 </a>
               </div>
               <a

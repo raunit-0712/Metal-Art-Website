@@ -31,7 +31,7 @@ export function ArtGallery() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionReveal>
           <div className="text-center mb-12">
-            <p className="text-[#748CAB] text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-[#3E5C76] text-sm tracking-[0.3em] uppercase mb-4">
               Collection
             </p>
             <h2 className="font-playfair text-4xl md:text-5xl text-[#0D1321]">
@@ -56,7 +56,7 @@ export function ArtGallery() {
               </div>
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-6 py-3 border border-[#DAD2BC] rounded-lg hover:bg-white transition-colors md:hidden text-[#1D2D44]"
+                className="flex items-center gap-2 px-6 py-3 border border-[#DAD2BC] rounded-lg bg-white hover:bg-gray-50 transition-colors md:hidden text-[#1D2D44]"
               >
                 <Filter size={18} />
                 Filters
@@ -84,7 +84,7 @@ export function ArtGallery() {
         {/* Masonry Grid */}
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
           <AnimatePresence mode="popLayout">
-            {filteredArtworks.map((artwork, index) => (
+            {filteredArtworks.map((artwork) => (
               <motion.div
                 key={artwork.id}
                 layout
@@ -96,7 +96,7 @@ export function ArtGallery() {
                 className="break-inside-avoid overflow-hidden rounded-[16px] border border-[#DAD2BC] hover:border-[#748CAB] bg-white shadow-[0_10px_30px_rgba(13,19,33,0.08)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.15)] transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden group/image">
                   <Image
                     src={artwork.image}
                     alt={artwork.title}
@@ -106,6 +106,9 @@ export function ArtGallery() {
                     className="w-full h-auto object-cover"
                     loading="lazy"
                   />
+                  {/* Subtle Image Overlay */}
+                  <div className="absolute inset-0 bg-[#0D1321]/15 opacity-0 group-hover/image:opacity-100 transition-opacity duration-300 pointer-events-none" />
+
                   {/* Branded Watermark overlay */}
                   <div className="absolute bottom-4 right-4 w-[12%] min-w-[50px] max-w-[90px] aspect-[1402/567] z-10 pointer-events-none select-none opacity-15">
                     <Image
@@ -139,6 +142,7 @@ export function ArtGallery() {
             className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-8"
             onClick={() => setSelectedArtwork(null)}
           >
+            {/* Close Button */}
             <button
               onClick={() => setSelectedArtwork(null)}
               className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-[110] p-2 bg-white/5 hover:bg-white/10 rounded-full"
