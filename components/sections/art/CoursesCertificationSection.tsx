@@ -218,6 +218,32 @@ export function CoursesCertificationSection() {
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
               </div>
+
+              {/* Student Artwork 1 — fills empty space */}
+              <div className="col-span-6 relative aspect-square rounded-2xl overflow-hidden border border-white/10 group bg-black/40 shadow-lg">
+                <Image
+                  src="/images/arts/student-works/0011.jpg"
+                  alt="Student artwork — pencil sketch drawing"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 20vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors duration-500" />
+              </div>
+
+              {/* Student Artwork 2 — fills empty space */}
+              <div className="col-span-6 relative aspect-square rounded-2xl overflow-hidden border border-white/10 group bg-black/40 shadow-lg">
+                <Image
+                  src="/images/arts/student-works/0013.jpg"
+                  alt="Student artwork — color composition study"
+                  fill
+                  sizes="(max-width: 768px) 50vw, 20vw"
+                  className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors duration-500" />
+              </div>
             </div>
 
             {/* Video Previews */}

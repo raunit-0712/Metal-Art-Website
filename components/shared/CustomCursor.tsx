@@ -11,13 +11,6 @@ export default function CustomCursor() {
     const dot = dotRef.current;
     if (!cursor || !dot) return;
 
-    let mouseX = 0;
-    let mouseY = 0;
-    let cursorX = 0;
-    let cursorY = 0;
-    let dotX = 0;
-    let dotY = 0;
-
     const isTouchDevice =
       'ontouchstart' in window || navigator.maxTouchPoints > 0;
     if (isTouchDevice) {
@@ -26,51 +19,70 @@ export default function CustomCursor() {
       return;
     }
 
-    const onMouseMove = (e: MouseEvent) => {
-      mouseX = e.clientX;
-      mouseY = e.clientY;
-    };
+    let mouseX = 0;
+    let mouseY = 0;
+    let cursorX = 0;
+    let cursorY = 0;
+    let dotX = 0;
+    let dotY = 0;
+    let rafId: number | null = null;
+    let idleTimer: ReturnType<typeof setTimeout> | null = null;
 
-    const onMouseEnterInteractive = () => {
-      cursor.classList.add('hover');
-    };
+    const startRAF = () => {
+      if (rafId !== null) return; // Already running
+      const animate = () => {
+        cursorX += (mouseX - cursorX) * 0.15;
+        cursorY += (mouseY - cursorY) * 0.15;
+        dotX += (mouseX - dotX) * 0.5;
+        dotY += (mouseY - dotY) * 0.5;
 
-    const onMouseLeaveInteractive = () => {
-      cursor.classList.remove('hover');
-    };
+        cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
+        dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
 
-    let rafId: number;
-    const animate = () => {
-      cursorX += (mouseX - cursorX) * 0.15;
-      cursorY += (mouseY - cursorY) * 0.15;
-      dotX += (mouseX - dotX) * 0.5;
-      dotY += (mouseY - dotY) * 0.5;
-
-      cursor.style.transform = `translate3d(${cursorX}px, ${cursorY}px, 0) translate(-50%, -50%)`;
-      dot.style.transform = `translate3d(${dotX}px, ${dotY}px, 0) translate(-50%, -50%)`;
-
+        rafId = requestAnimationFrame(animate);
+      };
       rafId = requestAnimationFrame(animate);
     };
 
-    window.addEventListener('mousemove', onMouseMove);
+    const stopRAF = () => {
+      if (rafId !== null) {
+        cancelAnimationFrame(rafId);
+        rafId = null;
+      }
+    };
 
-    const interactiveElements = document.querySelectorAll(
-      'a, button, [data-cursor-hover]'
-    );
-    interactiveElements.forEach((el) => {
-      el.addEventListener('mouseenter', onMouseEnterInteractive);
-      el.addEventListener('mouseleave', onMouseLeaveInteractive);
-    });
+    const onMouseMove = (e: MouseEvent) => {
+      mouseX = e.clientX;
+      mouseY = e.clientY;
 
-    rafId = requestAnimationFrame(animate);
+      // Start RAF on movement, reset idle timer
+      startRAF();
+      if (idleTimer !== null) clearTimeout(idleTimer);
+      idleTimer = setTimeout(stopRAF, 150); // Pause after 150ms of no movement
+    };
+
+    // Use event delegation instead of querySelectorAll — handles dynamic elements
+    const onMouseOver = (e: MouseEvent) => {
+      if ((e.target as HTMLElement).closest('a, button, [data-cursor-hover]')) {
+        cursor.classList.add('hover');
+      }
+    };
+    const onMouseOut = (e: MouseEvent) => {
+      if ((e.target as HTMLElement).closest('a, button, [data-cursor-hover]')) {
+        cursor.classList.remove('hover');
+      }
+    };
+
+    window.addEventListener('mousemove', onMouseMove, { passive: true });
+    document.addEventListener('mouseover', onMouseOver, { passive: true });
+    document.addEventListener('mouseout', onMouseOut, { passive: true });
 
     return () => {
       window.removeEventListener('mousemove', onMouseMove);
-      interactiveElements.forEach((el) => {
-        el.removeEventListener('mouseenter', onMouseEnterInteractive);
-        el.removeEventListener('mouseleave', onMouseLeaveInteractive);
-      });
-      cancelAnimationFrame(rafId);
+      document.removeEventListener('mouseover', onMouseOver);
+      document.removeEventListener('mouseout', onMouseOut);
+      stopRAF();
+      if (idleTimer !== null) clearTimeout(idleTimer);
     };
   }, []);
 
@@ -81,3 +93,4 @@ export default function CustomCursor() {
     </>
   );
 }
+

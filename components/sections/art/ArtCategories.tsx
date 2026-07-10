@@ -36,6 +36,12 @@ const categories = [
     description: 'Statement mural pieces designed to transform and elevate any interior space.',
     count: 4,
   },
+  {
+    icon : Image ,
+    title :'Logo Design',
+    description : 'Custom logo designs for businesses and organizations.',
+    count :16
+  }
 ];
 
 export function ArtCategories() {

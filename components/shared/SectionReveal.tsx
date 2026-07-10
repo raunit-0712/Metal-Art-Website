@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { motion, useInView, useReducedMotion } from 'framer-motion';
 
 interface SectionRevealProps {
   children: React.ReactNode;
@@ -18,6 +18,7 @@ export function SectionReveal({
 }: SectionRevealProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, margin: '-100px' });
+  const prefersReducedMotion = useReducedMotion();
 
   const directionOffset = {
     up: { y: 40, x: 0 },
@@ -25,6 +26,11 @@ export function SectionReveal({
     left: { y: 0, x: 40 },
     right: { y: 0, x: -40 },
   };
+
+  // When user prefers reduced motion, render children immediately without animation
+  if (prefersReducedMotion) {
+    return <div className={className}>{children}</div>;
+  }
 
   return (
     <motion.div
@@ -49,3 +55,4 @@ export function SectionReveal({
     </motion.div>
   );
 }
+

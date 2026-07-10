@@ -45,7 +45,9 @@ const greatVibes = Great_Vibes({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.com'
+  ),
 
   title: {
     default: 'Aakriti Atelier | Shaping Ideas into Reality',
@@ -76,12 +78,18 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
 
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: '/',
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.com',
     siteName: 'Aakriti Atelier',
     title: 'Aakriti Atelier | Shaping Ideas into Reality',
     description:
@@ -91,7 +99,7 @@ export const metadata: Metadata = {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Aakriti Atelier logo',
+        alt: 'Aakriti Atelier — Premium Steel Fabrication & Fine Arts',
       },
     ],
   },
@@ -105,7 +113,7 @@ export const metadata: Metadata = {
   },
 
   alternates: {
-    canonical: '/',
+    canonical: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.com',
   },
 };
 
@@ -114,6 +122,29 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  const siteUrl =
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.com';
+
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'Aakriti Atelier',
+    description:
+      'Premium architectural steel fabrication and fine arts studio specializing in custom metalwork, staircases, railings, and artistic creations.',
+    url: siteUrl,
+    logo: `${siteUrl}/images/logo.png`,
+    image: `${siteUrl}/images/og-image.jpg`,
+    sameAs: [],
+    address: {
+      '@type': 'PostalAddress',
+      addressCountry: 'IN',
+    },
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Steel Fabrication & Fine Arts Services',
+    },
+  };
+
   return (
     <html
       lang="en"
@@ -121,6 +152,11 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable} ${greatVibes.variable}`}
     >
       <body className="font-sans bg-brand-background text-brand-text overflow-x-hidden">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+
         {/* <LoadingScreen /> */}
 
         <CustomCursor />
@@ -128,7 +164,7 @@ export default function RootLayout({
         <SmoothScroll>
           <Navbar />
 
-          <main>{children}</main>
+          <main aria-label="Main content">{children}</main>
 
           <Footer />
 
