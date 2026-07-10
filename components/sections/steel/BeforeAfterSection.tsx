@@ -61,10 +61,10 @@ export function BeforeAfterSection() {
             onMouseLeave={handleMouseUp}
             onTouchMove={handleTouchMove}
             onTouchEnd={handleMouseUp}
-          >
+          > 
             {/* After Image (Full) */}
             <Image
-              src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675&dpr=2"
+              src="/images/gallery/after.jpeg"
               alt="After"
               fill
               sizes="(max-width: 1024px) 100vw, 1200px"
@@ -83,7 +83,7 @@ export function BeforeAfterSection() {
                 style={{ width: sliderPosition > 0 ? `${(100 / sliderPosition) * 100}%` : '100%' }}
               >
                 <Image
-                  src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1200&h=675&dpr=2"
+                  src="/images/gallery/before.jpeg"
                   alt="Before"
                   fill
                   sizes="(max-width: 1024px) 100vw, 1200px"

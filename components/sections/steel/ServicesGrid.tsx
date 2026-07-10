@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Wrench, Hammer, Check, Grid3X3, LayoutGrid, Layers, Minus, Library } from 'lucide-react';
 import Image from 'next/image';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { steelServices } from '@/lib/data';
+import { steelServices, additionalSteelServices } from '@/lib/data';
 
 const iconMap: Record<string, React.ElementType> = {
   Stairs: Wrench,
@@ -76,6 +76,41 @@ export function ServicesGrid() {
               </SectionReveal>
             );
           })}
+        </div>
+
+        {/* Additional Services Section */}
+        <div className="mt-24 pt-24 border-t border-white/10">
+          <SectionReveal>
+            <div className="text-center mb-16">
+              <p className="text-brand-secondary text-sm tracking-[0.3em] uppercase mb-4">
+                Expanded Capabilities
+              </p>
+              <h2 className="font-playfair text-3xl md:text-4xl text-white">
+                Additional Steel Fabrication Services
+              </h2>
+            </div>
+          </SectionReveal>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            {additionalSteelServices.map((service, index) => (
+              <SectionReveal key={index} delay={0.05 * (index % 4)}>
+                <motion.div
+                  whileHover={{ y: -3 }}
+                  className="flex items-start gap-3 p-5 rounded-lg border border-white/5 bg-white/[0.02] hover:bg-white/[0.06] hover:border-brand-secondary/40 transition-all duration-300 ease-out"
+                >
+                  <Check size={14} className="text-brand-secondary shrink-0 mt-1" />
+                  <div>
+                    <h4 className="font-sans text-base font-semibold text-white tracking-wide">
+                      {service.name}
+                    </h4>
+                    <p className="text-white/40 text-xs mt-1 leading-normal font-light">
+                      {service.subtitle}
+                    </p>
+                  </div>
+                </motion.div>
+              </SectionReveal>
+            ))}
+          </div>
         </div>
       </div>
     </section>

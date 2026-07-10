@@ -4,7 +4,7 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
   'kempegowda-airport': [
     {
       src: '/images/steel/projects/kempegowda-airport/entrance-lobby.jpg',
-      alt: 'Kempegowda Airport T1 Main Entrance Lobby Column and Wall Cladding',
+      alt: 'kempegowda Airport T1 Main Entrance Lobby Column and Wall Cladding',
       caption: 'Main entrance lobby custom stainless steel cladding'
     },
     {
@@ -31,7 +31,7 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
   'bangalore-t2-airport': [
     {
       src: '/images/steel/projects/bangalore-t2-airport/t2-column-wrapping.jpg',
-      alt: 'Kempegowda Airport T2 Custom Column Wrapping with Hairline Stainless Steel',
+      alt: 'kempegowda Airport T2 Custom Column Wrapping with Hairline Stainless Steel',
       caption: 'PVD gold column cladding integrated with natural timber'
     },
     {

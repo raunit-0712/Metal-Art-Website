@@ -12,6 +12,7 @@ const config: Config = {
       fontFamily: {
         playfair: ['var(--font-playfair)', 'serif'],
         inter: ['var(--font-inter)', 'sans-serif'],
+        greatvibes: ['var(--font-great-vibes)', 'cursive'],
       },
       colors: {
         brand: {

@@ -10,7 +10,7 @@ import Image from "next/image";
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
-  { href: '/steel-works', label: 'Steel Works' },
+  { href: '/steel-works', label: 'Metal Works' },
   { href: '/art-gallery', label: 'Art Gallery' },
   { href: '/projects', label: 'Projects' },
   { href: '/contact', label: 'Contact' },
@@ -59,7 +59,7 @@ export function Navbar() {
             </Link> */}
             <Link href="/" className="flex items-center">
             <Image
-              src="/images/logo.webp"
+              src="/images/logo.png"
               alt="Aakriti Atelier"
               width={220}
               height={80}

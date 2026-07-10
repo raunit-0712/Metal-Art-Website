@@ -4,7 +4,7 @@ import { steelProjectImages } from './project-images';
 export const steelProjects: SteelProject[] = [
   {
     id: '1',
-    title: 'Kempegowda International Airport (Terminal 1)',
+    title: 'kempegowda International Airport (Terminal 1)',
     category: 'steel',
     subcategory: 'Decorative Panels',
     description: 'This project involved the custom engineering, fabrication, and installation of durable stainless steel wall cladding, checkout display counters, restroom wall paneling, and architectural metal features for the Terminal 1 departure concourse and passenger check-in halls.',
@@ -38,7 +38,7 @@ export const steelProjects: SteelProject[] = [
   },
   {
     id: '2',
-    title: 'Kempegowda International Airport (Terminal 2)',
+    title: 'kempegowda International Airport (Terminal 2)',
     category: 'steel',
     subcategory: 'Architectural Metal',
     description: 'This project involved the execution of complex decorative metal systems inside the award-winning Garden Terminal (T2), including gold-anodized column wrapping, suspended ceiling baffle grids, safety corridor balustrades, and structural steel planters supporting the indoor ecosystem.',
@@ -174,7 +174,7 @@ export const steelProjects: SteelProject[] = [
   },
   {
     id: '6',
-    title: 'Grand Hyatt Luxury Suite & Lounge',
+    title: 'Card Lounge kempegowda',
     category: 'steel',
     subcategory: 'Architectural Metal',
     description: 'A highly complex, site-wide architectural metal package for a 5-star hotel, featuring grand atrium columns, reception decorative screens, lift portals, mirror finish ceiling trim profiles, helice stair balustrades, vanity stations, spa pools, and decorative grilles.',

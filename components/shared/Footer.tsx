@@ -22,7 +22,7 @@ export function Footer() {
           <Link href="/" className="inline-block mb-6">
             <div className="relative h-28 w-64">
               <Image
-                src="/images/logo.webp"
+                src="/images/logo.png"
                 alt="Aakriti Atelier"
                 fill
                 priority
@@ -44,7 +44,7 @@ export function Footer() {
             <ul className="space-y-3">
               {[
                 { href: '/about', label: 'About Us' },
-                { href: '/steel-works', label: 'Steel Works' },
+                { href: '/steel-works', label: 'Metal Works' },
                 { href: '/art-gallery', label: 'Art Gallery' },
                 { href: '/projects', label: 'Projects' },
                 { href: '/contact', label: 'Contact' },

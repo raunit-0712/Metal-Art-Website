@@ -91,8 +91,9 @@ export function ArtGallery() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                transition={{ duration: 0.4, delay: index * 0.05 }}
-                className="break-inside-avoid group relative overflow-hidden rounded-xl cursor-pointer"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.4 }}
+                className="break-inside-avoid relative overflow-hidden rounded-xl cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
                 <Image
@@ -101,22 +102,9 @@ export function ArtGallery() {
                   width={600}
                   height={600}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-auto object-cover"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
-                  <span className="text-brand-secondary text-xs tracking-wider uppercase">
-                    {artwork.category}
-                  </span>
-                  <h3 className="font-playfair text-lg text-white mt-1">
-                    {artwork.title}
-                  </h3>
-                  <p className="text-white/60 text-sm">{artwork.medium}</p>
-                </div>
-                <div className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <ZoomIn size={18} className="text-white" />
-                </div>
               </motion.div>
             ))}
           </AnimatePresence>
@@ -136,63 +124,30 @@ export function ArtGallery() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
+            className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-8"
             onClick={() => setSelectedArtwork(null)}
           >
             <button
               onClick={() => setSelectedArtwork(null)}
-              className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-10"
+              className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-[110] p-2 bg-white/5 hover:bg-white/10 rounded-full"
+              aria-label="Close Lightbox"
             >
               <X size={32} />
             </button>
 
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="relative max-w-full max-h-[85vh] aspect-auto flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="aspect-square overflow-hidden rounded-xl relative">
-                <Image
-                  src={selected.image}
-                  alt={selected.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 500px"
-                  className="object-cover"
-                />
-              </div>
-              <div className="text-white">
-                <span className="text-brand-secondary text-sm tracking-wider uppercase">
-                  {selected.category}
-                </span>
-                <h3 className="font-playfair text-3xl md:text-4xl mt-2 mb-4">
-                  {selected.title}
-                </h3>
-                <div className="space-y-3 text-white/70 mb-6">
-                  <p>
-                    <span className="text-white/40">Medium:</span>{' '}
-                    {selected.medium}
-                  </p>
-                  <p>
-                    <span className="text-white/40">Size:</span>{' '}
-                    {selected.size}
-                  </p>
-                  <p>
-                    <span className="text-white/40">Year:</span>{' '}
-                    {selected.year}
-                  </p>
-                </div>
-                <p className="text-white/60 leading-relaxed mb-8">
-                  {selected.description}
-                </p>
-                <a
-                  href="/contact"
-                  className="inline-block px-6 py-3 bg-brand-secondary text-white rounded hover:bg-brand-accent transition-colors"
-                >
-                  Inquire About This Artwork
-                </a>
-              </div>
+              <img
+                src={selected.image}
+                alt={selected.title}
+                className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
+              />
             </motion.div>
           </motion.div>
         )}

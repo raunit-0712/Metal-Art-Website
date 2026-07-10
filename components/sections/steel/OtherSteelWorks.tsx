@@ -47,7 +47,7 @@ export function OtherSteelWorks() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h2 className="font-playfair text-4xl md:text-5xl text-white font-medium">
-              Additional Steel Craftsmanship
+              Additional Custom Craftsmanship
             </h2>
           </SectionReveal>
           <SectionReveal delay={0.2}>
@@ -62,20 +62,20 @@ export function OtherSteelWorks() {
           </SectionReveal>
         </div>
 
-        {/* Bento Grid layout */}
+        {/* Symmetric responsive CSS grid */}
         <motion.div 
           variants={containerVariants}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: '-100px' }}
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-12 gap-6 lg:gap-8"
+          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-5 lg:gap-6"
         >
           {otherSteelImages.map((image, index) => (
             <motion.div
               key={image.id}
               variants={cardVariants}
               onClick={() => setActiveImageIndex(index)}
-              className={`group relative overflow-hidden rounded-2xl bg-black/30 border border-white/5 cursor-pointer shadow-xl hover:border-brand-secondary/30 transition-all duration-500 ${image.widthClass} ${image.heightClass}`}
+              className="group relative overflow-hidden rounded-2xl bg-black/30 border border-white/5 cursor-pointer shadow-xl hover:border-brand-secondary/30 transition-all duration-500 aspect-[4/3] w-full"
             >
               {/* Image component with skeleton shimmer loader */}
               <div className="absolute inset-0 w-full h-full bg-white/5 animate-pulse z-0" />
@@ -85,22 +85,9 @@ export function OtherSteelWorks() {
                 alt={image.alt}
                 fill
                 sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                className="object-cover transition-transform duration-700 ease-out group-hover:scale-[1.05]"
+                className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                 loading="lazy"
               />
-
-              {/* Luxury Overlay Gradient */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-transparent opacity-40 group-hover:opacity-85 transition-opacity duration-500 z-[1]" />
-
-              {/* Text metadata overlaid on hover */}
-              <div className="absolute inset-x-0 bottom-0 p-5 z-[2] transform translate-y-2 group-hover:translate-y-0 opacity-0 group-hover:opacity-100 transition-all duration-500 ease-out flex flex-col justify-end pointer-events-none">
-                <span className="text-brand-secondary text-[10px] uppercase tracking-widest font-semibold mb-1">
-                  {image.caption}
-                </span>
-                <h4 className="font-playfair text-lg text-white font-medium">
-                  {image.title}
-                </h4>
-              </div>
             </motion.div>
           ))}
         </motion.div>

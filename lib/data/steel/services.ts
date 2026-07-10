@@ -91,3 +91,31 @@ export const steelServices: Service[] = [
     ],
   },
 ];
+
+export interface AdditionalSteelService {
+  name: string;
+  subtitle: string;
+}
+
+export const additionalSteelServices: AdditionalSteelService[] = [
+  { name: 'CNC Laser Cutting', subtitle: 'High-precision metal profile cutting.' },
+  { name: 'Decorative Metal Screens', subtitle: 'Custom laser-cut spatial privacy partitions.' },
+  { name: 'Laser Cut Wall Panels', subtitle: 'Ornamental metallic wall cladding features.' },
+  { name: 'Stainless Steel Furniture', subtitle: 'Premium architectural metal seating and tables.' },
+  { name: 'Glass Railing Systems', subtitle: 'Frameless glass support structures and channels.' },
+  { name: 'Spiral Staircases', subtitle: 'Space-saving curved metal steps and balustrades.' },
+  { name: 'Modular Steel Structures', subtitle: 'Prefabs for custom structural frameworks.' },
+  { name: 'Mezzanine Floors', subtitle: 'Heavy-duty steel platform floor expansions.' },
+  { name: 'Sliding Gates', subtitle: 'Automatic tracked driveway security gates.' },
+  { name: 'Elevator Interiors', subtitle: 'Bespoke paneling for passenger elevator cabs.' },
+  { name: 'Reception Counters', subtitle: 'Luxury metal-faced retail and office desks.' },
+  { name: 'Decorative Ceiling Frames', subtitle: 'Ornamental hanging steel grids and panels.' },
+  { name: 'Kitchen Equipment Fabrication', subtitle: 'Heavy-gauge stainless steel restaurant counters.' },
+  { name: 'Custom Metal Furniture', subtitle: 'Bespoke tables and custom steel shelving.' },
+  { name: 'Metal Art Installations', subtitle: 'Sculptural custom metal features for foyers.' },
+  { name: 'Designer Wall Features', subtitle: 'Architectural steel wall art and inserts.' },
+  { name: 'Pergola Steel Framing', subtitle: 'Custom outdoor steel canopy frameworks.' },
+  { name: 'ACP Cladding Support Structures', subtitle: 'Heavy-duty structural backup frame assemblies.' },
+  { name: 'Retail Display Systems', subtitle: 'Premium clothing racks and shelving units.' },
+  { name: 'Security Window Grills', subtitle: 'Heavy-duty steel window protection frames.' }
+];

@@ -6,14 +6,17 @@ import { FeaturedArtSection } from '@/components/sections/home/FeaturedArtSectio
 import { StatsSection } from '@/components/sections/home/StatsSection';
 import { TestimonialsSection } from '@/components/sections/home/TestimonialsSection';
 import { CTASection } from '@/components/sections/home/CTASection';
+import { getSteelProjects } from '@/lib/data/steel/getProjects';
 
 export default function Home() {
+  const steelProjects = getSteelProjects();
+
   return (
     <>
       <HeroSection />
       <SplitScreenSection />
       <AboutPreviewSection />
-      <FeaturedSteelSection />
+      <FeaturedSteelSection initialProjects={steelProjects} />
       <FeaturedArtSection />
       <StatsSection />
       <TestimonialsSection />

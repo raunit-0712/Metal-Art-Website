@@ -4,22 +4,27 @@ import { useState, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { ArrowRight, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { steelProjects } from '@/lib/data';
+import { steelProjects, SteelProject } from '@/lib/data';
 import { SteelProjectGallery } from './SteelProjectGallery';
 
-export function ProjectShowcase() {
+interface ProjectShowcaseProps {
+  initialSteelProjects?: SteelProject[];
+}
+
+export function ProjectShowcase({ initialSteelProjects }: ProjectShowcaseProps) {
   const [selectedProject, setSelectedProject] = useState<string | null>(null);
   const searchParams = useSearchParams();
 
-  const selected = steelProjects.find((p) => p.id === selectedProject);
+  const activeProjects = initialSteelProjects || steelProjects;
+  const selected = activeProjects.find((p) => p.id === selectedProject);
 
   // Deep linking: Auto-open modal if URL contains 'id' matching a steel project
   useEffect(() => {
     const id = searchParams.get('id');
     if (id) {
-      const found = steelProjects.find(
+      const found = activeProjects.find(
         (p) =>
           p.id === id ||
           p.images[0].src.includes(`/${id}/`) ||
@@ -29,7 +34,7 @@ export function ProjectShowcase() {
         setSelectedProject(found.id);
       }
     }
-  }, [searchParams]);
+  }, [searchParams, activeProjects]);
 
   return (
     <section className="py-24 md:py-32 bg-brand-background">
@@ -45,69 +50,29 @@ export function ProjectShowcase() {
           </div>
         </SectionReveal>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          {steelProjects.map((project, index) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+          {activeProjects.map((project, index) => (
             <SectionReveal key={project.id} delay={0.1 * index}>
               <motion.div
-                whileHover={{ y: -5 }}
                 className="group cursor-pointer"
                 onClick={() => setSelectedProject(project.id)}
               >
-                {/* Image Container with Luxury Borders and Overlays */}
-                <div className="relative overflow-hidden rounded-xl mb-6 aspect-[16/10] bg-brand-primary border border-black/5 group-hover:border-brand-secondary/30 transition-colors duration-300">
+                {/* Image Container with Rounded Corners and Soft Shadow */}
+                <div className="relative overflow-hidden rounded-xl mb-4 aspect-square bg-brand-primary border border-black/5 shadow-sm">
                   <Image
                     src={project.images[0].src}
                     alt={project.images[0].alt || project.title}
                     fill
-                    sizes="(max-width: 768px) 100vw, 50vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw"
+                    className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                     loading="lazy"
                   />
-                  {/* Subtle Hover Gradient */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-brand-primary/95 via-brand-primary/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                  
-                  {/* Location Overlay */}
-                  <div className="absolute top-4 left-4 bg-brand-primary/75 backdrop-blur-md px-3 py-1 rounded text-[10px] tracking-wider uppercase text-white/80 font-medium z-[2]">
-                    {project.location}
-                  </div>
-
-                  {/* Year Overlay */}
-                  {project.year && (
-                    <div className="absolute top-4 right-4 bg-brand-primary/75 backdrop-blur-md px-3 py-1 rounded text-[10px] tracking-wider text-brand-secondary font-semibold z-[2]">
-                      {project.year}
-                    </div>
-                  )}
-
-                  {/* Bottom Text Overlays on Hover */}
-                  <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-[2]">
-                    <span className="text-brand-secondary text-xs tracking-wider uppercase font-semibold">
-                      {project.subcategory}
-                    </span>
-                    <div className="flex items-center gap-1.5 text-white text-xs tracking-wider uppercase">
-                      <span>View Details</span>
-                      <ArrowRight size={14} className="group-hover:translate-x-1.5 transition-transform duration-300" />
-                    </div>
-                  </div>
                 </div>
 
-                {/* Metadata details */}
-                <h3 className="font-playfair text-2xl text-brand-text mb-2 group-hover:text-brand-secondary transition-colors duration-300">
+                {/* Title details */}
+                <h3 className="font-sans text-[18px] sm:text-[20px] lg:text-[24px] leading-[1.35] tracking-[-0.02em] text-[#1F1F1F] text-center mt-4 h-[2.7em] overflow-hidden text-balance group-hover:text-brand-secondary transition-colors duration-300">
                   {project.title}
                 </h3>
-                <p className="text-brand-text/60 text-sm line-clamp-2 mb-4 font-light">
-                  {project.overview}
-                </p>
-
-                {/* Short services listing */}
-                {project.scopeOfWork && (
-                  <div className="flex flex-wrap gap-1.5">
-                    {project.scopeOfWork.slice(0, 3).map((scope, idx) => (
-                      <span key={idx} className="text-[10px] uppercase tracking-wider text-brand-text/40 px-2 py-0.5 bg-brand-text/5 rounded-full">
-                        {scope}
-                      </span>
-                    ))}
-                  </div>
-                )}
               </motion.div>
             </SectionReveal>
           ))}

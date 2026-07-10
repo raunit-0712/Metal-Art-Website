@@ -8,9 +8,83 @@ import { ArrowRight, X, ZoomIn } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
 import { artworks } from '@/lib/data';
 
+function getBalancedFeaturedArtworks(artworksList: typeof artworks): typeof artworks {
+  // Only consider featured artworks
+  const featured = artworksList.filter(a => a.featured);
+  
+  // Group by category
+  const grouped = new Map<string, typeof artworks>();
+  featured.forEach(a => {
+    if (!grouped.has(a.category)) {
+      grouped.set(a.category, []);
+    }
+    grouped.get(a.category)!.push(a);
+  });
+  
+  const categoryOrder = [
+    'Old Masters Copy',
+    'Portraits',
+    'Wall Arts',
+    'Digital Artwork',
+    'Logos',
+    'Miscellaneous'
+  ];
+  
+  // Preferred visual representative for each category to ensure high quality
+  const preferredIds = [
+    'om4', // Grand Landscape Master Copy (Old Masters Copy)
+    'p23', // Portrait of Grace (Portraits)
+    'w1',  // Textured Wall Mural I (Wall Arts)
+    'd3',  // Divine Union (Radha Krishna) (Digital Artwork)
+    'l16', // Ventus Logo Design (Logos)
+    'm19'  // Radha Krishna Sketch Study (Miscellaneous)
+  ];
+  
+  const selected: typeof artworks = [];
+  
+  // 1. Try to pick the preferred ones first
+  preferredIds.forEach(id => {
+    const found = featured.find(a => a.id === id);
+    if (found && !selected.some(s => s.category === found.category)) {
+      selected.push(found);
+    }
+  });
+  
+  // 2. Fill in from other categories if we don't have 6 yet
+  const remainingCategories = Array.from(grouped.keys()).filter(cat => !selected.some(s => s.category === cat));
+  remainingCategories.forEach(cat => {
+    if (selected.length < 6) {
+      const items = grouped.get(cat)!;
+      selected.push(items[0]);
+    }
+  });
+  
+  // 3. If we still have fewer than 6 artworks, round-robin select from existing categories
+  let index = 0;
+  while (selected.length < 6 && selected.length < featured.length) {
+    const cat = categoryOrder[index % categoryOrder.length];
+    const items = grouped.get(cat) || [];
+    const unselected = items.find(item => !selected.some(s => s.id === item.id));
+    if (unselected) {
+      selected.push(unselected);
+    }
+    index++;
+  }
+  
+  // 4. Ensure the most visually impressive artwork 'om4' is first.
+  const firstId = 'om4';
+  const firstIndex = selected.findIndex(s => s.id === firstId);
+  if (firstIndex > 0) {
+    const [firstItem] = selected.splice(firstIndex, 1);
+    selected.unshift(firstItem);
+  }
+  
+  return selected;
+}
+
 export function FeaturedArtSection() {
   const [selectedArtwork, setSelectedArtwork] = useState<string | null>(null);
-  const featuredArtworks = artworks.filter((a) => a.featured).slice(0, 6);
+  const featuredArtworks = getBalancedFeaturedArtworks(artworks);
 
   const selectedArt = artworks.find((a) => a.id === selectedArtwork);
 
@@ -52,8 +126,9 @@ export function FeaturedArtSection() {
           {featuredArtworks.map((artwork, index) => (
             <SectionReveal key={artwork.id} delay={0.1 * index}>
               <motion.div
-                whileHover={{ scale: 1.02 }}
-                className="break-inside-avoid group relative overflow-hidden rounded-lg cursor-pointer"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 0.4 }}
+                className="break-inside-avoid relative overflow-hidden rounded-lg cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
                 <Image
@@ -62,23 +137,9 @@ export function FeaturedArtSection() {
                   width={600}
                   height={600}
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
+                  className="w-full h-auto object-cover"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-brand-primary/0 group-hover:bg-brand-primary/40 transition-all duration-500 flex items-center justify-center">
-                  <ZoomIn
-                    size={32}
-                    className="text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  />
-                </div>
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-brand-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <span className="text-brand-secondary text-xs tracking-wider uppercase">
-                    {artwork.category}
-                  </span>
-                  <h3 className="font-playfair text-lg text-white">
-                    {artwork.title}
-                  </h3>
-                </div>
               </motion.div>
             </SectionReveal>
           ))}
@@ -92,63 +153,30 @@ export function FeaturedArtSection() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
+            className="fixed inset-0 z-[100] bg-black/90 backdrop-blur-md flex items-center justify-center p-4 md:p-8"
             onClick={() => setSelectedArtwork(null)}
           >
             <button
               onClick={() => setSelectedArtwork(null)}
-              className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-10"
+              className="absolute top-6 right-6 text-white/60 hover:text-white transition-colors z-[110] p-2 bg-white/5 hover:bg-white/10 rounded-full"
+              aria-label="Close Lightbox"
             >
               <X size={32} />
             </button>
 
             <motion.div
-              initial={{ scale: 0.9, opacity: 0 }}
+              initial={{ scale: 0.95, opacity: 0 }}
               animate={{ scale: 1, opacity: 1 }}
-              exit={{ scale: 0.9, opacity: 0 }}
-              className="max-w-5xl w-full grid grid-cols-1 lg:grid-cols-2 gap-8 items-center"
+              exit={{ scale: 0.95, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 200 }}
+              className="relative max-w-full max-h-[85vh] aspect-auto flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="aspect-square overflow-hidden rounded-lg relative">
-                <Image
-                  src={selectedArt.image}
-                  alt={selectedArt.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 500px"
-                  className="object-cover"
-                />
-              </div>
-              <div className="text-white">
-                <span className="text-brand-secondary text-sm tracking-wider uppercase">
-                  {selectedArt.category}
-                </span>
-                <h3 className="font-playfair text-3xl md:text-4xl mt-2 mb-4">
-                  {selectedArt.title}
-                </h3>
-                <div className="space-y-3 text-white/70">
-                  <p>
-                    <span className="text-white/40">Medium:</span>{' '}
-                    {selectedArt.medium}
-                  </p>
-                  <p>
-                    <span className="text-white/40">Size:</span>{' '}
-                    {selectedArt.size}
-                  </p>
-                  <p>
-                    <span className="text-white/40">Year:</span>{' '}
-                    {selectedArt.year}
-                  </p>
-                </div>
-                <p className="mt-6 text-white/60 leading-relaxed">
-                  {selectedArt.description}
-                </p>
-                <Link
-                  href="/contact"
-                  className="inline-block mt-8 px-6 py-3 bg-brand-secondary text-white rounded hover:bg-brand-accent transition-colors"
-                >
-                  Inquire About This Artwork
-                </Link>
-              </div>
+              <img
+                src={selectedArt.image}
+                alt={selectedArt.title}
+                className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
+              />
             </motion.div>
           </motion.div>
         )}

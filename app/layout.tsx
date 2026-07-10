@@ -1,14 +1,29 @@
 import './globals.css';
 import type { Metadata } from 'next';
-import { Inter, Playfair_Display } from 'next/font/google';
+import {
+  Inter,
+  Playfair_Display,
+  Great_Vibes,
+} from 'next/font/google';
 import dynamic from 'next/dynamic';
 
 import { Navbar } from '@/components/shared/Navbar';
 import { Footer } from '@/components/shared/Footer';
 
-const CustomCursor = dynamic(() => import('@/components/shared/CustomCursor'), { ssr: false });
-const SmoothScroll = dynamic(() => import('@/components/shared/SmoothScroll'), { ssr: false });
-const WhatsAppButton = dynamic(() => import('@/components/shared/WhatsAppButton'), { ssr: false });
+const CustomCursor = dynamic(
+  () => import('@/components/shared/CustomCursor'),
+  { ssr: false }
+);
+
+const SmoothScroll = dynamic(
+  () => import('@/components/shared/SmoothScroll'),
+  { ssr: false }
+);
+
+const WhatsAppButton = dynamic(
+  () => import('@/components/shared/WhatsAppButton'),
+  { ssr: false }
+);
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,12 +37,19 @@ const playfair = Playfair_Display({
   display: 'swap',
 });
 
+const greatVibes = Great_Vibes({
+  subsets: ['latin'],
+  weight: '400',
+  variable: '--font-great-vibes',
+  display: 'swap',
+});
+
 export const metadata: Metadata = {
   metadataBase: new URL('http://localhost:3000'),
 
   title: {
     default: 'Aakriti Atelier | Shaping Ideas into Reality',
-    template: '%s | Aakriti Atelier ',
+    template: '%s | Aakriti Atelier',
   },
 
   description:
@@ -96,15 +118,20 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${inter.variable} ${playfair.variable}`}
+      className={`${inter.variable} ${playfair.variable} ${greatVibes.variable}`}
     >
       <body className="font-sans bg-brand-background text-brand-text overflow-x-hidden">
         {/* <LoadingScreen /> */}
+
         <CustomCursor />
+
         <SmoothScroll>
           <Navbar />
+
           <main>{children}</main>
+
           <Footer />
+
           <WhatsAppButton />
         </SmoothScroll>
       </body>

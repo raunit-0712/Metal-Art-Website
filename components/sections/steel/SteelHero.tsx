@@ -11,8 +11,8 @@ export function SteelHero() {
       {/* Background */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2"
-          alt="Architectural steel works showcase background"
+          src="/images/steel/others-project-images/lobby-portal-framing.jpg"
+          alt="Architectural Metal Works showcase background"
           fill
           priority
           sizes="100vw"
@@ -47,7 +47,7 @@ export function SteelHero() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-playfair text-5xl md:text-7xl lg:text-8xl text-white mb-6"
         >
-          Steel Works
+          Metal Works
         </motion.h1>
 
         <motion.p

@@ -8,18 +8,18 @@ import { CONTACT } from '@/lib/config/contact';
 
 const contactSections = [
   {
-    title: 'Steel Works Division',
+    title: 'Metal Works Division',
     items: [
       {
         icon: Phone,
-        label: 'Call Steel Works',
+        label: 'Call Metal Works',
         value: '+91 80804 14471',
         href: `tel:+918080414471`,
         color: 'bg-green-500',
       },
       {
         icon: MessageCircle,
-        label: 'WhatsApp Steel Works',
+        label: 'WhatsApp Metal Works',
         value: '+91 80804 14471',
         href: `https://wa.me/918080414471?text=${encodeURIComponent(CONTACT.steel.whatsappMessage)}`,
         color: 'bg-green-600',

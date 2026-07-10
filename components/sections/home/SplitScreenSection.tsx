@@ -71,7 +71,7 @@ export function SplitScreenSection() {
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
             style={{
               backgroundImage:
-                'url(https://images.pexels.com/photos/1571463/pexels-photo-1571463.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2)',
+                'url(/images/steel/others-project-images/brushed-bronze-skirting.jpg)',
               transform: activeSide === 'left' ? 'scale(1.05)' : 'scale(1)',
             }}
           />
@@ -85,7 +85,7 @@ export function SplitScreenSection() {
             >
               <Wrench size={48} className="text-brand-secondary mx-auto mb-6" />
               <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-white mb-4">
-                Steel & Metal
+                Metal Jinglala
               </h2>
               <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
                 Precision-engineered architectural metalwork that defines spaces
@@ -96,7 +96,7 @@ export function SplitScreenSection() {
                 className="inline-flex items-center gap-2 text-brand-secondary hover:text-brand-accent transition-colors group"
               >
                 <span className="text-sm tracking-wider uppercase">
-                  Explore Steel Works
+                  Explore Metal Works
                 </span>
                 <ArrowRight
                   size={18}
@@ -117,11 +117,11 @@ export function SplitScreenSection() {
           onMouseEnter={() => handleMouseEnter('right')}
           onMouseLeave={handleMouseLeave}
         >
-          <div
+          <div  
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
             style={{
               backgroundImage:
-                'url(https://images.pexels.com/photos/1571472/pexels-photo-1571472.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2)',
+                'url(/images/arts/miscellaneous/IMG_3846.jpg)',
               transform: activeSide === 'right' ? 'scale(1.05)' : 'scale(1)',
             }}
           />

@@ -17,12 +17,7 @@ const categories = [
     description: 'Cutting-edge digital creations blending technology with artistic vision.',
     count: 7,
   },
-  {
-    icon: Frame,
-    title: 'Logos',
-    description: 'Bespoke corporate identity and vector brand designs.',
-    count: 16,
-  },
+  
   {
     icon: Pencil,
     title: 'Miscellaneous',
@@ -34,12 +29,6 @@ const categories = [
     title: 'Old Masters Copy',
     description: 'Oil paintings replicating classical landscape and figure styles.',
     count: 4,
-  },
-  {
-    icon: Paintbrush,
-    title: 'Student Works',
-    description: 'Basic shape studies, anatomical sketches, and shading practices.',
-    count: 11,
   },
   {
     icon: Image,

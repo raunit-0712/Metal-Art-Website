@@ -5,10 +5,15 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import { SectionReveal } from '@/components/shared/SectionReveal';
-import { steelFeatured } from '@/lib/data';
+import { steelFeatured, SteelProject, steelProjects } from '@/lib/data';
 
-export function FeaturedSteelSection() {
-  const featuredProjects = steelFeatured.slice(0, 3);
+interface FeaturedSteelSectionProps {
+  initialProjects?: SteelProject[];
+}
+
+export function FeaturedSteelSection({ initialProjects }: FeaturedSteelSectionProps) {
+  const activeProjects = initialProjects || steelProjects;
+  const featuredProjects = activeProjects.filter((p) => p.featured).slice(0, 3);
 
   return (
     <section className="py-24 md:py-32 bg-brand-primary">
@@ -18,7 +23,7 @@ export function FeaturedSteelSection() {
           <div>
             <SectionReveal>
               <p className="text-brand-secondary text-sm tracking-[0.3em] uppercase mb-4">
-                Steel Works
+                Metal Works
               </p>
             </SectionReveal>
             <SectionReveal delay={0.1}>
@@ -47,43 +52,23 @@ export function FeaturedSteelSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {featuredProjects.map((project, index) => (
             <SectionReveal key={project.id} delay={0.1 * index}>
-              <motion.div
-                whileHover={{ y: -10 }}
-                className="group relative overflow-hidden rounded-lg cursor-pointer"
-              >
-                <div className="relative aspect-[4/5] overflow-hidden">
-                  <Image
-                    src={project.images[0].src}
-                    alt={project.images[0].alt || project.title}
-                    fill
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover transition-transform duration-700 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-brand-primary via-brand-primary/40 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-                <div className="absolute bottom-0 left-0 right-0 p-6">
-                  <span className="text-brand-secondary text-xs tracking-wider uppercase mb-2 block">
-                    {project.subcategory}
-                  </span>
-                  <h3 className="font-playfair text-2xl text-white mb-2">
+              <Link href={`/projects?category=steel&id=${project.id}`}>
+                <motion.div className="group cursor-pointer">
+                  <div className="relative aspect-square overflow-hidden rounded-xl mb-4 bg-brand-primary border border-white/5 shadow-sm">
+                    <Image
+                      src={project.images[0].src}
+                      alt={project.images[0].alt || project.title}
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                      className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
+                      loading="lazy"
+                    />
+                  </div>
+                  <h3 className="font-sans text-[18px] sm:text-[20px] lg:text-[24px] leading-[1.35] tracking-[-0.02em] text-white text-center mt-4 h-[2.7em] overflow-hidden text-balance group-hover:text-brand-secondary transition-colors duration-300">
                     {project.title}
                   </h3>
-                  <p className="text-white/60 text-sm line-clamp-2 mb-4">
-                    {project.description}
-                  </p>
-                  <Link
-                    href={`/projects?category=steel&id=${project.id}`}
-                    className="inline-flex items-center gap-2 text-brand-secondary text-sm group/link"
-                  >
-                    <span>View Project</span>
-                    <ArrowRight
-                      size={14}
-                      className="group-hover/link:translate-x-1 transition-transform"
-                    />
-                  </Link>
-                </div>
-              </motion.div>
+                </motion.div>
+              </Link>
             </SectionReveal>
           ))}
         </div>

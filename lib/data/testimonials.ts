@@ -5,8 +5,8 @@ export const testimonials: Testimonial[] = [
     id: 't1',
     name: 'Rajesh Mehta',
     role: 'Chief Infrastructure Officer',
-    company: 'Kempegowda International Airport',
-    location: 'Kempegowda International Airport, Bengaluru',
+    company: 'kempegowda International Airport',
+    location: 'kempegowda International Airport, Bengaluru',
     content:
       'Aakriti Atelier executed the intricate interior metal works for the terminal expansion with exemplary professionalism. Their custom stainless steel and brass architectural installations required immense precision. From structural stability to the final luxury hand-polished finish, the team demonstrated unmatched craftsmanship. Despite tight airport security protocols and a demanding delivery timeline, their seamless communication and dedication ensured the project was completed on schedule. The finishing quality is world-class.',
     rating: 5,

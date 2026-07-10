@@ -4,7 +4,6 @@ export const artCategories = [
   'Logos',
   'Digital Artwork',
   'Miscellaneous',
-  'Student Works',
   'Old Masters Copy',
 ] as const;
 

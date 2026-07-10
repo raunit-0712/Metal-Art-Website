@@ -11,14 +11,14 @@ export function ArtHero() {
       {/* Soft Background */}
       <div className="absolute inset-0">
         <Image
-          src="https://images.pexels.com/photos/1571472/pexels-photo-1571472.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2"
+          src="/images/arts/old-master-copy/landscapes_by_mnorma_d3gpwbi.jpg"
           alt="Fine art gallery showcase background"
           fill
           priority
-          sizes="100vw"
+          sizes="100vw" 
           className="object-cover object-center"
         />
-        <div className="absolute inset-0 bg-brand-background/90" />
+        <div className="absolute inset-0 bg-brand-background/80" />
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
