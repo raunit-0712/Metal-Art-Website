@@ -96,7 +96,7 @@ export function ArtGallery() {
                 className="break-inside-avoid overflow-hidden rounded-xl cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
-                <div className="relative">
+                <div className="relative overflow-hidden">
                   <Image
                     src={artwork.image}
                     alt={artwork.title}
@@ -107,7 +107,7 @@ export function ArtGallery() {
                     loading="lazy"
                   />
                   {/* Branded Watermark overlay */}
-                  <div className="absolute bottom-4 right-4 w-[12%] min-w-[50px] max-w-[90px] aspect-[1402/567] z-50 pointer-events-none select-none opacity-15">
+                  <div className="absolute bottom-4 right-4 w-[12%] min-w-[50px] max-w-[90px] aspect-[1402/567] z-10 pointer-events-none select-none opacity-15">
                     <Image
                       src="/images/watermark.webp"
                       alt="Aakriti Atelier Watermark"
@@ -155,14 +155,14 @@ export function ArtGallery() {
               className="relative max-w-full max-h-[85vh] aspect-auto flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="relative">
+              <div className="relative overflow-hidden">
                 <img
                   src={selected.image}
                   alt={selected.title}
                   className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
                 />
                 {/* Branded Watermark overlay */}
-                <div className="absolute bottom-4 right-4 w-[12%] min-w-[70px] max-w-[150px] aspect-[1402/567] z-50 pointer-events-none select-none opacity-15">
+                <div className="absolute bottom-4 right-4 w-[12%] min-w-[70px] max-w-[150px] aspect-[1402/567] z-10 pointer-events-none select-none opacity-15">
                   <Image
                     src="/images/watermark.webp"
                     alt="Aakriti Atelier Watermark"

@@ -85,7 +85,7 @@ export function SplitScreenSection() {
             >
               <Wrench size={48} className="text-brand-secondary mx-auto mb-6" />
               <h2 className="font-playfair text-4xl md:text-5xl lg:text-6xl text-white mb-4">
-                Metal Jinglala
+                Metal Fabrications
               </h2>
               <p className="text-white/70 text-lg max-w-md mx-auto mb-8">
                 Precision-engineered architectural metalwork that defines spaces
