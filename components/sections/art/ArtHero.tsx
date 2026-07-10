@@ -7,18 +7,18 @@ import { ArrowDown, ChevronRight } from 'lucide-react';
 
 export function ArtHero() {
   return (
-    <section className="relative min-h-screen bg-brand-background flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen bg-[#0D1321] flex items-center justify-center overflow-hidden">
       {/* Soft Background */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 bg-[#0D1321]">
         <Image
           src="/images/arts/old-master-copy/landscapes_by_mnorma_d3gpwbi.jpg"
           alt="Fine art gallery showcase background"
           fill
           priority
           sizes="100vw" 
-          className="object-cover object-center"
+          className="object-cover object-center opacity-[0.12]"
         />
-        <div className="absolute inset-0 bg-brand-background/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#0D1321] via-transparent to-[#0D1321]/50" />
       </div>
 
       <div className="relative z-10 text-center px-4 max-w-5xl mx-auto">
@@ -26,7 +26,7 @@ export function ArtHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-brand-secondary text-sm tracking-[0.4em] uppercase mb-6"
+          className="text-[#748CAB] text-sm tracking-[0.4em] uppercase mb-6"
         >
           Fine Arts & Creative Works
         </motion.p>
@@ -35,7 +35,7 @@ export function ArtHero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="font-playfair text-5xl md:text-7xl lg:text-8xl text-brand-text mb-6"
+          className="font-playfair text-5xl md:text-7xl lg:text-8xl text-[#F0EBD8] mb-6"
         >
           Art Gallery
         </motion.h1>
@@ -44,7 +44,7 @@ export function ArtHero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-brand-text/60 text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
+          className="text-[#DAD2BC] text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
         >
           Timeless artistic creations that capture emotion, beauty, and the
           essence of human expression through various mediums.
@@ -58,20 +58,20 @@ export function ArtHero() {
         >
           <Link
             href="#gallery"
-            className="px-8 py-4 bg-brand-secondary text-white font-medium rounded-sm hover:bg-brand-accent transition-colors flex items-center gap-2"
+            className="px-8 py-4 bg-[#F0EBD8] text-[#0D1321] font-semibold rounded-md hover:bg-[#DAD2BC] transition-all duration-300 flex items-center gap-2 shadow-lg shadow-[#0d1321]/20 hover:scale-[1.02] active:scale-[0.98]"
           >
             View Gallery
             <ChevronRight size={18} />
           </Link>
           <Link
             href="#courses"
-            className="px-8 py-4 bg-brand-secondary/10 border border-brand-secondary/45 text-brand-secondary font-medium rounded-sm hover:bg-brand-secondary hover:text-white transition-all text-center"
+            className="px-8 py-4 bg-transparent border border-[#748CAB] text-[#F0EBD8] font-medium rounded-md hover:bg-[#748CAB] hover:text-[#0D1321] transition-all duration-300 text-center hover:scale-[1.02] active:scale-[0.98]"
           >
             Courses & Certification
           </Link>
           <Link
             href="#commission"
-            className="px-8 py-4 border border-brand-text/20 text-brand-text font-medium rounded-sm hover:bg-brand-text/5 transition-colors text-center"
+            className="px-8 py-4 bg-transparent border border-[#748CAB] text-[#F0EBD8] font-medium rounded-md hover:bg-[#748CAB] hover:text-[#0D1321] transition-all duration-300 text-center hover:scale-[1.02] active:scale-[0.98]"
           >
             Commission Artwork
           </Link>
@@ -89,7 +89,7 @@ export function ArtHero() {
           animate={{ y: [0, 10, 0] }}
           transition={{ duration: 2, repeat: Infinity }}
         >
-          <ArrowDown size={20} className="text-brand-secondary" />
+          <ArrowDown size={20} className="text-[#748CAB]" />
         </motion.div>
       </motion.div>
     </section>

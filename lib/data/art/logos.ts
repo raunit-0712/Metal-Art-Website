@@ -173,7 +173,7 @@ export const logos: Artwork[] = [
     medium: 'Digital Identity Graphic',
     size: 'Scalable Vector',
     description: 'Sleek premium brandmark and typography for the Ventus corporate project.',
-    image: '/images/arts/logos/ventuslogo.jpg',
+    image: '/images/arts/logos/sweta-graphics.png',
     year: 2024,
     featured: true,
   },

@@ -101,17 +101,6 @@ export const miscellaneous: Artwork[] = [
     featured: false,
   },
   {
-    id: 'm12',
-    title: 'Custom Metalwork Design Sketch I',
-    category: 'Miscellaneous',
-    medium: 'Pen and Ink on Paper',
-    size: '14 x 17 inches',
-    description: 'Bespoke design drafts for client-commissioned metal work.',
-    image: '/images/arts/miscellaneous/IMG_3846.jpg',
-    year: 2024,
-    featured: false,
-  },
-  {
     id: 'm14',
     title: 'Architectural Metal Draft I',
     category: 'Miscellaneous',

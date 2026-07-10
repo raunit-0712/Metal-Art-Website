@@ -217,7 +217,7 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                       onClick={() => setSelectedProject(item.id)}
                     >
                       {/* Project Card Image Container */}
-                      <div className="relative overflow-hidden rounded-xl mb-4 aspect-square bg-brand-primary border border-black/5 shadow-sm">
+                      <div className="relative overflow-hidden rounded-xl mb-0 aspect-square bg-brand-primary border border-black/5 shadow-sm">
                         <Image
                           src={src}
                           alt={alt}
@@ -227,10 +227,6 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                           loading="lazy"
                         />
                       </div>
-
-                      <h3 className="font-sans text-[18px] sm:text-[20px] lg:text-[24px] leading-[1.35] tracking-[-0.02em] text-[#1F1F1F] text-center mt-4 h-[2.7em] overflow-hidden text-balance group-hover:text-brand-secondary transition-colors duration-300">
-                        {item.title}
-                      </h3>
                     </motion.div>
                   );
                 }
@@ -247,7 +243,7 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                     onClick={() => setSelectedProject(item.id)}
                   >
                     {/* Project Card Image Container */}
-                    <div className="relative overflow-hidden rounded-xl mb-4 aspect-[4/3] bg-brand-primary border border-black/5 group-hover:border-brand-secondary/30 transition-colors duration-300">
+                    <div className="relative overflow-hidden rounded-xl mb-0 aspect-[4/3] bg-brand-primary border border-black/5 group-hover:border-brand-secondary/30 transition-colors duration-300">
                       <Image
                         src={src}
                         alt={alt}
@@ -257,13 +253,6 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                         loading="lazy"
                       />
                     </div>
-
-                    <h3 className="font-playfair text-xl text-brand-text mb-1 group-hover:text-brand-secondary transition-colors duration-300">
-                      {item.title}
-                    </h3>
-                    <p className="text-brand-text/60 text-sm line-clamp-2 font-light">
-                      {item.description}
-                    </p>
                   </motion.div>
                 );
               })}
@@ -292,7 +281,7 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                       className="group flex flex-col md:flex-row gap-6 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
                       onClick={() => setSelectedProject(item.id)}
                     >
-                      <div className="relative md:w-48 h-32 rounded-lg overflow-hidden shrink-0 aspect-[4/3] bg-brand-primary">
+                      <div className="relative md:w-48 h-32 rounded-lg overflow-hidden shrink-0 aspect-[4/3] bg-brand-primary mb-0">
                         <Image
                           src={src}
                           alt={alt}
@@ -301,11 +290,6 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                           className="object-cover transition-transform duration-500 ease-out group-hover:scale-[1.03]"
                           loading="lazy"
                         />
-                      </div>
-                      <div className="flex-1 flex flex-col justify-center">
-                        <h3 className="font-sans text-[18px] sm:text-[20px] lg:text-[24px] leading-[1.35] tracking-[-0.02em] text-[#1F1F1F] text-center mt-4 group-hover:text-brand-secondary transition-colors">
-                          {item.title}
-                        </h3>
                       </div>
                     </motion.div>
                   );
@@ -322,7 +306,7 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                     className="group flex flex-col md:flex-row gap-6 p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-shadow duration-300 cursor-pointer"
                     onClick={() => setSelectedProject(item.id)}
                   >
-                    <div className="relative md:w-48 h-32 rounded-lg overflow-hidden shrink-0 aspect-[4/3] bg-brand-primary">
+                    <div className="relative md:w-48 h-32 rounded-lg overflow-hidden shrink-0 aspect-[4/3] bg-brand-primary mb-0">
                       <Image
                         src={src}
                         alt={alt}
@@ -331,24 +315,6 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                         className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
                         loading="lazy"
                       />
-                    </div>
-                    <div className="flex-1">
-                      <div className="flex items-center gap-3 mb-2">
-                        <span className="text-xs tracking-wider uppercase px-2 py-1 rounded bg-brand-accent/20 text-brand-accent">
-                          Art Gallery
-                        </span>
-                        <span className="text-brand-text/40 text-xs">{item.subcategory}</span>
-                      </div>
-                      <h3 className="font-playfair text-xl text-brand-text mb-2 group-hover:text-brand-secondary transition-colors">
-                        {item.title}
-                      </h3>
-                      <p className="text-brand-text/60 text-sm line-clamp-2 mb-3 font-light">
-                        {item.description}
-                      </p>
-                      <div className="flex items-center gap-2 text-brand-secondary text-sm">
-                        <span>View Details</span>
-                        <ArrowRight size={14} className="group-hover:translate-x-1 transition-transform" />
-                      </div>
                     </div>
                   </motion.div>
                 );

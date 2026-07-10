@@ -15,17 +15,17 @@ interface FeatureCardProps {
 function FeatureCard({ title, description, icon }: FeatureCardProps) {
   return (
     <motion.div
-      whileHover={{ y: -6 }}
-      className="group p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-brand-secondary/40 hover:shadow-[0_10px_30px_rgba(176,141,87,0.1)] transition-all duration-300 flex gap-4"
+      whileHover={{ y: -4 }}
+      className="group p-6 rounded-[16px] bg-white border border-[#DAD2BC] hover:border-[#748CAB] hover:shadow-[0_10px_30px_rgba(13,19,33,0.08)] transition-all duration-300 flex gap-4"
     >
-      <div className="flex-shrink-0 text-brand-secondary mt-1 group-hover:scale-110 transition-transform duration-300">
+      <div className="flex-shrink-0 text-[#748CAB] mt-1 group-hover:scale-110 transition-transform duration-300">
         {icon}
       </div>
       <div>
-        <h4 className="font-playfair text-lg text-white font-medium mb-2 group-hover:text-brand-secondary transition-colors">
+        <h4 className="font-playfair text-lg text-[#0D1321] font-medium mb-2 group-hover:text-[#748CAB] transition-colors">
           {title}
         </h4>
-        <p className="text-white/60 text-xs md:text-sm font-light leading-relaxed">
+        <p className="text-[#3E5C76] text-xs md:text-sm font-light leading-relaxed">
           {description}
         </p>
       </div>
@@ -47,7 +47,7 @@ export function CoursesCertificationSection() {
   }, [activeVideoSrc]);
 
   return (
-    <section id="courses" className="py-24 md:py-32 bg-brand-primary text-white border-t border-white/5">
+    <section id="courses" className="py-24 md:py-32 bg-[#F0EBD8] text-[#3E5C76] border-t border-[#DAD2BC]">
       <div className="max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         
         {/* Responsive Grid Shell */}
@@ -59,17 +59,17 @@ export function CoursesCertificationSection() {
             {/* Header info */}
             <div className="space-y-4">
               <SectionReveal>
-                <span className="text-brand-secondary text-xs tracking-[0.3em] uppercase font-semibold">
+                <span className="text-[#748CAB] text-xs tracking-[0.3em] uppercase font-semibold">
                   LEARN • CREATE • ACHIEVE
                 </span>
               </SectionReveal>
               <SectionReveal delay={0.1}>
-                <h2 className="font-playfair text-4xl md:text-5xl text-white font-medium">
+                <h2 className="font-playfair text-4xl md:text-5xl text-[#0D1321] font-medium">
                   Art Courses & Certification
                 </h2>
               </SectionReveal>
               <SectionReveal delay={0.2}>
-                <p className="text-white/70 text-sm md:text-base font-light leading-relaxed max-w-2xl">
+                <p className="text-[#3E5C76] text-sm md:text-base font-light leading-relaxed max-w-2xl">
                   Develop artistic skills through structured certificate courses and professional drawing exam preparation under expert guidance.
                 </p>
               </SectionReveal>
@@ -100,28 +100,28 @@ export function CoursesCertificationSection() {
             </div>
 
             {/* Course Information & Curriculum Grid */}
-            <div className="p-8 rounded-2xl bg-white/5 border border-white/5 grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="p-8 rounded-[16px] bg-white border border-[#DAD2BC] grid grid-cols-1 md:grid-cols-2 gap-8 shadow-[0_10px_30px_rgba(13,19,33,0.08)]">
               <div>
-                <h4 className="font-playfair text-lg text-brand-secondary font-medium mb-4 pb-2 border-b border-white/10">
+                <h4 className="font-playfair text-lg text-[#0D1321] font-medium mb-4 pb-2 border-b border-[#DAD2BC]">
                   Courses Offered
                 </h4>
-                <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-white/70 text-xs md:text-sm font-light">
+                <ul className="grid grid-cols-2 gap-x-4 gap-y-2 text-[#3E5C76] text-xs md:text-sm font-light">
                   {['Drawing Fundamentals', 'Pencil Sketching', 'Watercolor', 'Acrylic Painting', 'Color Theory', 'Object Drawing', 'Perspective', 'Shading Techniques', 'Still Life', 'Creative Composition'].map((course) => (
                     <li key={course} className="flex items-center gap-2">
-                      <span className="h-1.5 w-1.5 rounded-full bg-brand-secondary flex-shrink-0" />
+                      <span className="h-1.5 w-1.5 rounded-full bg-[#748CAB] flex-shrink-0" />
                       <span>{course}</span>
                     </li>
                   ))}
                 </ul>
               </div>
               <div>
-                <h4 className="font-playfair text-lg text-brand-secondary font-medium mb-4 pb-2 border-b border-white/10">
+                <h4 className="font-playfair text-lg text-[#0D1321] font-medium mb-4 pb-2 border-b border-[#DAD2BC]">
                   Exam Preparation
                 </h4>
-                <ul className="space-y-3 text-white/70 text-xs md:text-sm font-light">
+                <ul className="space-y-3 text-[#3E5C76] text-xs md:text-sm font-light">
                   {['Elementary Drawing', 'Intermediate Drawing'].map((exam) => (
                     <li key={exam} className="flex items-center gap-2">
-                      <Check size={16} className="text-brand-secondary flex-shrink-0" />
+                      <Check size={16} className="text-[#748CAB] flex-shrink-0" />
                       <span>{exam}</span>
                     </li>
                   ))}
@@ -132,9 +132,9 @@ export function CoursesCertificationSection() {
             {/* Why Join Badges */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
               {['Personalized Guidance', 'Small Batch Learning', 'Practical Sessions', 'Certificate on Completion'].map((badge) => (
-                <div key={badge} className="flex items-center gap-2 py-3 px-4 rounded-xl bg-white/[0.03] border border-white/5">
-                  <Check size={14} className="text-brand-secondary flex-shrink-0" />
-                  <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-white/80 leading-tight">
+                <div key={badge} className="flex items-center gap-2 py-3 px-4 rounded-xl bg-white border border-[#DAD2BC] shadow-[0_5px_15px_rgba(13,19,33,0.04)]">
+                  <Check size={14} className="text-[#748CAB] flex-shrink-0" />
+                  <span className="text-[10px] sm:text-xs font-mono uppercase tracking-wider text-[#3E5C76] leading-tight">
                     {badge}
                   </span>
                 </div>
@@ -142,18 +142,18 @@ export function CoursesCertificationSection() {
             </div>
 
             {/* CTA bottom block */}
-            <div className="p-8 rounded-2xl bg-gradient-to-r from-brand-secondary/15 to-transparent border border-brand-secondary/20 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
+            <div className="p-8 rounded-[16px] bg-white border border-[#DAD2BC] shadow-[0_10px_30px_rgba(13,19,33,0.08)] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6">
               <div>
-                <h4 className="font-playfair text-xl text-white font-medium mb-1">
+                <h4 className="font-playfair text-xl text-[#0D1321] font-medium mb-1">
                   Ready to Begin Your Artistic Journey?
                 </h4>
-                <p className="text-white/60 text-xs md:text-sm font-light">
+                <p className="text-[#3E5C76] text-xs md:text-sm font-light">
                   Connect with us to inquire about seat availability and batch schedules.
                 </p>
               </div>
               <a
                 href="#commission"
-                className="px-6 py-3.5 bg-brand-secondary hover:bg-brand-accent text-white text-xs sm:text-sm font-medium rounded-lg transition-all flex-shrink-0 text-center uppercase tracking-wider font-mono shadow-lg hover:shadow-brand-secondary/20 hover:scale-[1.02] active:scale-[0.98]"
+                className="px-6 py-3.5 bg-[#1D2D44] hover:bg-[#0D1321] text-[#F0EBD8] text-xs sm:text-sm font-medium rounded-lg transition-all flex-shrink-0 text-center uppercase tracking-wider font-mono shadow-md hover:scale-[1.02] active:scale-[0.98]"
                 aria-label="Enquire about art courses"
               >
                 Enquire About Courses
@@ -168,7 +168,7 @@ export function CoursesCertificationSection() {
             {/* Certificate & Students Bento Showcase */}
             <div className="grid grid-cols-12 gap-4">
               {/* Primary Certificate Image */}
-              <div className="col-span-12 md:col-span-8 relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 group bg-black/40 shadow-lg">
+              <div className="col-span-12 md:col-span-8 relative aspect-[4/3] rounded-[16px] overflow-hidden border border-[#DAD2BC] hover:border-[#748CAB] group bg-white shadow-[0_10px_30px_rgba(13,19,33,0.08)] transition-all duration-300 hover:-translate-y-1">
                 <Image
                   src="/images/arts/certificate/art-certificate.jpeg"
                   alt="Aakriti Atelier Art Course Certificate layout"
@@ -177,11 +177,11 @@ export function CoursesCertificationSection() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 bg-[#0D1321]/10 group-hover:bg-transparent transition-colors duration-500" />
               </div>
 
               {/* Smaller Student image: Receiving Certificate */}
-              <div className="col-span-6 md:col-span-4 relative aspect-[4/5] md:aspect-square rounded-2xl overflow-hidden border border-white/10 group bg-black/40 shadow-lg">
+              <div className="col-span-6 md:col-span-4 relative aspect-[4/5] md:aspect-square rounded-[16px] overflow-hidden border border-[#DAD2BC] hover:border-[#748CAB] group bg-white shadow-[0_10px_30px_rgba(13,19,33,0.08)] transition-all duration-300 hover:-translate-y-1">
                 <Image
                   src="/images/arts/certificate/student-receiving-certificate.jpeg"
                   alt="Student receiving art gallery certificate"
@@ -190,11 +190,11 @@ export function CoursesCertificationSection() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 bg-[#0D1321]/15 group-hover:bg-transparent transition-colors duration-500" />
               </div>
 
               {/* Smaller Student image: Student with Artwork */}
-              <div className="col-span-6 md:col-span-4 relative aspect-square rounded-2xl overflow-hidden border border-white/10 group bg-black/40 shadow-lg">
+              <div className="col-span-6 md:col-span-4 relative aspect-square rounded-[16px] overflow-hidden border border-[#DAD2BC] hover:border-[#748CAB] group bg-white shadow-[0_10px_30px_rgba(13,19,33,0.08)] transition-all duration-300 hover:-translate-y-1">
                 <Image
                   src="/images/arts/certificate/student-with-artwork.jpeg"
                   alt="Student showing drawing sketch completed in art gallery"
@@ -203,11 +203,11 @@ export function CoursesCertificationSection() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 bg-[#0D1321]/15 group-hover:bg-transparent transition-colors duration-500" />
               </div>
 
               {/* Drawing Practice */}
-              <div className="col-span-12 md:col-span-8 relative aspect-[2/1] rounded-2xl overflow-hidden border border-white/10 group bg-black/40 shadow-lg">
+              <div className="col-span-12 md:col-span-8 relative aspect-[2/1] rounded-[16px] overflow-hidden border border-[#DAD2BC] hover:border-[#748CAB] group bg-white shadow-[0_10px_30px_rgba(13,19,33,0.08)] transition-all duration-300 hover:-translate-y-1">
                 <Image
                   src="/images/arts/certificate/student-drawing-practice.jpeg"
                   alt="Art student practicing pencil shading technique"
@@ -216,24 +216,24 @@ export function CoursesCertificationSection() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 bg-[#0D1321]/10 group-hover:bg-transparent transition-colors duration-500" />
               </div>
 
               {/* Student Artwork 1 — fills empty space */}
-              <div className="col-span-6 relative aspect-square rounded-2xl overflow-hidden border border-white/10 group bg-black/40 shadow-lg">
+              <div className="col-span-6 relative aspect-square rounded-[16px] overflow-hidden border border-[#DAD2BC] hover:border-[#748CAB] group bg-white shadow-[0_10px_30px_rgba(13,19,33,0.08)] transition-all duration-300 hover:-translate-y-1">
                 <Image
-                  src="/images/arts/student-works/0011.jpg"
+                  src="/images/arts/student-works/stu-work.jpeg"  
                   alt="Student artwork — pencil sketch drawing"
                   fill
                   sizes="(max-width: 768px) 50vw, 20vw"
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 bg-[#0D1321]/15 group-hover:bg-transparent transition-colors duration-500" />
               </div>
 
               {/* Student Artwork 2 — fills empty space */}
-              <div className="col-span-6 relative aspect-square rounded-2xl overflow-hidden border border-white/10 group bg-black/40 shadow-lg">
+              <div className="col-span-6 relative aspect-square rounded-[16px] overflow-hidden border border-[#DAD2BC] hover:border-[#748CAB] group bg-white shadow-[0_10px_30px_rgba(13,19,33,0.08)] transition-all duration-300 hover:-translate-y-1">
                 <Image
                   src="/images/arts/student-works/0013.jpg"
                   alt="Student artwork — color composition study"
@@ -242,13 +242,13 @@ export function CoursesCertificationSection() {
                   className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-black/15 group-hover:bg-transparent transition-colors duration-500" />
+                <div className="absolute inset-0 bg-[#0D1321]/15 group-hover:bg-transparent transition-colors duration-500" />
               </div>
             </div>
 
             {/* Video Previews */}
             <div className="space-y-4">
-              <h5 className="font-playfair text-white text-base tracking-wider uppercase font-medium">
+              <h5 className="font-playfair text-[#0D1321] text-base tracking-wider uppercase font-medium">
                 Syllabus & Classroom Preview
               </h5>
               
@@ -257,10 +257,10 @@ export function CoursesCertificationSection() {
                 {/* Video Card 1 */}
                 <div
                   onClick={() => setActiveVideoSrc('/images/arts/certificate/student-drawing-class-1.mp4')}
-                  className="group relative aspect-video rounded-xl overflow-hidden border border-white/10 bg-black/30 cursor-pointer shadow-md"
+                  className="group relative aspect-video rounded-xl overflow-hidden border border-[#DAD2BC] bg-white cursor-pointer shadow-[0_10px_30px_rgba(13,19,33,0.06)] hover:border-[#748CAB] transition-all duration-300 hover:-translate-y-1"
                 >
                   {/* Subtle placeholder/shimmer until preview plays */}
-                  <div className="absolute inset-0 bg-white/5 animate-pulse group-hover:bg-white/10 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-[#F0EBD8]/10 animate-pulse group-hover:bg-[#F0EBD8]/20 transition-colors duration-300" />
                   
                   {/* Mini looping video background as thumbnail */}
                   <video
@@ -269,18 +269,18 @@ export function CoursesCertificationSection() {
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-85 transition-opacity duration-300"
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
                   
                   {/* Play circle overlay */}
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
-                    <div className="p-2.5 rounded-full bg-brand-secondary/90 text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute inset-0 flex items-center justify-center bg-[#0D1321]/10 group-hover:bg-[#0D1321]/20 transition-colors duration-300">
+                    <div className="p-2.5 rounded-full bg-[#1D2D44] text-[#F0EBD8] shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                       <Play size={16} fill="white" />
                     </div>
                   </div>
                   
                   <div className="absolute bottom-3 left-3 z-10">
-                    <p className="text-[10px] uppercase font-mono tracking-widest text-white/90">
+                    <p className="text-[10px] uppercase font-mono tracking-widest text-[#3E5C76]">
                       Session Preview 01
                     </p>
                   </div>
@@ -289,9 +289,9 @@ export function CoursesCertificationSection() {
                 {/* Video Card 2 */}
                 <div
                   onClick={() => setActiveVideoSrc('/images/arts/certificate/student-drawing-class-2.mp4')}
-                  className="group relative aspect-video rounded-xl overflow-hidden border border-white/10 bg-black/30 cursor-pointer shadow-md"
+                  className="group relative aspect-video rounded-xl overflow-hidden border border-[#DAD2BC] bg-white cursor-pointer shadow-[0_10px_30px_rgba(13,19,33,0.06)] hover:border-[#748CAB] transition-all duration-300 hover:-translate-y-1"
                 >
-                  <div className="absolute inset-0 bg-white/5 animate-pulse group-hover:bg-white/10 transition-colors duration-300" />
+                  <div className="absolute inset-0 bg-[#F0EBD8]/10 animate-pulse group-hover:bg-[#F0EBD8]/20 transition-colors duration-300" />
                   
                   <video
                     src="/images/arts/certificate/student-drawing-class-2.mp4"
@@ -299,17 +299,17 @@ export function CoursesCertificationSection() {
                     muted
                     loop
                     playsInline
-                    className="w-full h-full object-cover opacity-60 group-hover:opacity-85 transition-opacity duration-300"
+                    className="w-full h-full object-cover opacity-80 group-hover:opacity-100 transition-opacity duration-300"
                   />
                   
-                  <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/40 transition-colors duration-300">
-                    <div className="p-2.5 rounded-full bg-brand-secondary/90 text-white shadow-lg transform group-hover:scale-110 transition-transform duration-300">
+                  <div className="absolute inset-0 flex items-center justify-center bg-[#0D1321]/10 group-hover:bg-[#0D1321]/20 transition-colors duration-300">
+                    <div className="p-2.5 rounded-full bg-[#1D2D44] text-[#F0EBD8] shadow-lg transform group-hover:scale-110 transition-transform duration-300">
                       <Play size={16} fill="white" />
                     </div>
                   </div>
                   
                   <div className="absolute bottom-3 left-3 z-10">
-                    <p className="text-[10px] uppercase font-mono tracking-widest text-white/90">
+                    <p className="text-[10px] uppercase font-mono tracking-widest text-[#3E5C76]">
                       Session Preview 02
                     </p>
                   </div>

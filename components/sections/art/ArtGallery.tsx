@@ -27,14 +27,14 @@ export function ArtGallery() {
   const selected = artworks.find((a) => a.id === selectedArtwork);
 
   return (
-    <section id="gallery" className="py-24 md:py-32 bg-brand-background">
+    <section id="gallery" className="py-24 md:py-32 bg-[#F0EBD8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionReveal>
           <div className="text-center mb-12">
-            <p className="text-brand-secondary text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-[#748CAB] text-sm tracking-[0.3em] uppercase mb-4">
               Collection
             </p>
-            <h2 className="font-playfair text-4xl md:text-5xl text-brand-text">
+            <h2 className="font-playfair text-4xl md:text-5xl text-[#0D1321]">
               Gallery
             </h2>
           </div>
@@ -45,18 +45,18 @@ export function ArtGallery() {
           <div className="mb-12">
             <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
               <div className="relative flex-1 w-full">
-                <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-brand-text/40" />
+                <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#748CAB]" />
                 <input
                   type="text"
                   placeholder="Search artworks..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 rounded-lg border border-gray-200 focus:border-brand-secondary focus:ring-1 focus:ring-brand-secondary outline-none transition-colors bg-white"
+                  className="w-full pl-12 pr-4 py-3 rounded-lg border border-[#DAD2BC] focus:border-[#748CAB] focus:ring-1 focus:ring-[#748CAB] outline-none transition-colors bg-white text-[#0D1321]"
                 />
               </div>
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-6 py-3 border border-gray-200 rounded-lg hover:bg-white transition-colors md:hidden"
+                className="flex items-center gap-2 px-6 py-3 border border-[#DAD2BC] rounded-lg hover:bg-white transition-colors md:hidden text-[#1D2D44]"
               >
                 <Filter size={18} />
                 Filters
@@ -68,10 +68,10 @@ export function ArtGallery() {
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm transition-all ${
+                  className={`px-4 py-2 rounded-full text-sm transition-all border ${
                     selectedCategory === category
-                      ? 'bg-brand-secondary text-white'
-                      : 'bg-white text-brand-text/70 hover:bg-brand-secondary/10 border border-gray-200'
+                      ? 'bg-[#1D2D44] border-[#1D2D44] text-white'
+                      : 'bg-transparent border-[#748CAB] text-[#1D2D44] hover:bg-[#748CAB] hover:text-white'
                   }`}
                 >
                   {category}
@@ -91,9 +91,9 @@ export function ArtGallery() {
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
-                whileHover={{ scale: 1.03 }}
+                whileHover={{ y: -4 }}
                 transition={{ duration: 0.4 }}
-                className="break-inside-avoid overflow-hidden rounded-xl cursor-pointer"
+                className="break-inside-avoid overflow-hidden rounded-[16px] border border-[#DAD2BC] hover:border-[#748CAB] bg-white shadow-[0_10px_30px_rgba(13,19,33,0.08)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.15)] transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
                 <div className="relative overflow-hidden">

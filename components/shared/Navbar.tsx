@@ -21,6 +21,8 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
+  const isArtGallery = pathname === '/art-gallery';
+
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 50;
@@ -43,9 +45,13 @@ export function Navbar() {
         animate={{ y: 0 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
-          isScrolled
-            ? 'bg-brand-primary/95 backdrop-blur-md shadow-lg'
-            : 'bg-transparent'
+          isArtGallery
+            ? isScrolled
+              ? 'bg-[#1D2D44]/95 backdrop-blur-md shadow-lg border-b border-[#748CAB]/15'
+              : 'bg-[#1D2D44] border-b border-[#748CAB]/10'
+            : isScrolled
+              ? 'bg-brand-primary/95 backdrop-blur-md shadow-lg'
+              : 'bg-transparent'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -80,15 +86,15 @@ export function Navbar() {
                   href={link.href}
                   className={`relative text-sm tracking-wide transition-colors duration-300 ${
                     pathname === link.href
-                      ? 'text-brand-secondary'
-                      : 'text-white/80 hover:text-white'
+                      ? isArtGallery ? 'text-[#748CAB]' : 'text-brand-secondary'
+                      : isArtGallery ? 'text-[#F0EBD8]/80 hover:text-white' : 'text-white/80 hover:text-white'
                   }`}
                 >
                   {link.label}
                   {pathname === link.href && (
                     <motion.div
                       layoutId="navbar-indicator"
-                      className="absolute -bottom-1 left-0 right-0 h-[2px] bg-brand-secondary"
+                      className={`absolute -bottom-1 left-0 right-0 h-[2px] ${isArtGallery ? 'bg-[#748CAB]' : 'bg-brand-secondary'}`}
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -100,7 +106,11 @@ export function Navbar() {
             <div className="hidden lg:block">
               <Link
                 href="/contact"
-                className="px-6 py-2.5 bg-brand-secondary text-white text-sm font-medium rounded hover:bg-brand-accent transition-colors duration-300"
+                className={`px-6 py-2.5 text-sm font-medium rounded transition-colors duration-300 ${
+                  isArtGallery
+                    ? 'bg-[#F0EBD8] text-[#0D1321] hover:bg-[#DAD2BC]'
+                    : 'bg-brand-secondary text-white hover:bg-brand-accent'
+                }`}
               >
                 Get a Quote
               </Link>
@@ -109,7 +119,7 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden text-white p-2"
+              className={`lg:hidden p-2 ${isArtGallery ? 'text-[#F0EBD8]' : 'text-white'}`}
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -126,7 +136,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-brand-primary pt-24 px-6 lg:hidden"
+            className={`fixed inset-0 z-40 pt-24 px-6 lg:hidden ${isArtGallery ? 'bg-[#1D2D44]' : 'bg-brand-primary'}`}
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link, index) => (
@@ -140,8 +150,8 @@ export function Navbar() {
                     href={link.href}
                     className={`text-2xl font-playfair ${
                       pathname === link.href
-                        ? 'text-brand-secondary'
-                        : 'text-white'
+                        ? isArtGallery ? 'text-[#748CAB]' : 'text-brand-secondary'
+                        : isArtGallery ? 'text-[#F0EBD8]' : 'text-white'
                     }`}
                   >
                     {link.label}
@@ -156,7 +166,11 @@ export function Navbar() {
               >
                 <Link
                   href="/contact"
-                  className="block w-full text-center px-6 py-3 bg-brand-secondary text-white font-medium rounded"
+                  className={`block w-full text-center px-6 py-3 font-medium rounded ${
+                    isArtGallery
+                      ? 'bg-[#F0EBD8] text-[#0D1321] hover:bg-[#DAD2BC]'
+                      : 'bg-brand-secondary text-white'
+                  }`}
                 >
                   Get a Quote
                 </Link>

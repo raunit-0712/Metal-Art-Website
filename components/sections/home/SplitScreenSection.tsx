@@ -71,9 +71,9 @@ export function SplitScreenSection() {
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
             style={{
               backgroundImage:
-                'url(/images/steel/others-project-images/brushed-bronze-skirting.jpg)',
+                'url(/images/gallery/metal-header.jpeg)',
               transform: activeSide === 'left' ? 'scale(1.05)' : 'scale(1)',
-            }}
+            }} 
           />
           <div className="absolute inset-0 bg-brand-primary/70" />
           <div className="relative z-10 h-full flex flex-col items-center justify-center p-8 text-center">
@@ -121,7 +121,7 @@ export function SplitScreenSection() {
             className="absolute inset-0 bg-cover bg-center transition-transform duration-700"
             style={{
               backgroundImage:
-                'url(/images/arts/miscellaneous/IMG_3846.jpg)',
+                'url(/images/gallery/fineart-header.png)',
               transform: activeSide === 'right' ? 'scale(1.05)' : 'scale(1)',
             }}
           />

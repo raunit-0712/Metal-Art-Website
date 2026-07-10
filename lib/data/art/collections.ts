@@ -4,7 +4,6 @@ import { digital } from './digital';
 import { logos } from './logos';
 import { miscellaneous } from './miscellaneous';
 import { oldMasters } from './oldMasters';
-import { studentWorks } from './studentWorks';
 import { wallArts } from './WallArts';
 
 export const artworks: Artwork[] = [
@@ -13,7 +12,6 @@ export const artworks: Artwork[] = [
   ...logos,
   ...miscellaneous,
   ...oldMasters,
-  ...studentWorks,
   ...wallArts,
 ];
 

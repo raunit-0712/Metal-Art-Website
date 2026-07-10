@@ -208,15 +208,6 @@ export const otherSteelImages: OtherSteelImage[] = [
     heightClass: 'aspect-[4/5]'
   },
   {
-    id: 'other-23',
-    src: '/images/steel/others-project-images/atrium-fascia-mirror-cladding.jpg',
-    title: 'Atrium Edge Mirror Paneling',
-    alt: 'Mirror finish gold PVD panels covering balcony floor slab edges in atrium.',
-    caption: 'Balcony slab horizontal edge cladding',
-    widthClass: 'md:col-span-8',
-    heightClass: 'aspect-[16/9]'
-  },
-  {
     id: 'other-24',
     src: '/images/steel/others-project-images/brushed-steel-skirting-joint.jpg',
     title: 'Recessed Skirting Flush Joint',
@@ -242,15 +233,6 @@ export const otherSteelImages: OtherSteelImage[] = [
     caption: 'Checkout desk protection trim details',
     widthClass: 'md:col-span-12',
     heightClass: 'aspect-[16/7]'
-  },
-  {
-    id: 'other-27',
-    src: '/images/steel/others-project-images/concourse-wall-cladding.jpg',
-    title: 'Commercial Wall Cladding Panels',
-    alt: 'Brushed hairline finish commercial steel wall paneling in high-traffic concourse.',
-    caption: 'Concourse passenger lobby wall cladding',
-    widthClass: 'md:col-span-6',
-    heightClass: 'aspect-[3/4]'
   },
   {
     id: 'other-28',
@@ -287,15 +269,6 @@ export const otherSteelImages: OtherSteelImage[] = [
     caption: 'Passenger departure gate portal architrave',
     widthClass: 'md:col-span-4',
     heightClass: 'aspect-[4/5]'
-  },
-  {
-    id: 'other-32',
-    src: '/images/steel/others-project-images/retail-storefront-facade-trim.jpg',
-    title: 'Retail Glass Window Bottom Trim',
-    alt: 'Sleek brushed steel framing holding double-glazed window glass on shopfront facade.',
-    caption: 'Storefront base window framing profile',
-    widthClass: 'md:col-span-8',
-    heightClass: 'aspect-[16/9]'
   },
   {
     id: 'other-33',

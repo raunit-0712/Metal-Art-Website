@@ -22,7 +22,7 @@ const categories = [
     icon: Pencil,
     title: 'Miscellaneous',
     description: 'Sketch drafts, still lifes, technical layouts, and custom drawings.',
-    count: 23,
+    count: 20,
   },
   {
     icon: Paintbrush,
@@ -46,14 +46,14 @@ const categories = [
 
 export function ArtCategories() {
   return (
-    <section className="py-24 md:py-32 bg-brand-background">
+    <section className="py-24 md:py-32 bg-[#F0EBD8]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionReveal>
           <div className="text-center mb-16">
-            <p className="text-brand-secondary text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-[#748CAB] text-sm tracking-[0.3em] uppercase mb-4">
               Explore
             </p>
-            <h2 className="font-playfair text-4xl md:text-5xl text-brand-text">
+            <h2 className="font-playfair text-4xl md:text-5xl text-[#0D1321]">
               Art Categories
             </h2>
           </div>
@@ -63,19 +63,19 @@ export function ArtCategories() {
           {categories.map((category, index) => (
             <SectionReveal key={category.title} delay={0.1 * index}>
               <motion.div
-                whileHover={{ y: -5 }}
-                className="group p-8 rounded-xl bg-white shadow-sm hover:shadow-lg transition-all duration-300 border border-transparent hover:border-brand-secondary/20"
+                whileHover={{ y: -4 }}
+                className="group p-8 rounded-[16px] bg-white border border-[#DAD2BC] hover:border-[#748CAB] shadow-[0_10px_30px_rgba(13,19,33,0.08)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.15)] transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-full bg-brand-secondary/10 flex items-center justify-center mb-6 group-hover:bg-brand-secondary/20 transition-colors">
-                  <category.icon size={28} className="text-brand-secondary" />
+                <div className="w-14 h-14 rounded-full bg-[#748CAB]/10 flex items-center justify-center mb-6 group-hover:bg-[#748CAB]/20 transition-colors">
+                  <category.icon size={28} className="text-[#748CAB]" />
                 </div>
-                <h3 className="font-playfair text-xl text-brand-text mb-2">
+                <h3 className="font-playfair text-xl text-[#0D1321] mb-2">
                   {category.title}
                 </h3>
-                <p className="text-brand-text/60 text-sm leading-relaxed mb-4">
+                <p className="text-[#3E5C76] text-sm leading-relaxed mb-4">
                   {category.description}
                 </p>
-                <span className="text-brand-secondary text-sm font-medium">
+                <span className="text-[#748CAB] text-sm font-medium">
                   {category.count} artworks
                 </span>
               </motion.div>
