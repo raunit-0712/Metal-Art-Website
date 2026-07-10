@@ -93,18 +93,30 @@ export function ArtGallery() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 whileHover={{ scale: 1.03 }}
                 transition={{ duration: 0.4 }}
-                className="break-inside-avoid relative overflow-hidden rounded-xl cursor-pointer"
+                className="break-inside-avoid overflow-hidden rounded-xl cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
-                <Image
-                  src={artwork.image}
-                  alt={artwork.title}
-                  width={600}
-                  height={600}
-                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  className="w-full h-auto object-cover"
-                  loading="lazy"
-                />
+                <div className="relative">
+                  <Image
+                    src={artwork.image}
+                    alt={artwork.title}
+                    width={600}
+                    height={600}
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                  {/* Branded Watermark overlay */}
+                  <div className="absolute bottom-4 right-4 w-[12%] min-w-[50px] max-w-[90px] aspect-[1402/567] z-50 pointer-events-none select-none opacity-15">
+                    <Image
+                      src="/images/watermark.webp"
+                      alt="Aakriti Atelier Watermark"
+                      width={140}
+                      height={57}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                </div>
               </motion.div>
             ))}
           </AnimatePresence>
@@ -143,11 +155,23 @@ export function ArtGallery() {
               className="relative max-w-full max-h-[85vh] aspect-auto flex items-center justify-center"
               onClick={(e) => e.stopPropagation()}
             >
-              <img
-                src={selected.image}
-                alt={selected.title}
-                className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
-              />
+              <div className="relative">
+                <img
+                  src={selected.image}
+                  alt={selected.title}
+                  className="max-w-[90vw] max-h-[80vh] object-contain rounded-lg shadow-2xl border border-white/10"
+                />
+                {/* Branded Watermark overlay */}
+                <div className="absolute bottom-4 right-4 w-[12%] min-w-[70px] max-w-[150px] aspect-[1402/567] z-50 pointer-events-none select-none opacity-15">
+                  <Image
+                    src="/images/watermark.webp"
+                    alt="Aakriti Atelier Watermark"
+                    width={140}
+                    height={57}
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              </div>
             </motion.div>
           </motion.div>
         )}
