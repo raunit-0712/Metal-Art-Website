@@ -9,7 +9,10 @@ import { AchievementsSection } from '@/components/sections/about/AchievementsSec
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Discover the story behind Aakriti Atelier, a creative studio specializing in architectural steel fabrication and fine arts.',
+    'Discover the story behind Aakriti Atelier, a creative studio specializing in architectural metal fabrication and fine arts.',
+  alternates: {
+    canonical: '/about/',
+  },
 };
 
 export default function AboutPage() {

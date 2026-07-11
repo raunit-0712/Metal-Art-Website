@@ -38,10 +38,10 @@ export const testimonials: Testimonial[] = [
     id: 't4',
     name: 'Sanjay Kulkarni',
     role: 'Senior Project Manager',
-    company: 'Prestige Enterprise Center',
+    company: 'Prestige Experience Center',
     location: 'Whitefield, Bengaluru',
     content:
-      'The elevator lobby and custom lift cladding at the Prestige Enterprise Center required top-tier precision and a premium scratch-resistant finish. Aakriti Atelier delivered custom stainless steel cladding that integrates perfectly with our modern design. Their engineers worked closely with our execution team, maintaining clear communication throughout. The project was completed within our strict timeline, and the craftsmanship of the seamless panel joints is outstanding.',
+      'The elevator lobby and custom lift cladding at the Prestige Experience Center required top-tier precision and a premium scratch-resistant finish. Aakriti Atelier delivered custom stainless steel cladding that integrates perfectly with our modern design. Their engineers worked closely with our execution team, maintaining clear communication throughout. The project was completed within our strict timeline, and the craftsmanship of the seamless panel joints is outstanding.',
     rating: 5,
     category: 'metal',
   },

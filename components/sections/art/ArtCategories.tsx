@@ -46,14 +46,14 @@ const categories = [
 
 export function ArtCategories() {
   return (
-    <section className="py-24 md:py-32 bg-[#F0EBD8]">
+    <section className="py-24 md:py-32 bg-[#F8F6F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionReveal>
           <div className="text-center mb-16">
-            <p className="text-[#748CAB] text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-[#B08D57] text-sm tracking-[0.3em] uppercase mb-4">
               Explore
             </p>
-            <h2 className="font-playfair text-4xl md:text-5xl text-[#0D1321]">
+            <h2 className="font-playfair text-4xl md:text-5xl text-[#111111]">
               Art Categories
             </h2>
           </div>
@@ -64,18 +64,18 @@ export function ArtCategories() {
             <SectionReveal key={category.title} delay={0.1 * index}>
               <motion.div
                 whileHover={{ y: -4 }}
-                className="group p-8 rounded-[16px] bg-white border border-[#DAD2BC] hover:border-[#3E5C76] shadow-[0_10px_30px_rgba(13,19,33,0.08)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.15)] transition-all duration-300"
+                className="group p-8 rounded-[16px] bg-[#FCFBF8] border border-[#E8E4DD] hover:border-[#B08D57] hover:bg-[#F3EEE5] shadow-[0_10px_30px_rgba(13,19,33,0.04)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.08)] transition-all duration-300"
               >
-                <div className="w-14 h-14 rounded-full bg-[#3E5C76]/10 flex items-center justify-center mb-6 group-hover:bg-[#3E5C76]/20 transition-colors">
-                  <category.icon size={28} className="text-[#3E5C76]" />
+                <div className="w-14 h-14 rounded-full bg-[#B08D57]/10 flex items-center justify-center mb-6 group-hover:bg-[#B08D57]/20 transition-colors">
+                  <category.icon size={28} className="text-[#B08D57]" />
                 </div>
-                <h3 className="font-playfair text-xl text-[#0D1321] mb-2">
+                <h3 className="font-playfair text-xl text-[#111111] mb-2">
                   {category.title}
                 </h3>
-                <p className="text-[#3E5C76] text-sm leading-relaxed mb-4">
+                <p className="text-[#666666] text-sm leading-relaxed mb-4">
                   {category.description}
                 </p>
-                <span className="text-[#3E5C76] text-sm font-medium">
+                <span className="text-[#B08D57] text-sm font-medium">
                   {category.count} artworks
                 </span>
               </motion.div>

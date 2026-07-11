@@ -35,6 +35,6 @@ export const timelineEvents: TimelineEvent[] = [
     year: '2024',
     title: '150 Projects & Counting',
     description:
-      'Reached the milestone of 150 completed projects, continuing to push boundaries in both steel and art.',
+      'Reached the milestone of 150 completed projects, continuing to push boundaries in both metal and art.',
   },
 ];

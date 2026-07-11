@@ -64,7 +64,7 @@ export function CTASection() {
                   className="flex items-center gap-2 text-white/60 hover:text-brand-secondary transition-colors"
                 >
                   <MessageCircle size={18} />
-                  <span className="text-sm">Steel Works</span>
+                  <span className="text-sm">Metal Works</span>
                 </a>
                 <a
                   href={`https://wa.me/91${CONTACT.art.whatsapp}?text=${encodeURIComponent(CONTACT.art.whatsappMessage)}`}

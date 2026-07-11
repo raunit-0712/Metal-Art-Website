@@ -79,17 +79,6 @@ export const logos: Artwork[] = [
     featured: false,
   },
   {
-    id: 'l8',
-    title: 'Linear Hexagon Logo',
-    category: 'Logos',
-    medium: 'Digital Vector',
-    size: 'Scalable Vector',
-    description: 'Branding concept featuring a line art hexagon symbol.',
-    image: '/images/arts/logos/Screenshot 2026-07-03 230532.png',
-    year: 2024,
-    featured: false,
-  },
-  {
     id: 'l9',
     title: 'Stellar Tech Logo',
     category: 'Logos',

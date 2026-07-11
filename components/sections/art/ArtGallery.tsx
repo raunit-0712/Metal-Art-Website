@@ -27,14 +27,14 @@ export function ArtGallery() {
   const selected = artworks.find((a) => a.id === selectedArtwork);
 
   return (
-    <section id="gallery" className="py-24 md:py-32 bg-[#F0EBD8]">
+    <section id="gallery" className="py-24 md:py-32 bg-[#F8F6F3]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionReveal>
           <div className="text-center mb-12">
-            <p className="text-[#3E5C76] text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-[#B08D57] text-sm tracking-[0.3em] uppercase mb-4">
               Collection
             </p>
-            <h2 className="font-playfair text-4xl md:text-5xl text-[#0D1321]">
+            <h2 className="font-playfair text-4xl md:text-5xl text-[#111111]">
               Gallery
             </h2>
           </div>
@@ -45,18 +45,18 @@ export function ArtGallery() {
           <div className="mb-12">
             <div className="flex flex-col md:flex-row items-center gap-4 mb-6">
               <div className="relative flex-1 w-full">
-                <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#748CAB]" />
+                <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-[#666666]" />
                 <input
                   type="text"
                   placeholder="Search artworks..."
                   value={searchQuery}
                   onChange={(e) => setSearchQuery(e.target.value)}
-                  className="w-full pl-12 pr-4 py-3 rounded-lg border border-[#DAD2BC] focus:border-[#748CAB] focus:ring-1 focus:ring-[#748CAB] outline-none transition-colors bg-white text-[#0D1321]"
+                  className="w-full pl-12 pr-4 py-3 rounded-lg border border-[#E8E4DD] focus:border-[#B08D57] focus:ring-1 focus:ring-[#B08D57] outline-none transition-colors bg-white text-[#111111]"
                 />
               </div>
               <button
                 onClick={() => setShowFilters(!showFilters)}
-                className="flex items-center gap-2 px-6 py-3 border border-[#DAD2BC] rounded-lg bg-white hover:bg-gray-50 transition-colors md:hidden text-[#1D2D44]"
+                className="flex items-center gap-2 px-6 py-3 border border-[#E8E4DD] rounded-lg bg-white hover:bg-[#F3EEE5] transition-colors md:hidden text-[#666666]"
               >
                 <Filter size={18} />
                 Filters
@@ -66,13 +66,13 @@ export function ArtGallery() {
             <div className={`flex flex-wrap gap-3 ${showFilters ? 'block' : 'hidden md:flex'}`}>
               {categories.map((category) => (
                 <button
-                  key={category}
-                  onClick={() => setSelectedCategory(category)}
-                  className={`px-4 py-2 rounded-full text-sm transition-all border ${
-                    selectedCategory === category
-                      ? 'bg-[#1D2D44] border-[#1D2D44] text-white'
-                      : 'bg-transparent border-[#748CAB] text-[#1D2D44] hover:bg-[#748CAB] hover:text-white'
-                  }`}
+                   key={category}
+                   onClick={() => setSelectedCategory(category)}
+                   className={`px-4 py-2 rounded-full text-sm transition-all border ${
+                     selectedCategory === category
+                       ? 'bg-[#B08D57] border-[#B08D57] text-[#FCFBF8]'
+                       : 'bg-transparent border-[#E8E4DD] text-[#666666] hover:bg-[#F3EEE5] hover:text-[#111111]'
+                   }`}
                 >
                   {category}
                 </button>
@@ -93,7 +93,7 @@ export function ArtGallery() {
                 exit={{ opacity: 0, scale: 0.9 }}
                 whileHover={{ y: -4 }}
                 transition={{ duration: 0.4 }}
-                className="break-inside-avoid overflow-hidden rounded-[16px] border border-[#DAD2BC] hover:border-[#748CAB] bg-white shadow-[0_10px_30px_rgba(13,19,33,0.08)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.15)] transition-all duration-300 cursor-pointer"
+                className="break-inside-avoid overflow-hidden rounded-[16px] border border-[#E8E4DD] hover:border-[#B08D57] bg-[#FCFBF8] shadow-[0_10px_30px_rgba(13,19,33,0.04)] hover:shadow-[0_15px_40px_rgba(13,19,33,0.08)] transition-all duration-300 cursor-pointer"
                 onClick={() => setSelectedArtwork(artwork.id)}
               >
                 <div className="relative overflow-hidden group/image">

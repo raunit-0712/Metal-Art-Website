@@ -1,0 +1,20 @@
+# Aakriti Atelier Hostinger Shared Hosting .htaccess Configuration
+
+# Enable Rewrite Engine
+RewriteEngine On
+RewriteBase /
+
+# 1. Transparently serve directory index.html for requests without trailing slash
+# Example: /about -> /about/index.html (URL in browser stays /about)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1/index.html -f
+RewriteRule ^(.*[^/])$ $1/index.html [L]
+
+# 2. Transparently serve directory index.html for requests with trailing slash
+# Example: /about/ -> /about/index.html (URL in browser stays /about/)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{DOCUMENT_ROOT}/$1index.html -f
+RewriteRule ^(.*)/$ $1index.html [L]
+
+# 3. Serve Custom 404 Page
+ErrorDocument 404 /404.html

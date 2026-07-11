@@ -7,7 +7,7 @@ export interface ProjectImage {
 export interface Project {
   id: string;
   title: string;
-  category: 'steel' | 'art';
+  category: 'steel' | 'metal' | 'art';
   subcategory: string;
   description: string;
   materials?: string;
@@ -87,5 +87,5 @@ export interface FAQ {
   id: string;
   question: string;
   answer: string;
-  category: 'steel' | 'art' | 'general';
+  category: 'steel' | 'metal' | 'art' | 'general';
 }

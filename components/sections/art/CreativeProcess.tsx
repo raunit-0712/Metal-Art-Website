@@ -29,14 +29,14 @@ const steps = [
 
 export function CreativeProcess() {
   return (
-    <section className="py-24 md:py-32 bg-[#1D2D44] border-t border-white/5">
+    <section className="py-24 md:py-32 bg-[#FFFFFF] border-t border-[#E8E4DD]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionReveal>
           <div className="text-center mb-16">
-            <p className="text-[#748CAB] text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-[#B08D57] text-sm tracking-[0.3em] uppercase mb-4">
               Behind the Canvas
             </p>
-            <h2 className="font-playfair text-4xl md:text-5xl text-[#F0EBD8]">
+            <h2 className="font-playfair text-4xl md:text-5xl text-[#111111]">
               Creative Process
             </h2>
           </div>
@@ -47,21 +47,20 @@ export function CreativeProcess() {
             <SectionReveal key={step.title} delay={0.15 * index}>
               <motion.div
                 whileHover={{ y: -4 }}
-                className="relative text-center p-8 bg-[#3E5C76] border border-white/5 rounded-[16px] shadow-[0_10px_30px_rgba(13,19,33,0.2)] transition-all duration-300"
+                className="relative text-center p-8 bg-[#FCFBF8] border border-[#E8E4DD] rounded-[16px] shadow-[0_10px_30px_rgba(13,19,33,0.05)] transition-all duration-300"
               >
                 {/* Step Number */}
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 font-playfair text-8xl text-white/5 select-none">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 font-playfair text-8xl text-[#111111]/5 select-none">
                   {index + 1}
                 </div>
 
                 <div className="relative z-10">
-                  <div className="w-16 h-16 rounded-full bg-[#748CAB]/10 flex items-center justify-center mx-auto mb-6">
-                    <step.icon size={32} className="text-[#748CAB]" />
+                  <div className="w-16 h-16 rounded-full bg-[#B08D57]/10 group-hover:bg-[#B08D57]/20 transition-all duration-500 flex items-center justify-center mx-auto mb-6">                    <step.icon size={32} className="text-[#B08D57]" />
                   </div>
-                  <h3 className="font-playfair text-2xl text-[#F0EBD8] mb-4">
+                  <h3 className="font-playfair text-2xl text-[#111111] mb-4">
                     {step.title}
                   </h3>
-                  <p className="text-[#F0EBD8]/80 leading-relaxed text-sm">
+                  <p className="text-[#666666] leading-relaxed text-sm">
                     {step.description}
                   </p>
                 </div>
@@ -69,7 +68,7 @@ export function CreativeProcess() {
                 {/* Connector */}
                 {index < steps.length - 1 && (
                   <div className="hidden lg:block absolute top-16 right-0 w-full h-px">
-                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-px bg-gradient-to-r from-[#748CAB]/20 to-transparent" />
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-px bg-gradient-to-r from-[#B08D57]/20 to-transparent" />
                   </div>
                 )}
               </motion.div>

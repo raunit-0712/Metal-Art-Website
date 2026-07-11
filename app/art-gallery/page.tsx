@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Art Gallery',
   description:
     'Explore our fine art gallery featuring pencil sketches, portraits, fine arts, custom commissions, and digital artwork. Each piece tells a unique story.',
+  alternates: {
+    canonical: '/art-gallery/',
+  },
 };
 
 export default function ArtGalleryPage() {

@@ -42,6 +42,9 @@ export function TeamSection() {
                     {member.social?.linkedin && (
                       <a
                         href={member.social.linkedin}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Visit Aakriti Atelier on LinkedIn`}
                         className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-brand-secondary transition-colors"
                       >
                         <Linkedin size={18} className="text-white" />
@@ -50,6 +53,9 @@ export function TeamSection() {
                     {member.social?.instagram && (
                       <a
                         href={member.social.instagram}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Visit Aakriti Atelier on Instagram`}
                         className="w-10 h-10 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center hover:bg-brand-secondary transition-colors"
                       >
                         <Instagram size={18} className="text-white" />

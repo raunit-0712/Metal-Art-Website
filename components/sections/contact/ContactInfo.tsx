@@ -52,9 +52,9 @@ const businessHours = [
 ];
 
 const socialLinks = [
-  { icon: Instagram, label: 'Instagram', href: '#' },
-  { icon: Facebook, label: 'Facebook', href: '#' },
-  { icon: Linkedin, label: 'LinkedIn', href: '#' },
+  { icon: Instagram, label: 'Visit Aakriti Atelier on Instagram', href: 'https://www.instagram.com/aakriti__atelier?igsh=ZHF4MGc4ajJ6enF4' },
+  { icon: Facebook, label: 'Visit Aakriti Atelier on Facebook', href: 'https://www.facebook.com/people/Aakriti-Atelier/61592053852121/' },
+  { icon: Linkedin, label: 'Visit Aakriti Atelier on LinkedIn', href: 'https://www.linkedin.com/in/aakritiatelier' },
 ];
 
 export function ContactInfo() {
@@ -162,6 +162,8 @@ export function ContactInfo() {
                 <motion.a
                   key={social.label}
                   href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.95 }}
                   className="w-12 h-12 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-brand-secondary hover:border-brand-secondary transition-all"

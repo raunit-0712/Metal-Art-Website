@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
@@ -20,6 +20,25 @@ export function SteelProjectGallery({ project, onClose }: SteelProjectGalleryPro
 
   const lightboxRef = useRef<HTMLDivElement>(null);
   const swipeStartRef = useRef<number | null>(null);
+
+  const handleNext = useCallback(() => {
+    if (images.length === 0) return;
+    setActiveImageIndex((prev) => (prev + 1) % images.length);
+  }, [images.length]);
+
+  const handlePrev = useCallback(() => {
+    if (images.length === 0) return;
+    setActiveImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  }, [images.length]);
+
+  const openLightbox = (index: number) => {
+    setActiveImageIndex(index);
+    setIsLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setIsLightboxOpen(false);
+  };
 
   // Sync lightbox image loading state
   useEffect(() => {
@@ -46,7 +65,7 @@ export function SteelProjectGallery({ project, onClose }: SteelProjectGalleryPro
     };
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [isLightboxOpen, activeImageIndex, images.length, onClose]);
+  }, [isLightboxOpen, activeImageIndex, images.length, onClose, handleNext, handlePrev]);
 
   // Lightbox Focus Trapping & Close button focus
   useEffect(() => {
@@ -87,24 +106,7 @@ export function SteelProjectGallery({ project, onClose }: SteelProjectGalleryPro
     return () => window.removeEventListener('keydown', handleFocusTrap);
   }, [isLightboxOpen]);
 
-  const handleNext = () => {
-    if (images.length === 0) return;
-    setActiveImageIndex((prev) => (prev + 1) % images.length);
-  };
 
-  const handlePrev = () => {
-    if (images.length === 0) return;
-    setActiveImageIndex((prev) => (prev - 1 + images.length) % images.length);
-  };
-
-  const openLightbox = (index: number) => {
-    setActiveImageIndex(index);
-    setIsLightboxOpen(true);
-  };
-
-  const closeLightbox = () => {
-    setIsLightboxOpen(false);
-  };
 
   // Swipe Gestures
   const handleTouchStart = (e: React.TouchEvent) => {

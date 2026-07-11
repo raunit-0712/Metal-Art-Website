@@ -104,19 +104,19 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
       caption: 'Sleek metal shopfront framing'
     }
   ],
-  'prestige-enterprise-center': [
+  'prestige-Experience-center': [
     {
-      src: '/images/steel/projects/prestige-enterprise-center/prestige-entrance-portal.jpg',
+      src: '/images/steel/projects/prestige-Experience-center/prestige-entrance-portal.jpg',
       alt: 'Prestige Corporate HQ Entrance Portal Clad in Dark Bronze Steel',
       caption: 'Minimalist elevator entrance metal framing'
     },
     {
-      src: '/images/steel/projects/prestige-enterprise-center/prestige-lift-lobby.jpg',
+      src: '/images/steel/projects/prestige-Experience-center/prestige-lift-lobby.jpg',
       alt: 'Hairline Finish Stainless Steel Elevator Door Jams and Wall Panels',
       caption: 'Corporate lift lobby cladding'
     },
     {
-      src: '/images/steel/projects/prestige-enterprise-center/prestige-office-partitions.jpg',
+      src: '/images/steel/projects/prestige-Experience-center/prestige-office-partitions.jpg',
       alt: 'Sleek Stainless Steel Frame Glass Partitions in Executive Office',
       caption: 'Custom glass wall metal framing'
     }

@@ -6,7 +6,10 @@ import { ContactInfo } from '@/components/sections/contact/ContactInfo';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Get in touch with Aakriti Atelier for architectural steel solutions, custom fabrication, fine arts, and creative projects. Request a quote, inquire about commissions, or visit our studio. We\'d love to hear from you.',
+    'Get in touch with Aakriti Atelier for architectural metal solutions, custom fabrication, fine arts, and creative projects. Request a quote, inquire about commissions, or visit our studio. We\'d love to hear from you.',
+  alternates: {
+    canonical: '/contact/',
+  },
 };
 
 export default function ContactPage() {

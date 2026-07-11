@@ -47,8 +47,8 @@ export function Navbar() {
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isArtGallery
             ? isScrolled
-              ? 'bg-[#1D2D44]/95 backdrop-blur-md shadow-lg border-b border-[#748CAB]/15'
-              : 'bg-[#1D2D44] border-b border-[#748CAB]/10'
+              ? 'bg-[#FFFFFF]/95 backdrop-blur-md shadow-sm border-b border-[#E8E4DD]'
+              : 'bg-[#F8F6F3] border-b border-[#E8E4DD]'
             : isScrolled
               ? 'bg-brand-primary/95 backdrop-blur-md shadow-lg'
               : 'bg-transparent'
@@ -73,7 +73,7 @@ export function Navbar() {
               height={80}
               priority
               className={`h-14 w-auto object-contain transition-all duration-300 ${
-                isArtGallery ? 'filter brightness-0 invert-[0.95] sepia-[0.1] saturate-[500%] hue-rotate-[330deg]' : ''
+                isArtGallery ? '' : ''
               }`}
             />
           </Link>
@@ -88,15 +88,15 @@ export function Navbar() {
                   href={link.href}
                   className={`relative text-sm tracking-wide transition-colors duration-300 ${
                     pathname === link.href
-                      ? isArtGallery ? 'text-[#748CAB]' : 'text-brand-secondary'
-                      : isArtGallery ? 'text-[#F0EBD8]/80 hover:text-[#3E5C76]' : 'text-white/80 hover:text-white'
+                      ? isArtGallery ? 'text-[#B08D57]' : 'text-brand-secondary'
+                      : isArtGallery ? 'text-[#666666] hover:text-[#B08D57]' : 'text-white/80 hover:text-white'
                   }`}
                 >
                   {link.label}
                   {pathname === link.href && (
                     <motion.div
                       layoutId="navbar-indicator"
-                      className={`absolute -bottom-1 left-0 right-0 h-[2px] ${isArtGallery ? 'bg-[#748CAB]' : 'bg-brand-secondary'}`}
+                      className={`absolute -bottom-1 left-0 right-0 h-[2px] ${isArtGallery ? 'bg-[#B08D57]' : 'bg-brand-secondary'}`}
                       transition={{ type: 'spring', stiffness: 380, damping: 30 }}
                     />
                   )}
@@ -110,7 +110,7 @@ export function Navbar() {
                 href="/contact"
                 className={`px-6 py-2.5 text-sm font-medium rounded transition-colors duration-300 ${
                   isArtGallery
-                    ? 'bg-[#F0EBD8] text-[#0D1321] hover:bg-[#DAD2BC]'
+                    ? 'bg-[#B08D57] text-[#FCFBF8] hover:bg-[#D4AF37]'
                     : 'bg-brand-secondary text-white hover:bg-brand-accent'
                 }`}
               >
@@ -121,7 +121,7 @@ export function Navbar() {
             {/* Mobile Menu Button */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className={`lg:hidden p-2 ${isArtGallery ? 'text-[#F0EBD8]' : 'text-white'}`}
+              className={`lg:hidden p-2 ${isArtGallery ? 'text-[#111111]' : 'text-white'}`}
               aria-label="Toggle menu"
             >
               {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -138,7 +138,7 @@ export function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className={`fixed inset-0 z-40 pt-24 px-6 lg:hidden ${isArtGallery ? 'bg-[#1D2D44]' : 'bg-brand-primary'}`}
+            className={`fixed inset-0 z-40 pt-24 px-6 lg:hidden ${isArtGallery ? 'bg-[#FCFBF8] border-b border-[#E8E4DD]' : 'bg-brand-primary'}`}
           >
             <div className="flex flex-col gap-6">
               {navLinks.map((link, index) => (
@@ -152,8 +152,8 @@ export function Navbar() {
                     href={link.href}
                     className={`text-2xl font-playfair transition-colors duration-300 ${
                       pathname === link.href
-                        ? isArtGallery ? 'text-[#748CAB]' : 'text-brand-secondary'
-                        : isArtGallery ? 'text-[#F0EBD8] hover:text-[#3E5C76]' : 'text-white hover:text-white'
+                        ? isArtGallery ? 'text-[#B08D57]' : 'text-brand-secondary'
+                        : isArtGallery ? 'text-[#666666] hover:text-[#B08D57]' : 'text-white hover:text-white'
                     }`}
                   >
                     {link.label}
@@ -170,7 +170,7 @@ export function Navbar() {
                   href="/contact"
                   className={`block w-full text-center px-6 py-3 font-medium rounded ${
                     isArtGallery
-                      ? 'bg-[#F0EBD8] text-[#0D1321] hover:bg-[#DAD2BC]'
+                      ? 'bg-[#B08D57] text-[#FCFBF8] hover:bg-[#D4AF37]'
                       : 'bg-brand-secondary text-white'
                   }`}
                 >

@@ -6,6 +6,7 @@ import {
   Great_Vibes,
 } from 'next/font/google';
 import dynamic from 'next/dynamic';
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 import { Navbar } from '@/components/shared/Navbar';
 import { Footer } from '@/components/shared/Footer';
@@ -46,7 +47,7 @@ const greatVibes = Great_Vibes({
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.com'
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.in'
   ),
 
   title: {
@@ -55,14 +56,14 @@ export const metadata: Metadata = {
   },
 
   description:
-    'Premium architectural steel fabrication and fine arts studio. We craft architectural metal masterpieces and timeless artistic creations.',
+    'Premium architectural metal fabrication and fine arts studio. We craft architectural metal masterpieces and timeless artistic creations.',
 
   keywords: [
-    'architectural steel',
+    'architectural metal',
     'metal fabrication',
     'fine arts',
     'custom metalwork',
-    'steel staircases',
+    'metal staircases',
     'metal railings',
     'art gallery',
     'portrait sketches',
@@ -89,17 +90,17 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.com',
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.in/',
     siteName: 'Aakriti Atelier',
     title: 'Aakriti Atelier | Shaping Ideas into Reality',
     description:
-      'Premium architectural steel fabrication and fine arts studio.',
+      'Premium architectural metal fabrication and fine arts studio.',
     images: [
       {
         url: '/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'Aakriti Atelier — Premium Steel Fabrication & Fine Arts',
+        alt: 'Aakriti Atelier — Premium Metal Fabrication & Fine Arts',
       },
     ],
   },
@@ -108,12 +109,12 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Aakriti Atelier | Shaping Ideas into Reality',
     description:
-      'Premium architectural steel fabrication and fine arts studio.',
+      'Premium architectural metal fabrication and fine arts studio.',
     images: ['/images/og-image.jpg'],
   },
 
   alternates: {
-    canonical: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.com',
+    canonical: '/',
   },
 };
 
@@ -123,14 +124,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const siteUrl =
-    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.com';
+    process.env.NEXT_PUBLIC_SITE_URL ?? 'https://aakritiatelier.in/';
 
   const jsonLd = {
     '@context': 'https://schema.org',
     '@type': 'LocalBusiness',
     name: 'Aakriti Atelier',
     description:
-      'Premium architectural steel fabrication and fine arts studio specializing in custom metalwork, staircases, railings, and artistic creations.',
+      'Premium architectural metal fabrication and fine arts studio specializing in custom metalwork, staircases, railings, and artistic creations.',
     url: siteUrl,
     logo: `${siteUrl}/images/logo.png`,
     image: `${siteUrl}/images/og-image.jpg`,
@@ -141,7 +142,7 @@ export default function RootLayout({
     },
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Steel Fabrication & Fine Arts Services',
+      name: 'Metal Fabrication & Fine Arts Services',
     },
   };
 
@@ -170,6 +171,7 @@ export default function RootLayout({
 
           <WhatsAppButton />
         </SmoothScroll>
+        <GoogleAnalytics gaId="G-JNTECK00HN" />
       </body>
     </html>
   );

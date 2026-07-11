@@ -12,9 +12,12 @@ import { QuoteForm } from '@/components/sections/steel/QuoteForm';
 import { getSteelProjects } from '@/lib/data/steel/getProjects';
 
 export const metadata: Metadata = {
-  title: '',
+  title: 'Metal Works',
   description:
-    'Premium architectural steel fabrication services. Custom staircases, railings, lift cladding, decorative panels, and bespoke metalwork for residential and commercial projects.',
+    'Premium architectural metal fabrication services. Custom staircases, railings, lift cladding, decorative panels, and bespoke metalwork for residential and commercial projects.',
+  alternates: {
+    canonical: '/steel-works/',
+  },
 };
 
 export default function SteelWorksPage() {

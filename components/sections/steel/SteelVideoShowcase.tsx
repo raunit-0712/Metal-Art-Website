@@ -78,7 +78,7 @@ export function SteelVideoShowcase() {
           </SectionReveal>
           <SectionReveal delay={0.1}>
             <h2 className="font-playfair text-3xl md:text-5xl text-white font-medium">
-              Steel Work in Motion
+              Metal Work in Motion
             </h2>
           </SectionReveal>
           <SectionReveal delay={0.2}>
@@ -95,11 +95,11 @@ export function SteelVideoShowcase() {
           whileInView={{ opacity: 1, y: 0, scale: 1 }}
           viewport={{ once: true, margin: '-100px' }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="group relative w-full aspect-video rounded-[1.8rem] sm:rounded-[2.2rem] overflow-hidden border border-brand-secondary/20 bg-black/60 shadow-[0_0_60px_rgba(176,141,87,0.12)] shadow-2xl focus-within:ring-2 focus-within:ring-brand-secondary focus-within:ring-offset-2 focus-within:ring-offset-brand-primary outline-none"
+          className="group relative w-full aspect-video rounded-[1.8rem] sm:rounded-[2.2rem] overflow-hidden border border-brand-secondary/20 bg-black/60 shadow-[0_0_60px_rgba(176,141,87,0.12)] focus-within:ring-2 focus-within:ring-brand-secondary focus-within:ring-offset-2 focus-within:ring-offset-brand-primary outline-none"
           tabIndex={0}
           onKeyDown={handleKeyDown}
-          aria-label="Steel Work in Motion Video Player. Press Spacebar or Enter to play/pause."
-          title="Steel Work in Motion"
+          aria-label="Metal Work in Motion Video Player. Press Spacebar or Enter to play/pause."
+          title="Metal Work in Motion"
         >
           {/* Shimmer Skeleton Loader */}
           {!isVideoLoaded && (

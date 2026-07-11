@@ -11,7 +11,7 @@ const TITLE_MAPPING: Record<string, string> = {
   'bangalore-t2-airport': 'Bangalore T2 Airport',
   'card-lounge-international-airport': 'Card Lounge International Airport',
   'kempegowda-airport': 'Kempegowda Airport',
-  'prestige-enterprise-center': 'Prestige Enterprise Center',
+  'prestige-Experience-center': 'Prestige Experience Center',
 };
 
 const SUBCATEGORY_MAPPING: Record<string, string> = {
@@ -22,14 +22,14 @@ const SUBCATEGORY_MAPPING: Record<string, string> = {
   'Cooper chimney , Navi Mumbai': 'Architectural Metal',
   'kempegowda-airport': 'Decorative Panels',
   'Metal-Decorative-Partition': 'Decorative Panels',
-  'prestige-enterprise-center': 'Lift Cladding',
+  'prestige-Experience-center': 'Lift Cladding',
 };
 
 const FEATURED_MAPPING: Record<string, boolean> = {
   'bangalore-t2-airport': true,
   'Card-lounge-080 t2 bangalore airport': true,
   'card-lounge-international-airport': false,
-  'prestige-enterprise-center': false,
+  'prestige-Experience-center': false,
   'kempegowda-airport': false,
   'Metal-Decorative-Partition': true,
 };

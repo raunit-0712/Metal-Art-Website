@@ -7,7 +7,10 @@ import { getSteelProjects } from '@/lib/data/steel/getProjects';
 export const metadata: Metadata = {
   title: 'Projects',
   description:
-    'Browse our complete portfolio of architectural steel projects and fine art creations. Filter by category, type, and explore detailed case studies.',
+    'Browse our complete portfolio of architectural metal projects and fine art creations. Filter by category, type, and explore detailed case studies.',
+  alternates: {
+    canonical: '/projects/',
+  },
 };
 
 export default function ProjectsPage() {

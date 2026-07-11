@@ -29,17 +29,17 @@ export function CommissionForm() {
   };
 
   return (
-    <section id="commission" className="py-24 md:py-32 bg-[#0D1321] border-t border-white/5">
+    <section id="commission" className="py-24 md:py-32 bg-[#F8F6F3] border-t border-[#E8E4DD]">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <SectionReveal>
           <div className="text-center mb-16">
-            <p className="text-[#748CAB] text-sm tracking-[0.3em] uppercase mb-4">
+            <p className="text-[#B08D57] text-sm tracking-[0.3em] uppercase mb-4">
               Custom Artwork
             </p>
-            <h2 className="font-playfair text-4xl md:text-5xl text-[#F0EBD8]">
+            <h2 className="font-playfair text-4xl md:text-5xl text-[#111111]">
               Commission Inquiry
             </h2>
-            <p className="text-[#748CAB] mt-4 max-w-2xl mx-auto">
+            <p className="text-[#666666] mt-4 max-w-2xl mx-auto">
               Let us create something uniquely yours. Fill out the form below and
               we&apos;ll bring your vision to life.
             </p>
@@ -51,22 +51,22 @@ export function CommissionForm() {
             <motion.div
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="text-center py-16 bg-[#1D2D44] rounded-[16px] border border-white/5 shadow-[0_10px_30px_rgba(13,19,33,0.3)]"
+              className="text-center py-16 bg-[#FCFBF8] rounded-[16px] border border-[#E8E4DD] shadow-[0_10px_30px_rgba(13,19,33,0.05)]"
             >
-              <CheckCircle size={64} className="text-[#748CAB] mx-auto mb-6" />
-              <h3 className="font-playfair text-3xl text-[#F0EBD8] mb-4">
+              <CheckCircle size={64} className="text-[#B08D57] mx-auto mb-6" />
+              <h3 className="font-playfair text-3xl text-[#111111] mb-4">
                 Inquiry Received!
               </h3>
-              <p className="text-[#DAD2BC] max-w-md mx-auto">
+              <p className="text-[#666666] max-w-md mx-auto">
                 Thank you for your interest in a custom commission. Our artist will
                 review your request and contact you within 48 hours.
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="bg-[#1D2D44] rounded-[16px] border border-white/5 shadow-[0_10px_30px_rgba(13,19,33,0.3)] p-8 md:p-12 space-y-6">
+            <form onSubmit={handleSubmit} className="bg-[#FCFBF8] rounded-[16px] border border-[#E8E4DD] shadow-[0_10px_30px_rgba(13,19,33,0.05)] p-8 md:p-12 space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-[#F0EBD8] mb-2">
+                  <label className="block text-sm font-medium text-[#111111] mb-2">
                     Full Name *
                   </label>
                   <input
@@ -75,12 +75,12 @@ export function CommissionForm() {
                     required
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#748CAB] focus:border-[#F0EBD8] focus:ring-1 focus:ring-[#F0EBD8] outline-none transition-colors bg-white text-[#0D1321]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E8E4DD] focus:border-[#B08D57] focus:ring-1 focus:ring-[#B08D57] outline-none transition-colors bg-white text-[#111111]"
                     placeholder="Your name"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-[#F0EBD8] mb-2">
+                  <label className="block text-sm font-medium text-[#111111] mb-2">
                     Email *
                   </label>
                   <input
@@ -89,7 +89,7 @@ export function CommissionForm() {
                     required
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#748CAB] focus:border-[#F0EBD8] focus:ring-1 focus:ring-[#F0EBD8] outline-none transition-colors bg-white text-[#0D1321]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E8E4DD] focus:border-[#B08D57] focus:ring-1 focus:ring-[#B08D57] outline-none transition-colors bg-white text-[#111111]"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -97,7 +97,7 @@ export function CommissionForm() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-[#F0EBD8] mb-2">
+                  <label className="block text-sm font-medium text-[#111111] mb-2">
                     Phone
                   </label>
                   <input
@@ -105,12 +105,12 @@ export function CommissionForm() {
                     name="phone"
                     value={formData.phone}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#748CAB] focus:border-[#F0EBD8] focus:ring-1 focus:ring-[#F0EBD8] outline-none transition-colors bg-white text-[#0D1321]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E8E4DD] focus:border-[#B08D57] focus:ring-1 focus:ring-[#B08D57] outline-none transition-colors bg-white text-[#111111]"
                     placeholder="+91 0000000000"
                   />
                 </div>
                 <div>
-                  <label className="block text-sm font-medium text-[#F0EBD8] mb-2">
+                  <label className="block text-sm font-medium text-[#111111] mb-2">
                     Art Type *
                   </label>
                   <select
@@ -118,7 +118,7 @@ export function CommissionForm() {
                     required
                     value={formData.artType}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#748CAB] focus:border-[#F0EBD8] focus:ring-1 focus:ring-[#F0EBD8] outline-none transition-colors bg-white text-[#0D1321]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E8E4DD] focus:border-[#B08D57] focus:ring-1 focus:ring-[#B08D57] outline-none transition-colors bg-white text-[#111111]"
                   >
                     <option value="">Select type</option>
                     <option value="portrait">Portrait</option>
@@ -133,14 +133,14 @@ export function CommissionForm() {
 
               <div className="grid grid-cols-1 gap-6">
                 <div>
-                  <label className="block text-sm font-medium text-[#F0EBD8] mb-2">
+                  <label className="block text-sm font-medium text-[#111111] mb-2">
                     Preferred Size
                   </label>
                   <select
                     name="size"
                     value={formData.size}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 rounded-lg border border-[#748CAB] focus:border-[#F0EBD8] focus:ring-1 focus:ring-[#F0EBD8] outline-none transition-colors bg-white text-[#0D1321]"
+                    className="w-full px-4 py-3 rounded-lg border border-[#E8E4DD] focus:border-[#B08D57] focus:ring-1 focus:ring-[#B08D57] outline-none transition-colors bg-white text-[#111111]"
                   >
                     <option value="">Select size</option>
                     <option value="small">Small (up to 16x20&quot;)</option>
@@ -152,7 +152,7 @@ export function CommissionForm() {
               </div>
 
               <div>
-                <label className="block text-sm font-medium text-[#F0EBD8] mb-2">
+                <label className="block text-sm font-medium text-[#111111] mb-2">
                   Vision & Description *
                 </label>
                 <textarea
@@ -161,7 +161,7 @@ export function CommissionForm() {
                   rows={5}
                   value={formData.description}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 rounded-lg border border-[#748CAB] focus:border-[#F0EBD8] focus:ring-1 focus:ring-[#F0EBD8] outline-none transition-colors bg-white text-[#0D1321] resize-none"
+                  className="w-full px-4 py-3 rounded-lg border border-[#E8E4DD] focus:border-[#B08D57] focus:ring-1 focus:ring-[#B08D57] outline-none transition-colors bg-white text-[#111111] resize-none"
                   placeholder="Describe your vision, subject matter, style preferences, and any specific requirements..."
                 />
               </div>
@@ -171,7 +171,7 @@ export function CommissionForm() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.98 }}
                   type="submit"
-                  className="px-12 py-4 bg-[#748CAB] hover:bg-[#3E5C76] text-white font-medium rounded-lg transition-colors duration-300 inline-flex items-center gap-2 shadow-md hover:scale-[1.02] active:scale-[0.98]"
+                  className="px-12 py-4 bg-[#B08D57] hover:bg-[#D4AF37] text-[#FCFBF8] font-medium rounded-lg transition-colors duration-300 inline-flex items-center gap-2 shadow-md hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <Send size={18} />
                   Submit Inquiry

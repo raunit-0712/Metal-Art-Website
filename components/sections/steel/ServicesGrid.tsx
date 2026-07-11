@@ -86,7 +86,7 @@ export function ServicesGrid() {
                 Expanded Capabilities
               </p>
               <h2 className="font-playfair text-3xl md:text-4xl text-white">
-                Additional Steel Fabrication Services
+                Additional Metal Fabrication Services
               </h2>
             </div>
           </SectionReveal>
