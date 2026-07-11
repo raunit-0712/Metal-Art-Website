@@ -10,7 +10,7 @@ export const testimonials: Testimonial[] = [
     content:
       'Aakriti Atelier executed the intricate interior metal works for the terminal expansion with exemplary professionalism. Their custom stainless steel and brass architectural installations required immense precision. From structural stability to the final luxury hand-polished finish, the team demonstrated unmatched craftsmanship. Despite tight airport security protocols and a demanding delivery timeline, their seamless communication and dedication ensured the project was completed on schedule. The finishing quality is world-class.',
     rating: 5,
-    category: 'steel',
+    category: 'metal',
   },
   {
     id: 't2',
@@ -21,7 +21,7 @@ export const testimonials: Testimonial[] = [
     content:
       'We partnered with Aakriti Atelier for the complex architectural fabrication at Bangalore T2 Airport. Their technical expertise in heavy-gauge custom metal styling and high-precision welding was visible in every corner. They combined premium grade materials with state-of-the-art finishing techniques, exceeding our expectations for structural safety and aesthetics. Their collaborative communication and meticulous attention to detail turned challenging designs into flawless reality.',
     rating: 5,
-    category: 'steel',
+    category: 'metal',
   },
   {
     id: 't3',
@@ -32,7 +32,7 @@ export const testimonials: Testimonial[] = [
     content:
       'For the premium VIP international lounge, we envisioned bespoke decorative brass panels and custom trim work. Aakriti Atelier brought this vision to life with spectacular luxury finishes and unmatched precision. Their ability to deliver flawless brushed and antique brass textures on complex curved surfaces was impressive. The level of craftsmanship and meticulous attention to detail has made the lounge a benchmark for high-end corporate interiors.',
     rating: 5,
-    category: 'steel',
+    category: 'metal',
   },
   {
     id: 't4',
@@ -43,7 +43,7 @@ export const testimonials: Testimonial[] = [
     content:
       'The elevator lobby and custom lift cladding at the Prestige Enterprise Center required top-tier precision and a premium scratch-resistant finish. Aakriti Atelier delivered custom stainless steel cladding that integrates perfectly with our modern design. Their engineers worked closely with our execution team, maintaining clear communication throughout. The project was completed within our strict timeline, and the craftsmanship of the seamless panel joints is outstanding.',
     rating: 5,
-    category: 'steel',
+    category: 'metal',
   },
   {
     id: 't5',
@@ -54,7 +54,7 @@ export const testimonials: Testimonial[] = [
     content:
       'Aakriti Atelier delivered stunning decorative stainless steel partitioning and custom screens for our luxury hotel lobby. The finishing quality and champagne-gold PVD coating are exceptionally premium. Their team showed immense professionalism, from initial shop drawings to final onsite installation. Their attention to detail and ability to work around hotel pre-opening timelines made them an invaluable partner for this luxury hospitality development.',
     rating: 5,
-    category: 'steel',
+    category: 'metal',
   },
   {
     id: 't6',
@@ -65,7 +65,7 @@ export const testimonials: Testimonial[] = [
     content:
       'We commissioned Aakriti Atelier to fabricate a custom helical steel and glass staircase for our duplex home in Indiranagar. The team demonstrated outstanding craftsmanship, engineering a floating steel structure that is both strong and elegant. The matte finish and seamless metal joints are incredibly clean. Their design team was highly responsive, explaining every step and ensuring the installation was finished on time with zero hassle.',
     rating: 5,
-    category: 'steel',
+    category: 'metal',
   },
   {
     id: 't7',

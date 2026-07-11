@@ -85,7 +85,7 @@ export function TestimonialsSection() {
                     </div>
                     <span
                       className={`ml-auto text-xs tracking-wider uppercase px-3 py-1 rounded-full ${
-                        current.category === 'steel'
+                        current.category === 'metal'
                           ? 'bg-[#1D2D44] text-white'
                           : 'bg-[#748CAB]/20 text-[#1D2D44]'
                       }`}

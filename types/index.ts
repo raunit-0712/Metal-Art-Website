@@ -51,7 +51,7 @@ export interface Testimonial {
   content: string;
   rating: number;
   image?: string;
-  category: 'steel' | 'art';
+  category: 'metal' | 'art';
   location?: string;
 }
 

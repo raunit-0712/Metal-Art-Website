@@ -3,6 +3,11 @@ import { ProjectImage } from '@/types';
 export const steelProjectImages: Record<string, ProjectImage[]> = {
   'kempegowda-airport': [
     {
+      src: '/images/steel/projects/kempegowda-airport/feature-wall.jpg',
+      alt: 'Large-scale Architectural Steel Feature Wall Panels',
+      caption: 'Sleek elevator-bay feature wall'
+    },
+    {
       src: '/images/steel/projects/kempegowda-airport/entrance-lobby.jpg',
       alt: 'kempegowda Airport T1 Main Entrance Lobby Column and Wall Cladding',
       caption: 'Main entrance lobby custom stainless steel cladding'
@@ -21,14 +26,14 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
       src: '/images/steel/projects/kempegowda-airport/washroom-cladding.jpg',
       alt: 'Heavy-duty Hairline Finish Stainless Steel Washroom Wall Cladding',
       caption: 'Architectural metal cladding in washrooms'
-    },
-    {
-      src: '/images/steel/projects/kempegowda-airport/feature-wall.jpg',
-      alt: 'Large-scale Architectural Steel Feature Wall Panels',
-      caption: 'Sleek elevator-bay feature wall'
     }
   ],
   'bangalore-t2-airport': [
+    {
+      src: '/images/steel/projects/bangalore-t2-airport/t2-ceiling-structures.jpg',
+      alt: 'Suspended Architectural Metal Ceiling Baffles and Structures',
+      caption: 'Custom-engineered ceiling framing system'
+    },
     {
       src: '/images/steel/projects/bangalore-t2-airport/t2-column-wrapping.jpg',
       alt: 'kempegowda Airport T2 Custom Column Wrapping with Hairline Stainless Steel',
@@ -40,11 +45,6 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
       caption: 'Bespoke large-scale steel planters'
     },
     {
-      src: '/images/steel/projects/bangalore-t2-airport/t2-ceiling-structures.jpg',
-      alt: 'Suspended Architectural Metal Ceiling Baffles and Structures',
-      caption: 'Custom-engineered ceiling framing system'
-    },
-    {
       src: '/images/steel/projects/bangalore-t2-airport/t2-railing-balustrades.jpg',
       alt: 'Sleek Stainless Steel Balustrades and Guardrails with Handrails',
       caption: 'Safety railings for passenger corridors'
@@ -52,9 +52,9 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
   ],
   'card-lounge-international-airport': [
     {
-      src: '/images/steel/projects/card-lounge-international-airport/lounge-reception-fascia.jpg',
-      alt: '080 Lounge Reception Desk Brass Panel Fascia',
-      caption: 'Reception counter front in brushed gold finish'
+      src: '/images/steel/projects/card-lounge-international-airport/1-lounge-divider-screen.jpg', 
+      alt: 'Geometric CNC-Cut Brass Decorative Divider Screen',
+      caption: 'Custom metal privacy partition screen'
     },
     {
       src: '/images/steel/projects/card-lounge-international-airport/lounge-pillar-cladding.jpg',
@@ -62,9 +62,9 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
       caption: 'Decorative gold pillar finishes'
     },
     {
-      src: '/images/steel/projects/card-lounge-international-airport/lounge-divider-screen.jpg',
-      alt: 'Geometric CNC-Cut Brass Decorative Divider Screen',
-      caption: 'Custom metal privacy partition screen'
+      src: '/images/steel/projects/card-lounge-international-airport/lounge-reception-fascia.jpg',
+      alt: '080 Lounge Reception Desk Brass Panel Fascia',
+      caption: 'Reception counter front in brushed gold finish'
     },
     {
       src: '/images/steel/projects/card-lounge-international-airport/lounge-bar-backdrop.jpg',
@@ -89,6 +89,11 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
   ],
   'bangalore-t1-airport': [
     {
+      src: '/images/steel/projects/bangalore-t1-airport/t1-checkin-counters.jpg',
+      alt: 'Sleek Stainless Steel Check-in Counters and Baggage Grilles',
+      caption: 'High-traffic ticket counter cladding'
+    },
+    {
       src: '/images/steel/projects/bangalore-t1-airport/t1-departure-gates.jpg',
       alt: 'Durable Stainless Steel Portal Cladding for Departure Gates',
       caption: 'Heavy-duty portal framing at passenger gates'
@@ -97,11 +102,6 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
       src: '/images/steel/projects/bangalore-t1-airport/t1-retail-facade.jpg',
       alt: 'Architectural Steel Framing and Facade trim for Retail Outlets',
       caption: 'Sleek metal shopfront framing'
-    },
-    {
-      src: '/images/steel/projects/bangalore-t1-airport/t1-checkin-counters.jpg',
-      alt: 'Sleek Stainless Steel Check-in Counters and Baggage Grilles',
-      caption: 'High-traffic ticket counter cladding'
     }
   ],
   'prestige-enterprise-center': [
@@ -122,6 +122,11 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
     }
   ],
   '5-star-hotel': [
+    {
+      src: '/images/steel/projects/5-star-hotel/hotel-staircase-balustrade.jpg',
+      alt: 'Helical Grand Staircase with Brass Handrails and Glass Guard',
+      caption: 'Grand lobby spiral staircase metalwork'
+    },
     {
       src: '/images/steel/projects/5-star-hotel/hotel-lobby-atrium.jpg',
       alt: 'Grand Atrium Columns Clad in Mirror Finish Gold Stainless Steel',
@@ -146,11 +151,6 @@ export const steelProjectImages: Record<string, ProjectImage[]> = {
       src: '/images/steel/projects/5-star-hotel/hotel-elevator-cladding.jpg',
       alt: 'Elevator Interior Walls Finished in Etched Mirror Steel',
       caption: 'Elevator cab interior architectural cladding'
-    },
-    {
-      src: '/images/steel/projects/5-star-hotel/hotel-staircase-balustrade.jpg',
-      alt: 'Helical Grand Staircase with Brass Handrails and Glass Guard',
-      caption: 'Grand lobby spiral staircase metalwork'
     },
     {
       src: '/images/steel/projects/5-star-hotel/hotel-lounge-partition.jpg',
