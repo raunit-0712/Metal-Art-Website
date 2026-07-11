@@ -8,7 +8,7 @@ export function AboutHero() {
     <section className="relative min-h-[70vh] bg-brand-primary flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2"
+          src="/images/steel/projects/Card-lounge-080 t2 bangalore airport/hotel-buffet-counter.jpg"
           alt="Studio story and overview background"
           fill
           priority

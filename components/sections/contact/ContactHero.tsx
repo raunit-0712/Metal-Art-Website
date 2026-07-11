@@ -8,7 +8,7 @@ export function ContactHero() {
     <section className="relative min-h-[50vh] bg-brand-primary flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2"
+          src="/images/steel/projects/bangalore-t1-airport/WhatsApp Image 2026-07-10 at 9.57.19 AM (1).jpeg"
           alt="Contact enquiry and studio location background"
           fill
           priority

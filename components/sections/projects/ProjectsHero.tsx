@@ -8,7 +8,7 @@ export function ProjectsHero() {
     <section className="relative min-h-[50vh] bg-brand-primary flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0">
         <Image
-          src="https://images.pexels.com/photos/1571460/pexels-photo-1571460.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080&dpr=2"
+          src="/images/steel/projects/Card-lounge-080 t2 bangalore airport/hotel-canopy-structure.jpg"
           alt="Completed architectural works and fine art projects background"
           fill
           priority
