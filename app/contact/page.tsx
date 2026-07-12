@@ -7,7 +7,7 @@ import { BreadcrumbsJsonLd, WebPageJsonLd } from '@/components/seo/JsonLd';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Get in touch with Aakriti Atelier for architectural metal solutions, custom fabrication, fine arts, and creative projects. Request a quote, inquire about commissions, or visit our studio. We\'d love to hear from you.',
+    'Contact Aakriti Atelier in Vasai, Mumbai for custom metal fabrication & fine art commissions. Get in touch with our experts today for a premium quote.',
   alternates: {
     canonical: '/contact/',
   },

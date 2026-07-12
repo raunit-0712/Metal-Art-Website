@@ -376,6 +376,7 @@ export function ProjectsGrid({ initialSteelProjects }: ProjectsGridProps) {
                 onClick={(e) => e.stopPropagation()}
               >
                 <div className="relative overflow-hidden">
+                  {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={typeof selected.images[0] === 'string' ? selected.images[0] : (selected.images[0] as any).src}
                     alt={selected.title}

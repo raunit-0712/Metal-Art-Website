@@ -16,7 +16,7 @@ import { faqs } from '@/lib/data';
 export const metadata: Metadata = {
   title: 'Metal Works',
   description:
-    'Premium architectural metal fabrication services. Custom staircases, railings, lift cladding, decorative panels, and bespoke metalwork for residential and commercial projects.',
+    'Premium architectural metal fabrication services in Mumbai. We design custom staircases, railings, elevator jambs, and decorative panels at Aakriti Atelier.',
   alternates: {
     canonical: '/steel-works/',
   },

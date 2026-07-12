@@ -45,6 +45,7 @@ export function OtherSteelGallery({ images, initialIndex, onClose }: OtherSteelG
         className="relative max-w-full max-h-[85vh] aspect-auto flex items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={currentImage.src}
           alt={currentImage.alt || currentImage.title}

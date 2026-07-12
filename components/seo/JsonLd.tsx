@@ -22,6 +22,17 @@ export function OrganizationJsonLd() {
     name: 'Aakriti Atelier',
     url: 'https://aakritiatelier.in',
     logo: 'https://aakritiatelier.in/images/logo.png',
+    email: 'hello@aakritiatelier.in',
+    telephone: '+91-80804-14471',
+    foundingDate: '2014',
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: 'N/502, Veena Dynasty, Evershine City, Last stop',
+      addressLocality: 'Vasai (E)',
+      addressRegion: 'Maharashtra',
+      postalCode: '401209',
+      addressCountry: 'IN',
+    },
     sameAs: SOCIAL_PROFILES,
     contactPoint: [
       {
@@ -49,8 +60,10 @@ export function LocalBusinessJsonLd() {
     '@id': 'https://aakritiatelier.in/#localbusiness',
     name: 'Aakriti Atelier',
     image: 'https://aakritiatelier.in/images/og-image.jpg',
+    logo: 'https://aakritiatelier.in/images/logo.png',
     url: 'https://aakritiatelier.in',
     telephone: '+91-80804-14471',
+    email: 'hello@aakritiatelier.in',
     priceRange: '$$$',
     address: {
       '@type': 'PostalAddress',

@@ -174,6 +174,7 @@ export function FeaturedArtSection() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={selectedArt.image}
                   alt={selectedArt.title}

@@ -160,6 +160,7 @@ export function ArtGallery() {
               onClick={(e) => e.stopPropagation()}
             >
               <div className="relative overflow-hidden">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={selected.image}
                   alt={selected.title}

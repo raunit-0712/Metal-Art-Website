@@ -65,7 +65,7 @@ export function BeforeAfterSection() {
             {/* After Image (Full) */}
             <Image
               src="/images/gallery/after.jpeg"
-              alt="After"
+              alt="Finished metal and wood staircase with handrails in a completed modern interior"
               fill
               sizes="(max-width: 1024px) 100vw, 1200px"
               className="object-cover"
@@ -84,7 +84,7 @@ export function BeforeAfterSection() {
               >
                 <Image
                   src="/images/gallery/before.jpeg"
-                  alt="Before"
+                  alt="Raw steel structural staircase frame under construction before final architectural finish"
                   fill
                   sizes="(max-width: 1024px) 100vw, 1200px"
                   className="object-cover"
